@@ -8,253 +8,248 @@
 
 <body>
 
-  <header class="header">
-    <nav class="header__nav menu">
-      <div class="menu__inner inner">
-        <div class="menu__logo">
-          <a class="menu__link logo">
-            <img class="logo__image" src="#" width="100" height="20" alt="Логотип сервиса Погнали">
-          </a>
-          <button class="menu__toggle" type="button">Открыть меню</button>
-          <button class="menu__close-button">Закрыть меню</button>
-        </div>
-        <ul class="menu__list site-list">
-          <li class="site-list__item">
-            <a href="#">О сервисе</a>
-          </li>
-          <li class="site-list__item">
-            <a href="#">Направления</a>
-          </li>
-          <li class="site-list__item">
-            <a href="#">Попутчики</a>
-          </li>
-        </ul>
-        <div class="menu__user user-item">
-          <a class="uer-item__login login-btn" href="#">Авторизация</a>
-        </div>
-        <div class="menu__contacts contacts">
-          <a class="contacts__button contacts__button--tel" href="tel:+78005558628">8 800 555-86-28</a>
-          <a class="contacts__button contacts__button--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </div>
-        <ul class="menu__socials socials">
-          <li class="socials__item">
-            <a class="socials__link socials__link--fb" href="#">Facebook</a>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link socials__link--vk" href="#">Вконтакте</a>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link socials__link--ig" href="#">Instagram</a>
-          </li>
-        </ul>
+  <header class="page-header">
+    <nav class="main-nav">
+      <div class="page-header__wrap">
+        <a class="main-nav__logo">
+          <img class="main-nav__img" src="#" width="100" height="20" alt="Логотип сервиса Погнали">
+        </a>
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
       </div>
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item">
+          <a href="#">О сервисе</a>
+        </li>
+        <li class="site-list__item">
+          <a href="#">Направления</a>
+        </li>
+        <li class="site-list__item">
+          <a href="#">Попутчики</a>
+        </li>
+      </ul>
+      <ul class="main-nav__list user-list">
+        <li class="user-list__item">
+          <a class="user-list__login btn" href="login.html">Авторизация</a>
+        </li>
+      </ul>
+      <ul class="main-nav__list contact-list">
+        <li class="contact-list__item">
+          <a class="contact-list__button contact-list__button--tel" href="tel:+78005558628">8 800 555-86-28</a>
+        </li>
+        <li class="contact-list__item">
+          <a class="contact-list__button contact-list__button--mail"
+            href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </li>
+      </ul>
+      <ul class="main-nav__list social-list">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--fb" href="#">Facebook</a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--vk" href="#">Вконтакте</a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--ig" href="#">Instagram</a>
+        </li>
+      </ul>
     </nav>
   </header>
 
-  <main class="main">
+  <main class="page-main">
     <h1 class="visually-hidden">"Погнали?" - сервис поиска попутчиков</h1>
 
-    <section class="main__intro intro">
-      <div class="intro__inner inner">
-        <h2 class="visually-hidden">Описание сервиса</h2>
-        <p class="intro__slogan">В путешествие с крутыми попутчиками!</p>
-        <div class="intro__inner">
-          <div class="intro__contacts contacts">
-            <a class="contacts__button contacts__button--tel" href="tel:+78005558628">8 800 555-86-28</a>
-            <a class="contacts__button contacts__button--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </div>
-          <div class="intro__user intro-login">
-            <a class="intro-login__login login-btn" href="#">Авторизация</a>
-          </div>
-        </div>
-        <blockquote class="intro__review review">
-          <p class="review__text text text--light">"Лучшее предложение, что я видел в жизни!"</p>
-          <cite class="review__author text-bold">Мурат Эльтазин главный редактор газеты "гаджетлайф"</cite>
-        </blockquote>
-        <ul class="intro__steps steps">
-          <li class="steps__item">Выберите направление</li>
-          <li class="steps__item">Изучите идеи путешественников</li>
-          <li class="steps__item">Находите тех, кто похож на вас</li>
-          <li class="steps__item">Путешествуйте вместе!</li>
-        </ul>
-      </div>
+    <section class="intro">
+      <h2 class="visually-hidden">Описание сервиса</h2>
+      <p class="intro__slogan">В путешествие с крутыми попутчиками!</p>
+      <ul class="contact-list">
+        <li class="contact-list__item">
+          <a class="contact-list__button contact-list__button--tel" href="tel:+78005558628">8 800 555-86-28</a>
+        </li>
+        <li class="contact-list__item">
+          <a class="contact-list__button contact-list__button--mail"
+            href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </li>
+      </ul>
+      <a class="login-btn btn" href="#">Авторизация</a>
+      <blockquote class="review">
+        <p class="review__text">"Лучшее предложение, что я видел в жизни!"</p>
+        <cite class="review__author">Мурат Эльтазин главный редактор газеты "гаджетлайф"</cite>
+      </blockquote>
+      <ol class="steps">
+        <li class="steps__item">Выберите направление</li>
+        <li class="steps__item">Изучите идеи путешественников</li>
+        <li class="steps__item">Находите тех, кто похож на вас</li>
+        <li class="steps__item">Путешествуйте вместе!</li>
+      </ol>
     </section>
 
-    <section class="main__about about">
-      <div class="about__inner inner">
+    <section class="about">
         <h2 class="visually-hidden">О нас</h2>
-        <p class="about__text text text--light">Любое путешествие веселее
+        <p class="about__text">Любое путешествие веселее
           с попутчиками, которые на одной волне с тобой!
           Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-        <p class="about__text about__text--two">А если найдете кого-то
+        <p class="about__text">А если найдете кого-то
           близкого по духу — скорее
           зовите в совместный трип!</p>
       </div>
     </section>
 
-    <section class="main__routes routes">
-      <div class="routes__inner inner">
+    <section class="routes">
         <h2 class="routes__title">Направления</h2>
-        <p class="routes__text text text--light">Мы не продаем туры
+        <p class="routes__text">Мы не продаем туры
           и ничего не рекламируем.
           Люди сами пишут о странах, куда хотели бы отправиться
           и чем можно там заняться.</p>
         <ul class="routes__list">
-          <li class="routes__item route-item">
-            <img class="route-item__pic" src="#" alt="Таиланд">
-            <dl class="route-item__info">
-              <dt class="route-item__title route-item__title--th">Таиланд</dt>
-              <dd class="route-item__description">Джунгли зовут!</dd>
-              <dd class="route-item__users">18321</dd>
-            </dl>
+          <li class="routes__item">
+            <img class="routes__img" src="#" alt="Таиланд">
+            <div class="routes__info">
+              <h3 class="routes__title routes__title--th">Таиланд</h3>
+              <p class="routes__description">Джунгли зовут!</p>
+              <p class="routes__users">18321</p>
+            </div>
           </li>
-          <li class="routes__item route-item">
-            <img class="route-item__pic" src="#" alt="Франция">
-            <dl class="route-item__info">
-              <dt class="route-item__title route-item__title--fr">Франция</dt>
-              <dd class="route-item__description">Трэ бьен, манифик!</dd>
-              <dd class="route-item__users">12518/dd>
-            </dl>
+          <li class="routes__item">
+            <img class="routes__img" src="#" alt="Франция">
+            <div class="routes__info">
+              <h3 class="routes__title routes__title--fr">Франция</h3>
+              <p class="routs__description">Трэ бьен, манифик!</p>
+              <p class="routes__users">12518</p>
+             </div>
           </li>
-          <li class="routes__item route-item">
-            <img class="route-item__pic" src="#" alt="Чехия">
-            <dl class="route-item__info">
-              <dt class="route-item__title route-item__title--cz">Чехия</dt>
-              <dd class="route-item__description">Закоулки старой Европы</dd>
-              <dd class="route-item__users">5326</dd>
-            </dl>
+          <li class="routes__item">
+            <img class="routes__img" src="#" alt="Чехия">
+            <div class="routes__info">
+              <h3 class="routes__title routes__title--cz">Чехия</h3>
+              <p class="routes__description">Закоулки старой Европы</p>
+              <p class="routes__users">5326</p>
+            </div>
           </li>
         </ul>
-        <a class="routes__button show-btn" href="">Показать все</a>
+        <a class="routes__button btn-1" href="">Показать все</a>
     </section>
 
-    <section class="main-travelers travelers">
-      <div class="travelers__inner inner">
+    <section class="travelers">
         <h2 class="travelers__title">Попутчики</h2>
-        <p class="travelers__text text text--light">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
+        <p class="travelers__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
           Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
         </p>
-        <p class="travelers__text text text--bold">Теперь можно легко найти единомышленников</p>
-        <ul class="travelers__list">
-          <li class="travelers__item travelers-item">
-            <div class="travelers-item__pic">
+        <p class="travelers__text">Теперь можно легко найти единомышленников</p>
+          <article class="travelers__item">
+            <div class="travelers__pic">
               <img src="#" alt="Фото Тани Фирсовой">
             </div>
-            <div class="travelers-item__level">
-              <span>99</span>
-              <span>level</span>
+            <div class="travelers__level">
+              <span class="travelers__score">99</span>
+              <span class="travelers__lev">level</span>
             </div>
-            <ul class="travelers-item__flags flags">
-              <li class="flags__item"></li>
-              <li class="flags__item"></li>
-              <li class="flags__item"></li>
+            <ul class="travelers__flags">
+              <li class="travelers__flag"></li>
+              <li class="travelers__flag"></li>
+              <li class="travelers__flag"></li>
             </ul>
-            <h3 class="travelers-item__title">Таня Фирсова</h3>
-            <p class="travelers-item__habits user-card__habits">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-            <ul class="travelers-item__transport transport">
-              <li class="transport__item transport__item--plane"></li>
-              <li class="transport__item transport__item--bus"></li>
-              <li class="transport__item transport__item--bike"></li>
-              <li class="transport__item transport__item--walk"></li>
+            <h3 class="travelers__title">Таня Фирсова</h3>
+            <p class="travelers__habits">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+            <ul class="travelers__transport-list">
+              <li class="travelers__transport-item travelers__transport-item--plane"></li>
+              <li class="travelers__transport-item travelers__transport-item--bus"></li>
+              <li class="travelers__transport-item travelers__transport-item--bike"></li>
+              <li class="travelers__transport-item travelers__transport-item--walk"></li>
             </ul>
-          </li>
-          <li class="travelers__item travelers-item">
-            <div class="travelers-item__pic">
+          </article>
+
+          <article class="travelers__item">
+            <div class="travelers__pic">
               <img src="#" alt="Фото Пети Демина">
             </div>
-            <div class="travelers-item__level level">
-              <span>80</span>
-              <span>level</span>
+            <div class="travelers__level">
+              <span class="travelers__score">80</span>
+              <span class="travelers__lev">level</span>
             </div>
-            <ul class="travelers-item__flags flags">
-              <li class="flags__item"></li>
-              <li class="flags__item"></li>
+            <ul class="travelers__flags">
+              <li class="travelers__flag"></li>
+              <li class="travelers__flag"></li>
             </ul>
-            <h3 class="travelers-item__title">Петя Демин</h3>
-            <p class="travelers-item__habits user-card__habits">#бургер #бар #футбол #концерт #крафт</p>
-            <ul class="travelers-item__transport transport">
-              <li class="transport__item transport__item--plane"></li>
-              <li class="transport__item transport__item--bus"></li>
-              <li class="transport__item transport__item--bike"></li>
-              <li class="transport__item transport__item--walk"></li>
+            <h3 class="travelers__title">Петя Демин</h3>
+            <p class="travelers__habits">#бургер #бар #футбол #концерт #крафт</p>
+            <ul class="travelers__transport-list">
+              <li class="travelers__transport-item travelers__transport-item--plane"></li>
+              <li class="travelers__transport-item travelers__transport-item--bus"></li>
+              <li class="travelers__transport-item travelers__transport-item--bike"></li>
+              <li class="travelers__transport-item travelers__transport-item--walk"></li>
             </ul>
-          </li>
-        </ul>
-        <a class="travelers__button show-btn" href="">Показать всеx</a>
+          </article>
+        <a class="travelers__button btn-2" href="#">Показать всеx</a>
     </section>
 
-    <section class="main__rates rates">
-      <div class="rates__inner inner">
+    <section class="rates">
         <h2 class="visually-hidden">Тарифы</h2>
-        <p>Добавьте свой профиль</p>
-        <dl class="rates__list rates-list">
-          <div class="rates-list__item">
-            <dt class="rates-list__term">Базовое размещение</dt>
-            <dd class="rates-list__def">Бесплатно</dd>
-          </div>
-          <div class="rates-list__item">
-            <dt class="rates-list__term">Вывод на первых позициях</dt>
-            <dd class="rates-list__def">99 руб./мес</dd>
-          </div>
-          <div class="rates-list__item">
-            <dt class="rates-list__term">Кастомный цвет карточки</dt>
-            <dd class="rates-list__def">59 руб./мес</dd>
-          </div>
-        </dl>
-        <a class="rates__button rate-btn" href="#">Показать тарифы для бизнеса</a>
-      </div>
-    </section>
-
-    <section class="business-rates modal">
-      <h2 class="business-rates__title">Бизнес-тарифы</h2>
-      <dl class="business-rates__list rates-list">
-        <div class="rates-list__item">
-          <dt class="rates-list__term">Реклама у блоггера</dt>
-          <dd class="rates-list__def">300 000 руб./пост</dd>
-        </div>
-        <div class="rates-list__item">
-          <dt class="rates-list__term">Накрутка подписчиков</dt>
-          <dd class="rates-list__def">от 1 руб./шт.</dd>
-        </div>
-        <div class="rates-list__item">
-          <dt class="rates-list__term">Лайки от ботов</dt>
-          <dd class="rates-list__def">от 20 коп./лайк</dd>
-        </div>
-        <div class="rates-list__item">
-          <dt class="rates-list__term">Ваш продакт-плейсмент</dt>
-          <dd class="rates-list__def">Индивидуально</dd>
-        </div>
-      </dl>
-      <button class="business-rates__close-button rate-btn">Закрыть окно</button>
+        <p class="rates__text">Добавьте свой профиль</p>
+        <ol class="rates__list">
+          <li class="rates__item">
+            <p class="rates__term">Базовое размещение</p>
+            <p class="rates__price">Бесплатно</p>
+          </li>
+          <li class="rates__item">
+            <p class="rates__term">Вывод на первых позициях</p>
+            <p class="rates__price">99 руб./мес</p>
+          </li>
+          <li class="rates__item">
+            <p class="rates__term">Кастомный цвет карточки</p>
+            <p class="rates__price">59 руб./мес</p>
+          </li>
+        </ol>
+        <a class="rates__button" href="#">Показать тарифы для бизнеса</a>
     </section>
 
   </main>
 
-</body>
-
-<footer class="footer">
-  <div class="footer__inner inner">
-    <div class="footer__logo">
-      <a class="footer__link logo">
-        <img class="logo__image" src="#" width="100" height="20" alt="Логотип сервиса Погнали">
+<footer class="page-footer">
+    <div class="page-footer__logo">
+      <a class="page-footer__link">
+        <img class="page-footer__img" src="#" width="100" height="20" alt="Логотип сервиса Погнали">
       </a>
     </div>
-    <ul class="footer__socials socials">
-      <li class="socials__item">
-        <a class="socials__link socials__link--fb" href="#">Facebook</a>
+    <ul class="page-footer__social social-list">
+      <li class="social-list__item">
+        <a class="social-list__link social-list__link--fb" href="#">Facebook</a>
       </li>
-      <li class="socials__item">
-        <a class="socials__link socials__link--vk" href="#">Вконтакте</a>
+      <li class="social-list__item">
+        <a class="social-list__link social-list__link--vk" href="#">Вконтакте</a>
       </li>
-      <li class="socials__item">
-        <a class="socials__link socials__link--ig" href="#">Instagram</a>
+      <li class="social-list__item">
+        <a class="social-list__link social-list__link--ig" href="#">Instagram</a>
       </li>
     </ul>
     <div class="footer__copyright copyright">
       <p class="copyright__text">Разработано</p>
       <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive"></a>
     </div>
-  </div>
 </footer>
+
+<section class="business-rates modal">
+  <h2 class="business-rates__title">Бизнес-тарифы</h2>
+  <ul class="business-rates__list">
+    <li class="business-rates__item">
+      <p class="business-rates__term">Реклама у блоггера</p>
+      <p class="business-rates__price">300 000 руб./пост</p>
+    </li>
+    <li class="business-rates__item">
+      <p class="business-rates__term">Накрутка подписчиков</p>
+      <p class="business-rates__price">от 1 руб./шт.</p>
+    </li>
+    <li class="business-rates__item">
+      <p class="business-rates__term">Лайки от ботов</p>
+      <p class="business-rates__price">от 20 коп./лайк</p>
+    </li>
+    <li class="business-ratest__item">
+      <p class="business-rates__term">Ваш продакт-плейсмент</p>
+      <p class="business-rates__price">Индивидуально</p>
+    </li>
+  </ul>
+  <button class="business-rates__button">Закрыть окно</button>
+</section>
+
+</body>
 
 </html>
