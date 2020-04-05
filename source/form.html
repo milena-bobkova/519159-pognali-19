@@ -4,26 +4,27 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Погнали. Форма</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="page-header">
-    <nav class="main-nav">
+    <nav class="main-nav container">
       <div class="page-header__wrap">
-        <a class="main-nav__logo" href="index.html">
+        <a href="index.html" class="main-nav__logo">
           <img class="main-nav__img" src="#" width="100" height="20" alt="Логотип сервиса Погнали">
         </a>
         <button class="main-nav__toggle" type="button">Открыть меню</button>
       </div>
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
-          <a href="#">О сервисе</a>
+          <a class="site-list__link" href="#">О сервисе</a>
         </li>
         <li class="site-list__item">
-          <a href="#">Направления</a>
+          <a class="site-list__link" href="#">Направления</a>
         </li>
         <li class="site-list__item">
-          <a href="#">Попутчики</a>
+          <a class="site-list__link" href="#">Попутчики</a>
         </li>
       </ul>
       <ul class="main-nav__list user-list">
@@ -33,10 +34,10 @@
       </ul>
       <ul class="main-nav__list contact-list">
         <li class="contact-list__item">
-          <a class="contact-list__button contact-list__button--tel" href="tel:+78005558628">8 800 555-86-28</a>
+          <a class="contact-list__link contact-list__link--tel" href="tel:+78005558628">8 800 555-86-28</a>
         </li>
         <li class="contact-list__item">
-          <a class="contact-list__button contact-list__button--mail"
+          <a class="contact-list__link contact-list__link--mail"
             href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </li>
       </ul>
@@ -55,309 +56,446 @@
   </header>
 
   <main class="page-main">
-    <div class="form-title">
-      <h1 class="form-title__title">Направления</h1>
+    <div class="page-main__title-wrap">
+      <div class="container">
+        <h1 class="page-main__title">Направления</h1>
+      </div>
     </div>
 
     <section class="profile-plan">
       <form class="profile-plan__form" method="post" action="https://echo.htmlacademy.ru/courses">
-        <div class="profile-plan__level">
-          <span class="profile-plan__score">99</span>
-          <span class="profile-plan__lev">level</span>
-        </div>
-        <div class="profile-plan__pic">
-          <img src="#" alt="Фото Пети Демина">
-        </div>
-        <a class="profile-plan__change-pic">Сменить фото</a>
+        <article class="profile-plsn__card user-card">
+          <h2 class="visually-hidden">Карточка участника</h2>
+          <div class="container">
+            <div class="user-card__level">
+              <span class="user-card__score">99</span>
+              <span class="user-card__lev">level</span>
+            </div>
+            <div class="user-card__pic">
+              <img src="#" alt="Фото Пети Демина">
+            </div>
+            <a class="profile-plan__btn">Сменить фото</a>
 
-        <fieldset class="profile-plan__fieldset">
-          <legend class="profile-plan__legend">Тэги</legend>
-          <label class="visually-hidden">Тэги</label>
-          <textarea class="profile-plan__tags">#бургер #бар #футбол #концерт #крафт</textarea>
-        </fieldset>
-        <fieldset class="profile-plan__fieldset">
-          <legend class="profile-plan__legend">
-            <button class="profile-plan__legend-btn">Транспорт</button>
-          </legend>
-          <div class="profile-plan__item">
-            <label><input class="profile-plan__input" type="checkbox" name="food" value="авиа"></label>
+            <fieldset class="profile-plan__fieldset">
+              <legend class="profile-plan__legend">Тэги</legend>
+              <label class="visually-hidden">Тэги</label>
+              <textarea class="profile-plan__tags user-card__habits">#бургер #бар #футбол #концерт #крафт</textarea>
+            </fieldset>
+            <fieldset class="profile-plan__fieldset">
+              <legend class="profile-plan__legend">Транспорт</legend>
+              <div class="profile-plan__item">
+                <label><input class="profile-plan__input visually-hidden" type="checkbox" name="transport"
+                    value="авиа"></label>
+              </div>
+              <div class="profile-plan__item">
+                <label><input class="profile-plan__input visually-hidden" type="checkbox" name="transport"
+                    value="авто"></label>
+              </div>
+              <div class="profile-plan__item">
+                <label><input class="profile-plan__input visually-hidden" type="checkbox" name="transport"
+                    value="вело"></label>
+              </div>
+              <div class="profile-plan__item">
+                <label><input class="profile-plan__input visually-hidden" type="checkbox" name="transport"
+                    value="пешком"></label>
+              </div>
+            </fieldset>
           </div>
-          <div class="profile-plan__item">
-            <label><input class="profile-plan__input" type="checkbox" name="food" value="авто"></label>
-          </div>
-          <div class="profile-plan__item">
-            <label><input class="profile-plan__input" type="checkbox" name="food" value="вело"></label>
-          </div>
-          <div class="profile-plan__item">
-            <label><input class="profile-plan__input" type="checkbox" name="food" value="пешком"></label>
-          </div>
-        </fieldset>
+        </article>
     </section>
 
     <section class="my-plans">
-      <h2 class="my-plans__title">Мои планы:</h2>
-      <ol class="my-plans__list">
-        <li class="my-plans__item">
-          <p class="my-plans__country">Франция, Италия</p>
-          <p class="my-plans__travellers">3 попутчика</p>
-          <p class="my-plans__date">26 мар - 29 мар</p>
-          <a class="my-plans__change" href="#">Изменить</a>
-        </li>
-        <li class="my-plans__item">
-          <p class="my-plans__country">Таиланд, Индонезия</p>
-          <p class="my-plans__travellers">1 попутчик</p>
-          <p class="my-plans__date">1 июл - 15 июл</p>
-          <a class="my-plans__change" href="#">Изменить</a>
-        </li>
-      </ol>
+      <div class="container">
+        <h2 class="my-plans__title profile-plan__title">Мои планы:</h2>
+        <ol class="my-plans__list">
+          <li class="my-plans__item">
+            <p class="my-plans__country">1. Франция, Италия</p>
+            <p class="my-plans__travellers">3 попутчика</p>
+            <p class="my-plans__date">26 мар - 29 мар</p>
+            <a class="my-plans__change" href="#">Изменить</a>
+          </li>
+          <li class="my-plans__item">
+            <p class="my-plans__country">2. Таиланд, Индонезия</p>
+            <p class="my-plans__travellers">1 попутчик</p>
+            <p class="my-plans__date">1 июл - 15 июл</p>
+            <a class="my-plans__change" href="#">Изменить</a>
+          </li>
+        </ol>
+      </div>
     </section>
 
     <section class="add-plan">
-      <h2 class="add-plan__title">Добавить план</h2>
-      <div class="slider__buttons slider-buttons">
-        <button class="slider-butons__one" type="button"></button>
-        <button class="slider-butons__two" type="button"></button>
-        <button class="slider-butons__three" type="button"></button>
+      <div class="container">
+        <h2 class="add-plan__title profile-plan__title">Добавить план:</h2>
+        <div class="slider__buttons slider-buttons">
+          <button class="slider-butons__one" type="button"></button>
+          <button class="slider-butons__two" type="button"></button>
+          <button class="slider-butons__three" type="button"></button>
+        </div>
+        <fieldset class="add-plan__fieldset add-plan__fieldset--one">
+          <div class="add-plan__legend">
+            <span>Шаг 1.</span>
+            <span> Даты пребывания</span>
+          </div>
+          <p class="add-plan__text">Укажите предпочтительное количество попутчиков, которых
+            вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+          <div class="add-plan__form-wrap add-plan__form-wrap--people">
+            <label class="add-plan__form-label" for="num-people">Ищу попутчиков:</label>
+            <button class="add-plan__form-btn add-plan__form-btn--decrease" type="button">-</button>
+            <input class="add-plan__form-input" type="text" name="people" value="2" id="num-people">
+            <button class="add-plan__form-btn add-plan__form-btn--increase" type="button">+</button>
+          </div>
+          <div class="add-plan__form-wrap add-plan__form-wrap--duration">
+            <label class="add-plan__form-label" for="num-duration">Длительность:</label>
+            <button class="add-plan__form-btn add-plan__form-btn--decrease" type="button">-</button>
+            <input class="add-plan__form-input" type="text" name="duration" value="2" id="num-duration">
+            <button class="add-plan__form-btn add-plan__form-btn--increase" type="button">+</button>
+          </div>
+          <div class="add-plan__form-wrap add-plan__form-wrap--child">
+            <input class="add-plan__form-input" type="checkbox" name="step1" value="2" id="num-child">
+            <label class="add-plan__form-child" for="num-child">Можно с детьми</label>
+          </div>
+          <div class="add-plan__form-wrap add-plan__form-wrap--month">
+            <button class="add-plan__form-btn add-plan__form-btn--decrease" type="button"></button>
+            <input class="add-plan__form-month" type="text" name="month" value="Март 2019" id="num-month">
+            <button class="add-plan__form-btn add-plan__form-btn--increase" type="button"></button>
+          </div>
+          <div class="add-plan__form-wrap add-plan__form-wrap--month">
+            <table class="add-plan__table">
+              <thead>
+                <tr>
+                  <th class="add-plane__day">П</th>
+                  <th class="add-plane__day">В</th>
+                  <th class="add-plane__day">С</th>
+                  <th class="add-plane__day">Ч</th>
+                  <th class="add-plane__day">П</th>
+                  <th class="add-plane__day">С</th>
+                  <th class="add-plane__day">В</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-02-23">23</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-02-24">24</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-02-25">25</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-02-26">26</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-02-27">27</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-02-28">28</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-01">1</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-02">2</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-03">3</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-04">4</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-05">5</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-06">6</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-07">7</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-08">8</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-09">9</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-10">10</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-11">11</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-12">12</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-13">13</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-14">14</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-15">15</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-16">16</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-17">17</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-18">18</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-19">19</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-20">20</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-21">21</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-22">22</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-23">23</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-24">24</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-25">25</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-26">26</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-27">27</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-28">28</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-29">29</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-30">30</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-03-31">31</label>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-04-01">1</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-04-02">2</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-04-03">3</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-04-04">4</label>
+                  </td>
+                  <td class="add-plane__date-wrap">
+                    <label class="add-plane__date"><input class="visually-hidden" type="date" name="trip-date"
+                        value="2019-04-05">5</label>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <a class="add-plan__btn btn">Следующий шаг</a>
+        </fieldset>
+
+        <fieldset class="add-plan__fieldset add-plan__fieldset--two">
+          <div class="add-plan__legend">
+            <span>Шаг 2.</span>
+            <span>Маршрут</span>
+          </div>
+          <p class="add-plan__text">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
+          </p>
+          <div class="add-plan__form-wrap add-plan__form-wrap--country1">
+            <select class="add-plan__select">
+              <option class="add-plan__option">Босния и Герцеговина</option>
+            </select>
+            <div class="add-plan__flag">
+              <img src="#">
+            </div>
+          </div>
+          <div class="add-plan__form-wrap add-plan__form-wrap--country2">
+            <select class="add-plan__select">
+              <option class="add-plan__option">Чехия</option>
+            </select>
+            <div class="add-plan__flag">
+              <img src="#">
+            </div>
+          </div>
+          <div class="add-plan__choice">
+            <button class="add-plan__btn">Выберите страну</button>
+          </div>
+          <ul class="add-plan__country-list">
+            <li><label><input class="visually-hidden" type="radio">а</label></li>
+            <li><label><input class="visually-hidden" type="radio">б</label></li>
+            <li><label><input class="visually-hidden" type="radio">в</label></li>
+            <li><label><input class="visually-hidden" type="radio">г</label></li>
+            <li><label><input class="visually-hidden" type="radio">д</label></li>
+
+            <li><label><input class="visually-hidden" type="radio">е</label></li>
+            <li><label><input class="visually-hidden" type="radio">з</label></li>
+            <li><label><input class="visually-hidden" type="radio">и</label></li>
+            <li><label><input class="visually-hidden" type="radio">к</label></li>
+            <li><label><input class="visually-hidden" type="radio">к</label></li>
+
+            <li><label><input class="visually-hidden" type="radio">м</label></li>
+            <li><label><input class="visually-hidden" type="radio">н</label></li>
+            <li><label><input class="visually-hidden" type="radio">о</label></li>
+            <li><label><input class="visually-hidden" type="radio">п</label></li>
+            <li><label><input class="visually-hidden" type="radio">р</label></li>
+
+            <li><label><input class="visually-hidden" type="radio">с</label></li>
+            <li><label><input class="visually-hidden" type="radio">т</label></li>
+            <li><label><input class="visually-hidden" type="radio">у</label></li>
+            <li><label><input class="visually-hidden" type="radio">ф</label></li>
+            <li><label><input class="visually-hidden" type="radio">х</label></li>
+
+            <li><label><input class="visually-hidden" type="radio">ч</label></li>
+            <li><label><input class="visually-hidden" type="radio">ш</label></li>
+            <li><label><input class="visually-hidden" type="radio">э</label></li>
+            <li><label><input class="visually-hidden" type="radio">ю</label></li>
+            <li><label><input class="visually-hidden" type="radio">я</label></li>
+          </ul>
+          <div class="add-plan__list">
+            <a class="add-plan__list-item" href="#">Австралия</a>
+            <a class="add-plan__list-item" href="#">Австрия</a>
+            <a class="add-plan__list-item" href="#">Азербайджан</a>
+            <a class="add-plan__list-item" href="#">Албания</a>
+            <a class="add-plan__list-item" href="#">Алжир</a>
+            <a class="add-plan__list-item" href="#">Ангола</a>
+            <a class="add-plan__list-item" href="#">Андорра</a>
+            <a class="add-plan__list-item" href="#">Антигуа и Барбудда</a>
+            <a class="add-plan__list-item" href="#">Аргентина</a>
+            <a class="add-plan__list-item" href="#">Армения</a>
+            <a class="add-plan__list-item" href="#">Афганистан</a>
+          </div>
+          <div class="add-plan__choice">
+            <a class="add-plan__btn" href="#">Добавить страну</a>
+          </div>
+          <a class="add-plan__btn btn" href="#">Следующий шаг</a>
+          <a class="add-plan__btn btn" htef="#">На шаг назад</a>
       </div>
-      <fieldset class="add-plan__fieldset add-plan__fieldset--one">
-        <legend class="add-plan__legend">
-          <span>Шаг 1.</span>
-          <span> Даты пребывания</span>
-        </legend>
-        <p class="add-plan__text">Укажите предпочтительное количество попутчиков, которых
-          вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-        <div class="add-plan__form-wrap add-plan__form-wrap--people">
-          <label class="add-plan__form-label" for="num-people">Ищу попутчиков:</label>
-          <button class="add-plan__form-btn add-plan__form-btn--decrease" type="button">-</button>
-          <input class="add-plan__form-input" type="text" name="people" value="2" id="num-people">
-          <button class="add-plan__form-btn add-plan__form-btn--increase" type="button">+</button>
-        </div>
-        <div class="add-plan__form-wrap add-plan__form-wrap--duration">
-          <label class="add-plan__form-label" for="num-duration">Длительность:</label>
-          <button class="add-plan__form-btn add-plan__form-btn--decrease" type="button">-</button>
-          <input class="add-plan__form-input" type="text" name="duration" value="2" id="num-duration">
-          <button class="add-plan__form-btn add-plan__form-btn--increase" type="button">+</button>
-        </div>
-        <div class="add-plan__form-wrap add-plan__form-wrap--child">
-          <input class="add-plan__form-input" type="checkbox" name="step1" value="2" id="num-child">
-          <label class="add-plan__form-label" for="num-child">Можно с детьми</label>
-        </div>
-        <div class="add-plan__form-wrap add-plan__form-wrap--month">
-          <button class="add-plan__form-btn add-plan__form-btn--decrease" type="button"></button>
-          <input class="add-plan__form-input" type="text" name="month" value="март 2019" id="num-month">
-          <button class="add-plan__form-btn add-plan__form-btn--increase" type="button"></button>
-        </div>
-        <div class="add-plan__form-wrap add-plan__form-wrap--month">
-          <table class="add-plan__table">
-            <thead>
-              <tr>
-                <th>П</th>
-                <th>В</th>
-                <th>С</th>
-                <th>Ч</th>
-                <th>П</th>
-                <th>С</th>
-                <th>В</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><button>23</button></td>
-                <td><button>24</button></td>
-                <td><button>25</button></td>
-                <td><button>26</button></td>
-                <td><button>27</button></td>
-                <td><button>28</button></td>
-                <td><button>1</button></td>
-              </tr>
-              <tr>
-                <td><button>2</button></td>
-                <td><button>3</button></td>
-                <td><button>4</button></td>
-                <td><button>5</button></td>
-                <td><button>6</button></td>
-                <td><button>7</button></td>
-                <td><button>8</button></td>
-              </tr>
-              <tr>
-                <td><button>9</button></td>
-                <td><button>10</button></td>
-                <td><button>11</button></td>
-                <td><button>12</button></td>
-                <td><button>13</button></td>
-                <td><button>14</button></td>
-                <td><button>15</button></td>
-              </tr>
-              <tr>
-                <td><button>16</button></td>
-                <td><button>17</button></td>
-                <td><button>18</button></td>
-                <td><button>19</button></td>
-                <td><button>20</button></td>
-                <td><button>21</button></td>
-                <td><button>22</button></td>
-              </tr>
-              <tr>
-                <td><button>34</button></td>
-                <td><button>24</button></td>
-                <td><button>25</button></td>
-                <td><button>26</button></td>
-                <td><button>27</button></td>
-                <td><button>28</button></td>
-                <td><button>29</button></td>
-              </tr>
-              <tr>
-                <td><button>30</button></td>
-                <td><button>31</button></td>
-                <td><button>1</button></td>
-                <td><button>2</button></td>
-                <td><button>3</button></td>
-                <td><button>4</button></td>
-                <td><button>5</button></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <a class="add-plan__btn btn">Следующий шаг</a>
       </fieldset>
 
-      <fieldset class="add-plan__fieldset add-plan__fieldset--two">
-        <legend class="add-plan__legend">
-          <span>Шаг 2.</span>
-          <span>Маршрут</span>
-        </legend>
-        <p class="add-plan__text">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
-        </p>
-        <div class="add-plan__form-wrap add-plan__form-wrap--country1">
-          <select class="add-plan__select">
-            <option class="add-plan__option">Босния и Герцеговина</option>
-          </select>
-          <div class="add-plan__flag">
-            <img src="#">
+      <div class="container">
+        <fieldset class="add-plan__fieldset add-plan__fieldset--three">
+          <div class="add-plan__legend">
+            <span>Шаг 3.</span>
+            <span>Развлечения</span>
           </div>
-        </div>
-        <div class="add-plan__form-wrap add-plan__form-wrap--country2">
-          <select class="add-plan__select">
-            <option class="add-plan__option">Чехия</option>
-          </select>
-          <div class="add-plan__flag">
-            <img src="#">
+          <p class="add-plan__text">Наконец, расскажите о своих планах времяпровождения.
+            Можно писать в свободной форме и ставить тэги.</p>
+          <div class="add-plan__textarea-wrap add-plan__textarea-wrap--one">
+            <label class="add-plan__label">
+              <p>Босния и Герцеговина</p>
+              <div class="add-plan__flag">
+                <img src="#">
+              </div>
+              <textarea class="add-plan__textarea" rows="#" cols="#" placeholder="План действий"></textarea>
+            </label>
           </div>
-        </div>
-        <a class="add-plan__country-btn" href="#">Добавить страну</a>
-        <div class="add-plan__choice">
-          <button class="add-plan__choice-btn">Выберите страну</button>
-          <table class="add-plan__table">
-            <tr>
-              <td><label><input type="text">а</label></td>
-              <td><label><input type="text">б</label></td>
-              <td><label><input type="text">в</label></td>
-              <td><label><input type="text">г</label></td>
-              <td><label><input type="text">д</label></td>
-            </tr>
-            <tr>
-              <td><label><input type="text">е</label></td>
-              <td><label><input type="text">з</label></td>
-              <td><label><input type="text">и</label></td>
-              <td><label><input type="text">к</label></td>
-              <td>
-                <labe><input type="text">л</label>
-              </td>
-            </tr>
-            <tr>
-              <td><label><input type="text">м</label></td>
-              <td><label><input type="text">н</label></td>
-              <td><label><input type="text">о</label></td>
-              <td><label><input type="text">п</label></td>
-              <td><label><input type="text">р</label></td>
-            </tr>
-            <tr>
-              <td><label><input type="text">с</label></td>
-              <td><label><input type="text">т</label></td>
-              <td><label><input type="text">у</label></td>
-              <td><label><input type="text">ф</label></td>
-              <td><label><input type="text">х</label></td>
-            </tr>
-            <tr>
-              <td><label><input type="text">ч</label></td>
-              <td><label><input type="text">ш</label></td>
-              <td><label><input type="text">э</label></td>
-              <td><label><input type="text">ю</label></td>
-              <td><label><input type="text">я</label></td>
-            </tr>
-          </table>
-          <div class="add-plan__list-a">
-            <a href="#">Австралия</a>
-            <a href="#">Австрия</a>
-            <a href="#">Азербайджан</a>
-            <a href="#">Албания</a>
-            <a href="#">Алжир</a>
-            <a href="#">Ангола</a>
-            <a href="#">Андорра</a>
-            <a href="#">Антигуа и Барбудда</a>
-            <a href="#">Аргентина</a>
-            <a href="#">Армения</a>
-            <a href="#">Афганистан</a>
-          </div>
-        </div>
-        <a class="add-plan__btn btn" href="#">Следующий шаг</a>
-        <a class="add-plan__btn btn" htef="#">На шаг назад</a>
-      </fieldset>
-      <fieldset class="add-plan__fieldset add-plan__fieldset--three">
-        <legend class="add-plan__legend">
-          <span>Шаг 3.</span>
-          <span>Развлечения</span>
-        </legend>
-        <p class="add-plan__text">Наконец, расскажите о своих планах времяпровождения.
-          Можно писать в свободной форме и ставить тэги.</p>
-        <div class="add-plan__textarea-wrap add-plan__textarea-wrap--one">
-          <label class="add-plan__label">
-            <p>Босния и Герцеговина</p>
-            <div class="add-plan__flag">
-              <img src="#">
-            </div>
-            <textarea class="add-plan__textarea" rows="#" cols="#" placeholder="План действий"></textarea>
-          </label>
-        </div>
-        <div class="add-plan__textarea-wrap add-plan__textarea-wrap--two">
-          <label class="add-plan__label">
-            <p>Чехия</p>
-            <div class="add-plan__flag">
-              <img src="#">
-            </div>
-            <textarea class="add-plan__textarea" rows="#" cols="#" placeholder="План действий">Пить пиво и лазить
+          <div class="add-plan__textarea-wrap add-plan__textarea-wrap--two">
+            <label class="add-plan__label">
+              <p>Чехия</p>
+              <div class="add-plan__flag">
+                <img src="#">
+              </div>
+              <textarea class="add-plan__textarea" rows="#" cols="#" placeholder="План действий">Пить пиво и лазить
             по старым замкам, наслаждаться архитектурой
             и вот это все.</textarea>
-          </label>
-        </div>
-        <button class="add-plan__btn btn" type="submit">Отправить</button>
-        <a class="add-plan__btn btn" htef="#">На шаг назад</a>
-      </fieldset>
+            </label>
+          </div>
+          <button class="add-plan__btn btn" type="submit">Отправить</button>
+          <a class="add-plan__btn btn" htef="#">На шаг назад</a>
+        </fieldset>
+      </div>
       </form>
     </section>
 
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__logo">
-      <a class="page-footer__link">
-        <img class="page-footer__img" src="#" width="100" height="20" alt="Логотип сервиса Погнали">
-      </a>
-    </div>
-    <ul class="page-footer__social social-list">
-      <li class="social-list__item">
-        <a class="social-list__link social-list__link--fb" href="#">Facebook</a>
-      </li>
-      <li class="social-list__item">
-        <a class="social-list__link social-list__link--vk" href="#">Вконтакте</a>
-      </li>
-      <li class="social-list__item">
-        <a class="social-list__link social-list__link--ig" href="#">Instagram</a>
-      </li>
-    </ul>
-    <div class="footer__copyright copyright">
-      <p class="copyright__text">Разработано</p>
-      <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive"></a>
+    <div class="container">
+      <div class="page-footer__logo">
+        <a href="index.html" class="page-footer__link">
+          <img class="page-footer__img" src="#" width="100" height="20" alt="Логотип сервиса Погнали">
+        </a>
+      </div>
+      <ul class="page-footer__social social-list">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--fb" href="#">Facebook</a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--vk" href="#">Вконтакте</a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--ig" href="#">Instagram</a>
+        </li>
+      </ul>
+      <div class="footer__copyright copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive"></a>
+      </div>
     </div>
   </footer>
 
