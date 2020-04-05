@@ -1,0 +1,47 @@
+.user-card {
+  background-color: $color-light;
+}
+
+.user-card__score {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $color-light;
+}
+
+.user-card__lev {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  color: $color-light;
+}
+
+.user-card__flags {
+  @include list-reset;
+}
+
+.user-card__link {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #1d2e5b;
+}
+
+.user-card__habits {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #444444;
+}
+
+.user-card__transport-list {
+  @include list-reset;
+}
+
+.user-card__text {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #444444;
+  text-transform: lowercase;
+}

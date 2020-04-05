@@ -1,0 +1,43 @@
+.countries-filter {
+  background-color: #e2e5f2;
+}
+
+.countries-filter__title {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  color: $color-dark;
+  text-transform: uppercase;
+}
+
+.countries-filter__continents {
+  @include list-reset;
+}
+
+.countries-filter__continent-link {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #192144;
+  opacity: 0.3;
+  text-transform: uppercase;
+}
+
+.countries-filter__letters {
+  @include list-reset;
+}
+
+.countries-filter__link {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #1d2e5b;
+  text-transform: uppercase;
+}
+
+.countries-filter__list-link {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #444444;
+}
