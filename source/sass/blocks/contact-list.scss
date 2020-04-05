@@ -1,0 +1,15 @@
+.contact-list {
+  @include list-reset;
+}
+
+.contact-list__link {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #192144;
+  text-transform: uppercase;
+}
+
+.contact-list__link--yellow {
+  color: #ffd74b;
+}

@@ -1,0 +1,29 @@
+.profile-plan__btn {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  color: $color-dark;
+  text-transform: uppercase;
+  background-color: #dfe3f0;
+}
+
+.profile-plan__legend {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #1d2e5b;
+  text-transform: uppercase;
+}
+
+.profile-plan__tags {
+  border: none;
+  overflow: hidden;
+  resize: none;
+}
+
+.profile-plan__title {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #1d2e5b;
+}

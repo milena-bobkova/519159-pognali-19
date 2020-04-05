@@ -1,0 +1,26 @@
+.about {
+  background-color: #192144;
+  background-image: url("../../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+}
+
+.about-title {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ff8d30;
+}
+
+.about__text {
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-light;
+}
+
+.about__text--light {
+  font-weight: 300;
+}
+
+.about__text--bold {
+  font-weight: 700;
+}

@@ -1,0 +1,12 @@
+.intro-top {
+  background: url("../../img/globe-back-mobile@1x.jpg"),
+    url("../../img/traveller-illustration-mobile@1x.png");
+  background-repeat: no-repeat;
+}
+
+.intro-top__text {
+  font-size: 35px;
+  line-height: 40px;
+  font-weight: 700;
+  color: $color-light;
+}

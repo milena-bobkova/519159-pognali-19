@@ -1,0 +1,42 @@
+.routes__title {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ff8d30;
+}
+
+.routes__text {
+  font-size: 16px;
+  line-height: 22px;
+  color: #444444;
+  font-weight: 300;
+}
+
+.routes__list {
+  @include list-reset;
+}
+
+.routes__info {
+  background-color: $color-light;
+}
+
+.routes__country-title {
+  font-size: 21px;
+  line-height: 21px;
+  color: $color-dark;
+  font-weight: 700;
+}
+
+.routs__description {
+  font-size: 16px;
+  line-height: 18px;
+  color: rgba(#444444, 0.3);
+  font-weight: 500;
+}
+
+.routes__users {
+  font-size: 16px;
+  line-height: 30px;
+  color: rgba(#444444, 0.3);
+  font-weight: 500;
+}

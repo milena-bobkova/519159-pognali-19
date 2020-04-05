@@ -1,0 +1,36 @@
+.mu-plans {
+  background-color: #dfe3f0;
+}
+
+.my-plans__list {
+  @include list-reset;
+}
+
+.my-plans__item {
+  background-color: $color-light;
+}
+
+.my-plans__country {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #1d2e5b;
+}
+
+.my-plans__travellers,
+.my-plans__date {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  color: #1d2e5b;
+  text-transform: uppercase;
+}
+
+.my-plans__change {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #000000;
+  opacity: 0.3;
+  text-transform: uppercase;
+}

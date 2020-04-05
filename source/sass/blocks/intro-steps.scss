@@ -1,0 +1,26 @@
+.intro-steps__list {
+  @include list-reset;
+}
+
+.intro-steps__item:nth-of-type(1) {
+  background-color: #ff8d30;
+}
+
+.intro-steps__item:nth-of-type(2) {
+  background-color: #ffa530;
+}
+
+.intro-steps__item:nth-of-type(3) {
+  background-color: #ffbd30;
+}
+
+.intro-steps__item:nth-of-type() {
+  background-color: #ffd74b;
+}
+
+.intro-steps__link {
+  font-style: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $color-dark;
+}
