@@ -3,6 +3,7 @@
 @import "variables";
 @import "mixins";
 @import "global";
+@import "blocks/page-section";
 @import "blocks/container";
 @import "blocks/btn";
 @import "blocks/page-header";
@@ -31,3 +32,5 @@
 @import "blocks/profile-plan";
 @import "blocks/my-plans";
 @import "blocks/add-plan";
+@import "blocks/travelers-catalog";
+@import "blocks/rates-modal";

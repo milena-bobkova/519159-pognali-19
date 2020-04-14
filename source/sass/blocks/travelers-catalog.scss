@@ -1,0 +1,307 @@
+.travelers-catalog {
+  margin-top: 30px;
+}
+
+.travelers-catalog__card-wrap {
+  margin-bottom: 10px;
+  padding: 15px 20px 22px 20px;
+  background-color: $color-light;
+  border-radius: 20px;
+}
+
+.travelers-catalog__card {
+  position: relative;
+}
+
+.travelers-catalog__card-pic {
+  float: left;
+  margin-right: 15px;
+  width: 70px;
+  height: 70px;
+}
+
+.travelers-catalog__card-picture {
+  border-radius: 50%;
+}
+
+.travelers-catalog__card-title {
+  margin: 0;
+  width: 180px;
+}
+
+.travelers-catalog__likes-btn {
+  position: absolute;
+  top: 40px;
+  left: 48px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #edeff6;
+  border: none;
+  font-size: 0;
+}
+
+.travelers-catalog__likes-num {
+  font-size: 14px;
+  font-weight: 700;
+  color: $color-dark;
+  text-transform: uppercase;
+}
+
+.travelers-catalog__card-habits {
+  width: 220px;
+  padding: 15px 0 20px 5px;
+  text-align: left;
+}
+
+.travelers-catalog__text {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: $color-grey;
+}
+
+.travelers-catalog__block-two {
+  padding-left: 5px;
+}
+
+.travelers-catalog__card-flags {
+  padding: 15px 0;
+}
+
+.travelers-catalog__card-flag {
+  padding-left: 40px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1d2e5b;
+  text-transform: uppercase;
+}
+
+.travelers-catalog__block-three {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.travelers-catalog__transport {
+  flex-grow: 1;
+}
+
+.travelers-catalog__transport-list {
+  padding: 15px 0;
+  display: flex;
+}
+
+.travelers-catalog__transport-item {
+  background-color: #edeff6;
+}
+
+.travelers-catalog__level {
+  width: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.travelers-catalog__button {
+  display: block;
+  width: 230px;
+  padding: 11px 0;
+  text-align: center;
+
+  &--mob {
+    display: none;
+  }
+}
+
+.travelers-catalog__more-button {
+  display: block;
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1d2e5b;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.travelers-catalog__pagination {
+  margin-bottom: 100px;
+}
+
+@media (min-width: $tablet-width) {
+  .travelers-catalog {
+    margin-top: 40px;
+  }
+
+  .travelers-catalog__card-wrap {
+    margin-bottom: 40px;
+    padding: 35px 25px 25px 35px;
+    width: 638px;
+  }
+
+  .travelers-catalog__card {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .travelers-catalog__card-pic {
+    width: 190px;
+    height: 190px;
+  }
+
+  .travelers-catalog__card-picture {
+    border-radius: 15px;
+  }
+
+  .travelers-catalog__card-title {
+    font-size: 30px;
+  }
+
+  .travelers-catalog__block-one {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .travelers-catalog__card-likes {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    order: 1;
+  }
+
+  .travelers-catalog__likes-btn {
+    position: initial;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .travelers-catalog__likes-num {
+    font-size: 20px;
+  }
+
+  .travelers-catalog__text {
+    font-size: 20px;
+    line-height: 24px;
+
+    &--none {
+      display: none;
+    }
+  }
+
+  .travelers-catalog__block-two {
+    order: 1;
+    flex-grow: 1;
+    padding-top: 20px;
+  }
+
+  .travelers-catalog__card-flags {
+    display: flex;
+    padding: 25px 0 0 0;
+  }
+
+  .travelers-catalog__card-flag {
+    padding-left: 70px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .travelers-catalog__block-three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .travelers-catalog__transport-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .travelers-catalog__transport {
+    background-color: transparent;
+  }
+
+  .travelers-catalog__button {
+    &--tab {
+      display: none;
+    }
+
+    &--mob {
+      display: block;
+      width: 145px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .travelers-catalog__card-wrap {
+    margin-bottom: 30px;
+    padding: 0;
+    width: 950px;
+  }
+
+  .travelers-catalog__card {
+    width: 950px;
+    height: 280px;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    &::after {
+      content: "";
+      width: 2px;
+      height: 285px;
+      background: linear-gradient(to bottom, transparent, #e5e5e5, transparent);
+      order: 3;
+    }
+  }
+
+  .travelers-catalog__block-one {
+    padding: 50px 35px;
+    order: 2;
+  }
+
+  .travelers-catalog__card-pic {
+    width: 285px;
+    height: 285px;
+    order: 1;
+  }
+
+  .travelers-catalog__card-picture {
+    border-radius: 20px 0 0 20px;
+  }
+
+  .travelers-catalog__card-want {
+    display: none;
+  }
+
+  .travelers-catalog__block-two {
+    padding: 40px;
+    height: 100px;
+    order: 4;
+  }
+
+  .travelers-catalog__card-flags {
+    padding: 0;
+    flex-direction: column;
+    align-self: baseline;
+  }
+
+  .travelers-catalog__card-flag {
+    width: 160px;
+  }
+
+  .travelers-catalog__block-three {
+    padding: 0 40px 30px 40px;
+    margin: 0;
+    flex-direction: row;
+    order: 5;
+  }
+
+  .travelers-catalog__transport-list {
+    flex-direction: row;
+  }
+}

@@ -1,24 +1,87 @@
 .travelers {
-  background-color: #192144;
+  background-color: $color-blue;
+  padding-top: 100px;
+  padding-bottom: 30px;
 }
 
-.travelers__title {
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: 700;
-  color: #ff8d30;
+.travelers__item {
+  background-color: $color-light;
 }
 
 .travelers__text {
-  font-size: 16px;
-  line-height: 22px;
-  color: $color-light;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 215px;
+
+  &:last-of-type {
+    width: 200px;
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
 }
 
-.travelers__text-light {
-  font-weight: 300;
+@media (min-width: $tablet-width) {
+  .travelers {
+    padding-top: 160px;
+    padding-bottom: 85px;
+  }
+
+  .travelers__item {
+    width: 285px;
+  }
+
+  .travelers__title {
+    padding-bottom: 50px;
+  }
+
+  .travelers__text {
+    padding-bottom: 30px;
+    width: 425px;
+
+    &:last-of-type {
+      padding-bottom: 55px;
+      width: 256px;
+      font-size: 21px;
+      line-height: 25px;
+    }
+  }
+
+  .travelers__button {
+    margin-top: 80px;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
 }
 
-.travelers__text-bold {
-  font-weight: 700;
+@media (min-width: $desktop-width) {
+  .travelers {
+    padding-top: 180px;
+    padding-bottom: 0;
+  }
+
+  .travelers__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 750px;
+  }
+
+  .travelers__title {
+    padding-bottom: 50px;
+  }
+
+  .travelers__text {
+    padding-bottom: 35px;
+
+    &:last-of-type {
+      padding-bottom: 60px;
+    }
+  }
+
+  .travelers__button {
+    margin-top: 20px;
+    margin-left: 70px;
+  }
 }

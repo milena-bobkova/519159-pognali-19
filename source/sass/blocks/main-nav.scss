@@ -1,3 +1,54 @@
 .main-nav {
+  margin: 0 auto;
+  padding-bottom: 35px;
   background-color: $color-light;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-nav__logo {
+  width: 100px;
+  height: 19px;
+}
+
+.main-nav__logo-wrap {
+  display: flex;
+  justify-content: space-between;
+  min-width: 270px;
+  padding: 26px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    width: auto;
+  }
+
+  .main-nav__logo-wrap {
+    order: -1;
+    width: 355px;
+  }
+
+  .main-nav__logo {
+    width: 166px;
+    height: 42px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1320px;
+    margin: 0;
+    padding: 30px 0 0 0;
+    background-color: $color-dark;
+  }
+
+  .main-nav__logo-wrap {
+    width: 300px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
 }

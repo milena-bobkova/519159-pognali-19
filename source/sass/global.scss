@@ -1,9 +1,18 @@
 body {
+  margin: 0;
+  padding: 0;
   font-family: $font-main;
+  font-size: $text-size;
+  line-height: $line-height;
 }
 
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {

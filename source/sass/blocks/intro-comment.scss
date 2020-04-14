@@ -1,17 +1,48 @@
 .intro-comment {
-  font-size: 16px;
-  line-height: 22px;
   color: $color-light;
 }
 
 .intro-comment__review {
+  display: flex;
+  flex-wrap: wrap;
+  width: 160px;
   margin: 0;
+  padding: 30px 25px 110px;
 }
 
 .intro-comment__text {
+  margin: 0;
+  padding-bottom: 20px;
   font-weight: 300;
 }
 
 .intro-comment__author {
   font-weight: 700;
+  font-style: normal;
+}
+
+@media (min-width: $tablet-width) {
+  .intro-comment__review {
+    width: 265px;
+    margin: 0;
+    padding: 70px 355px 280px 30px;
+  }
+
+  .intro-comment__text {
+    font-size: 28px;
+    line-height: 33px;
+    padding-bottom: 40px;
+  }
+
+  .intro-comment__author {
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .intro-comment__review {
+    justify-content: flex-end;
+    padding: 90px 10px 0 0;
+  }
 }

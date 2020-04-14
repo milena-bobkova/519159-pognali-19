@@ -1,8 +1,29 @@
+.rates {
+  padding-top: 110px;
+  padding-bottom: 10px;
+}
+
 .rates__title {
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: 700;
-  color: #ff8d30;
+  padding-bottom: 40px;
+  width: 105px;
+
+  &--business {
+    width: 100%;
+    padding: 0;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+}
+
+.rates__item {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 200px;
+  border-top: 1px solid #e1e3e9;
+
+  &:last-of-type {
+    border-bottom: 1px solid #e1e3e9;
+  }
 }
 
 .rates__list {
@@ -10,20 +31,126 @@
 }
 
 .rates__term {
-  font-size: 16px;
-  line-height: 22px;
+  margin: 0;
+  color: $color-grey;
   font-weight: 300;
-  color: #444444;
 }
 
 .rates__price {
-  font-size: 16px;
-  line-height: 22px;
+  margin: 0;
+  color: $color-grey;
   font-weight: 300;
-  color: #444444;
 }
 
 .rates__button {
+  display: block;
+  padding-top: 25px;
+  padding-bottom: 25px;
   font-weight: 700;
-  color: $color-dark;
+  color: $color-blue;
+  text-align: center;
+
+  &--mod {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 18px auto;
+    background-color: #f3f4f8;
+  }
+}
+
+.rates__business {
+  margin: 0 auto;
+  width: 270px;
+  border-radius: 20px;
+  box-shadow: 0 20px 25px 0 #dee5fc;
+}
+
+@media (min-width: $tablet-width) {
+  .rates {
+    padding-top: 130px;
+    padding-bottom: 55px;
+  }
+
+  .rates__title {
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 30px;
+    padding-bottom: 70px;
+    width: 485px;
+  }
+
+  .rates__list {
+    padding-bottom: 30px;
+  }
+
+  .rates__item {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 90px;
+    width: 565px;
+  }
+
+  .rates__term {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .rates__price {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .rates__button {
+    padding-left: 85px;
+    font-size: 20px;
+    text-align: left;
+
+    &--mod {
+      font-size: 24px;
+      text-align: center;
+      padding: 40px;
+    }
+  }
+
+  .rates__business {
+    width: 680px;
+    padding-top: 50px;
+    border-radius: 25px;
+  }
+
+  .rates__business-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .rates__mosal .rates__title {
+    padding-bottom: 50px;
+    align-self: center;
+  }
+
+  .rates__business .rates__item {
+    margin: 0;
+    width: 500px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .rates {
+    padding: 170px, 70px, 165px, 70px;
+  }
+
+  .rates__list {
+    padding-left: 70px;
+  }
+
+  .rates__item {
+    margin-left: 85px;
+    width: 815px;
+  }
+
+  .rates__business {
+    width: 750px;
+  }
 }

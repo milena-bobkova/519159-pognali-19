@@ -1,43 +1,224 @@
 .countries-filter {
+  padding-top: 60px;
   background-color: #e2e5f2;
 }
 
+.countries-filter__title-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .countries-filter__title {
-  font-size: 16px;
-  line-height: 22px;
+  margin: 0;
+  padding: 15px 25px;
+  width: 200px;
   font-weight: 700;
+  font-size: $text-size;
   color: $color-dark;
   text-transform: uppercase;
 }
 
+.countries-filter__btn {
+  width: 15px;
+  height: 15px;
+  align-self: center;
+  border: none;
+  font-size: 0;
+}
+
 .countries-filter__continents {
   @include list-reset;
+  order: 1;
+  padding-top: 20px;
+  padding-left: 25px;
 }
 
 .countries-filter__continent-link {
-  font-size: 16px;
-  line-height: 22px;
   font-weight: 700;
-  color: #192144;
+  color: $color-blue;
   opacity: 0.3;
   text-transform: uppercase;
 }
 
 .countries-filter__letters {
   @include list-reset;
+  margin: 25px 25px 300px 25px;
+  padding: 1px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 220px;
+  height: 206px;
+  background-color: #cbced9;
+}
+
+.countries-filter__letter {
+  position: relative;
+  width: 42px;
+  height: 40px;
+  padding-right: 1px;
+  background-color: $color-light;
+
+  &:nth-of-type(5n) {
+    padding-right: 0;
+  }
 }
 
 .countries-filter__link {
+  display: block;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 42px;
   font-weight: 500;
   color: #1d2e5b;
   text-transform: uppercase;
+  text-align: center;
+}
+
+.countries-filter__list {
+  position: absolute;
+  top: 220px;
+
+  &--dropdown {
+    display: block;
+  }
+
+  &--closed {
+    display: none;
+  }
 }
 
 .countries-filter__list-link {
-  font-size: 16px;
-  line-height: 22px;
+  display: block;
+  width: 210px;
   font-weight: 400;
-  color: #444444;
+  color: $color-grey;
+}
+
+.countries-filter__collapse {
+  width: 100%;
+  margin-bottom: 25px;
+  background-color: #d6daed;
+  line-height: 40px;
+  border: none;
+}
+
+@media (min-width: $tablet-width) {
+  .countries-filter__title {
+    display: none;
+  }
+
+  .countries-filter__btn {
+    width: 180px;
+    height: 24px;
+    padding-right: 30px;
+    margin-right: 25px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-blue;
+  }
+
+  .countries-filter__continents {
+    padding: 55px 30px;
+    width: 365px;
+    display: flex;
+    justify-content: space-between;
+    order: 0;
+  }
+
+  .countries-filter__continent-link {
+    font-size: 20px;
+  }
+
+  .countries-filter__letters {
+    margin: 0 0 70px 30px;
+    width: 380px;
+    height: 400px;
+    background-color: #e2e5f2;
+  }
+
+  .countries-filter__letter {
+    width: 75px;
+    height: 60px;
+    background-color: transparent;
+  }
+
+  .countries-filter__list {
+    top: 0;
+    left: 450px;
+  }
+
+  .countries-filter__link {
+    display: block;
+    font-size: 60px;
+    color: $color-blue;
+    opacity: 0.2;
+    font-weight: 700;
+  }
+
+  .countries-filter__collapse {
+    width: 619px;
+    margin: 0 35px 70px 35px;
+    font-size: 20px;
+    line-height: 100px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .countries-filter {
+    background-color: #edeff6;
+  }
+
+  .countries-filter__title {
+    display: block;
+    font-size: 20px;
+    width: 250px;
+    padding: 55px 35px;
+  }
+
+  .countries-filter__continents {
+    flex-grow: 1;
+    justify-content: flex-start;
+  }
+
+  .countries-filter__continent {
+    padding-right: 20px;
+  }
+
+  .countries-filter__letter {
+    display: flex;
+    width: 250px;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .countries-filter__list {
+    position: static;
+
+    &--closed {
+      display: block;
+    }
+  }
+
+  .countries-filter__letters {
+    margin: 20px 30px;
+    width: 100%;
+    height: auto;
+    align-items: stretch;
+    background-color: #edeff6;
+  }
+
+  .countries-filter__link {
+    margin: 50px 0;
+    opacity: 1;
+    text-align: left;
+  }
+
+  .countries-filter__collapse {
+    width: 100%;
+    margin: 50px 0;
+  }
 }
