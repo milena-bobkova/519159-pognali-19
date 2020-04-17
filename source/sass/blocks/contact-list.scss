@@ -1,15 +1,57 @@
 .contact-list {
   @include list-reset;
+  padding: 40px 0;
+}
+
+.contact-list__item {
+  padding-left: 60px;
 }
 
 .contact-list__link {
-  font-size: 16px;
-  line-height: 22px;
+  display: block;
+  padding: 11px 0;
   font-weight: 700;
-  color: #192144;
+  color: $color-blue;
   text-transform: uppercase;
 }
 
 .contact-list__link--yellow {
-  color: #ffd74b;
+  color: $color-yellow;
+}
+
+@media (min-width: $tablet-width) {
+  .contact-list {
+    width: 688px;
+    padding-left: 60px;
+  }
+
+  .contact-list__item {
+    padding-left: 90px;
+    width: 315px;
+  }
+
+  .contact-list__link {
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contact-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+
+    &--header {
+      width: 100px;
+    }
+  }
+
+  .contact-list__item {
+    padding-left: 120px;
+  }
+
+  .contact-list__link--header {
+    font-size: 0;
+  }
 }

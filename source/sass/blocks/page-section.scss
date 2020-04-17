@@ -1,0 +1,185 @@
+.page-section {
+  position: relative;
+  min-width: 320px;
+  margin-top: -60px;
+  background-color: $color-blue;
+  border-radius: 0 0 25px 25px;
+
+  &--intro {
+    margin: 0;
+    border-radius: 0;
+    z-index: 8;
+  }
+
+  &--about {
+    padding-top: 50px;
+    z-index: 7;
+  }
+
+  &--routes {
+    background-color: #edeff6;
+    z-index: 6;
+  }
+
+  &--travelers {
+    z-index: 5;
+  }
+
+  &--rates {
+    background-color: #edeff6;
+    z-index: 4;
+  }
+
+  &--cta {
+    z-index: 3;
+  }
+
+  &--map {
+    z-index: 2;
+  }
+
+  &--footer {
+    z-index: 1;
+  }
+
+  &--travel {
+    z-index: 3;
+  }
+
+  &--countries {
+    z-index: 2;
+  }
+
+  &--plans {
+    z-index: 2;
+  }
+
+  &--plan {
+    border-radius: 25px 25px 0 0;
+    z-index: 1;
+  }
+
+  &--my-plans {
+    border-radius: 25px 25px 0 0;
+    z-index: 2;
+  }
+
+  &--add-plan {
+    border-radius: 25px 25px 0 0;
+    z-index: 3;
+  }
+
+  &--footer-form {
+    z-index: 4;
+  }
+}
+
+.page-section__title {
+  margin: 0;
+  padding-left: 25px;
+  font-size: 24px;
+  font-weight: 700;
+  color: $color-orange;
+}
+
+.page-section__text {
+  margin: 0;
+  padding-left: 25px;
+  font-size: $text-size;
+  line-height: $line-height;
+  font-weight: 300;
+  color: $color-light;
+
+  &--grey {
+    color: $color-grey;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+}
+
+.page-section__btn {
+  display: block;
+  box-sizing: border-box;
+  width: 270px;
+  padding: 23px 22px;
+  background-color: $color-yellow;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1d2e5b;
+}
+
+@media (min-width: $tablet-width) {
+  .page-section {
+    border-radius: 0 0 40px 40px;
+
+    &--plan {
+      border-radius: 40px 40px 0 0;
+      z-index: 1;
+    }
+
+    &--my-plans {
+      border-radius: 40px 40px 0 0;
+      z-index: 2;
+    }
+
+    &--add-plan {
+      border-radius: 40px 40px 0 0;
+      z-index: 3;
+    }
+  }
+
+  .page-section__title {
+    padding-left: 35px;
+    font-size: 45px;
+  }
+
+  .page-section__text {
+    padding-left: 35px;
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .page-section__btn {
+    width: 619px;
+    padding: 30px 45px 30px 30px;
+    border-radius: 20px;
+    font-size: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-section {
+    border-radius: 0 0 60px 60px;
+
+    &--plan {
+      border-radius: 60px 60px 0 0;
+      z-index: 1;
+    }
+
+    &--my-plans {
+      border-radius: 60px 60px 0 0;
+      z-index: 2;
+    }
+
+    &--add-plan {
+      border-radius: 60px 60px 0 0;
+      z-index: 3;
+    }
+  }
+
+  .page-section__title {
+    padding-left: 70px;
+  }
+
+  .page-section__text {
+    padding-left: 70px;
+  }
+
+  .page-section__btn {
+    margin-left: 70px;
+    width: 275px;
+  }
+}

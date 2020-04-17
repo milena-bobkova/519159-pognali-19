@@ -1,10 +1,88 @@
-.map__title {
-  background-color: #ffd74b;
+.map {
+  position: relative;
 }
 
-.map__adress {
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 300;
+.map__title {
+  padding-top: 110px;
+  background-color: $color-yellow;
+  padding-bottom: 35px;
+}
+
+.map__address {
+  margin: 0;
+  margin-left: 60px;
+  padding-bottom: 35px;
+  width: 145px;
+  font-weight: 700;
   color: $color-dark;
+  text-transform: uppercase;
+}
+
+.map__btn {
+  display: block;
+  box-sizing: border-box;
+  padding: 20px 25px;
+  width: 270px;
+  font-weight: 700;
+  color: #1d2e5b;
+  border: 3px solid #1d2e5b;
+  border-radius: 10px;
+}
+
+.map__wrap {
+  min-height: 335px;
+}
+
+@media (min-width: $tablet-width) {
+  .map__title {
+    padding-bottom: 85px;
+  }
+
+  .map__address {
+    margin: 0;
+    margin-left: 125px;
+    padding-bottom: 40px;
+    width: 440px;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  .map__btn {
+    padding: 30px 45px 30px 35px;
+    margin-left: 35px;
+    margin-right: 35px;
+    width: 619px;
+    font-weight: 700;
+    font-size: 24px;
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map__title {
+    padding-bottom: 50px;
+  }
+
+  .map__title-wrap {
+    display: flex;
+    padding-bottom: 40px;
+  }
+
+  .map__address {
+    padding: 0;
+    display: block;
+    flex-grow: 7;
+    width: 440px;
+    padding-left: 125px;
+    font-weight: 700;
+    line-height: 78px;
+  }
+
+  .map__btn {
+    padding: 25px 45px 25px 30px;
+    margin: 0;
+    flex-grow: 3;
+    width: 225px;
+    border-radius: 15px;
+  }
 }
