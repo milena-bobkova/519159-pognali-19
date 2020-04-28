@@ -3,40 +3,82 @@
   background-color: #edeff6;
 }
 
-.profile-plan__level {
-  width: 100px;
-  height: 100px;
-  float: left;
-}
-
 .profile-plan__card {
-  padding-top: 60px;
-  padding-bottom: 40px;
+  padding: 60px 0;
+
   background-color: transparent;
 }
 
-.profile-plan__pic-wrap {
+.profile-plan__level {
+  position: relative;
+  float: left;
+
+  padding: 0 30px 0 20px;
+
   width: 100px;
   height: 100px;
+}
+
+.profile-plan__score {
+  position: absolute;
+  top: 23px;
+  left: 47px;
+
+  font-size: 38px;
+  line-height: 38px;
+  color: $color-dark;
+  border-bottom: 1px solid rgba($color-dark, 0.3);
+}
+
+.profile-plan__lev {
+  position: absolute;
+  top: 64px;
+  left: 53px;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 18px;
+  line-height: 22px;
+  color: $color-dark;
+}
+
+.profile-plan__circle {
+  width: 100px;
+  height: 100px;
+}
+
+.profile-plan__pic-wrap {
   float: right;
+}
+
+.profile-plan__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 .profile-plan__picture {
   border-radius: 50%;
 }
 
-.profile-plan__btn-pic--none {
+.profile-plan__btn-name--desk {
   display: none;
 }
 
-.profile-plan__clearfix {
+.clearfix::after {
+  content: "";
+  display: block;
   clear: both;
 }
 
 .profile-plan__btn {
-  width: 100%;
-  margin-bottom: 20px;
+  margin: 20px 0 25px 0;
+
+  width: 270px;
+
   display: block;
+
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
@@ -48,10 +90,15 @@
 }
 
 .profile-plan__fieldset {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  padding: 5px 25px 20px 25px;
   border: 1px solid #cbced9;
   border-radius: 5px;
   text-align: center;
+}
+
+.profile-plan__transport {
+  padding-bottom: 5px;
 }
 
 .profile-plan__legend {
@@ -62,8 +109,9 @@
   text-transform: uppercase;
 }
 
-.profile-plan__tags {
-  width: 100%;
+.profile-plan__tags-text {
+  width: 210px;
+
   border: none;
   overflow: hidden;
   resize: none;
@@ -78,13 +126,34 @@
   color: #1d2e5b;
 }
 
-.profile-plan__fieldset-transport {
-  margin-bottom: 30px;
+.profile-plan__transport-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-plan__transport-icon {
+  padding: 8px;
+  overflow: visible;
+
+  width: 18px;
+  height: 16px;
+
+  background-color: $color-light;
+  border-radius: 50%;
 }
 
 @media (min-width: $tablet-width) {
+  .profile-plan {
+    padding: 0;
+  }
+
+  .profile-plan__card {
+    margin-bottom: 0;
+    padding-bottom: 45px;
+  }
+
   .profile-plan__wrap {
-    padding: 60px 75px;
+    padding: 60px 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -104,19 +173,38 @@
     }
   }
 
+  .clearfix::after {
+    display: none;
+  }
+
   .profile-plan__title {
     font-size: 36px;
   }
 
   .profile-plan__level {
+    padding: 0 35px 0 30px;
     order: -2;
   }
 
+  .profile-plan__score {
+    top: 23px;
+    left: 61px;
+  }
+
+  .profile-plan__lev {
+    top: 64px;
+    left: 66px;
+  }
+
   .profile-plan__btn {
-    order: 5;
+    margin: 35px 35px 40px 35px;
     padding: 15px 0;
-    margin: 40px 0;
-    border-radius: 10px;
+
+    width: 615px;
+
+    order: 5;
+    border-radius: 20px;
+    font-size: 20px;
   }
 
   .profile-plan__pic-wrap {
@@ -125,34 +213,67 @@
     height: 95px;
   }
 
-  .profile-plan__picture {
+  .profile-plan__pic {
+    padding: 0 35px 0 30px;
+  }
+
+  .profile-plan__img {
     border-radius: 5px;
   }
 
   .profile-plan__fieldset {
+    margin: 0;
+    padding: 5px 35px 30px 35px;
     border-radius: 10px;
+    transform: rotate(180deg);
   }
 
-  .profile-plan__fieldset-transport {
+  .profile-plan__transport {
     margin: 0;
     order: -1;
     width: 315px;
   }
 
-  .profile-plan__fieldset-tags {
-    margin: 0;
+  .profile-plan__transport-wrap {
+    transform: rotate(180deg);
+  }
+
+  .profile-plan__transport-icon {
+    width: 20px;
+    height: 20px;
+    padding: 11px;
+    border-radius: 50%;
+    overflow: visible;
+  }
+
+  .profile-plan__tags {
+    margin: 0 35px;
     order: 7;
-    width: 100%;
+  }
+
+  .profile-plan__tags-text {
+    padding: 0;
+    width: 540px;
+    transform: rotate(180deg);
+  }
+
+  .profile-plan__legend {
+    font-size: 20px;
+    transform: rotate(180deg);
   }
 }
 
 @media (min-width: $desktop-width) {
   .profile-plan__card {
-    margin-top: -325px;
+    margin-top: -255px;
+    padding-bottom: 110px;
+    z-index: 4;
   }
 
   .profile-plan__wrap {
-    justify-content: space-around;
+    padding: 0 60px;
+    justify-content: space-between;
+    align-items: center;
 
     &::before {
       content: "";
@@ -165,51 +286,84 @@
       content: "";
       flex-basis: 100%;
       width: 0;
-      order: 0;
+      order: 5;
     }
   }
 
   .profile-plan__pic {
-    margin-left: 90px;
+    padding: 0 95px 0 0;
     width: 190px;
     height: 190px;
   }
 
+  .profile-plan__img {
+    width: 190px;
+    height: 190px;
+
+    border-radius: 15px 15px 0 0;
+  }
+
   .profile-plan__level {
-    order: -1;
     margin-left: auto;
+    margin-right: 10px;
+    order: -1;
+  }
+
+  .profile-plan__score {
+    color: $color-light;
+  }
+
+  .profile-plan__lev {
+    color: $color-light;
+    border-top: 1px solid #5c6172;
   }
 
   .profile-plan__pic-wrap {
     order: 2;
   }
 
-  .profile-plan__btn--none {
-    display: none;
-  }
+  .profile-plan__btn {
+    margin: 0 95px 25px 0;
+    margin-left: auto;
+    padding: 10px 0;
 
-  .profile-plan__btn-pic {
-    margin-bottom: 25px;
-    display: block;
-    padding: 11px 0;
     width: 190px;
-    font-size: 20px;
-    font-weight: 500;
-    color: #1d2e5b;
-    text-transform: uppercase;
-    text-align: center;
-    background-color: #dfe3f0;
-    border: 0 0 5px 5px;
+
+    order: 4;
+    border-radius: 0 0 10px 10px;
   }
 
-  .profile-plan__fieldset-tags {
-    order: 4;
-    width: 734px;
+  .profile-plan__btn-name {
+    &--mob {
+      display: none;
+    }
+
+    &--desk {
+      display: block;
+    }
+  }
+
+  .profile-plan__tags {
+    margin: 0 0 0 60px;
+    order: 6;
+    width: 725px;
     text-align: left;
   }
 
-  .profile-plan__fieldset-transport {
-    order: 5;
+  .profile-plan__tags-text {
+    width: 655px;
+  }
+
+  .profile-plan__fieldset {
+    padding: 5px 35px 25px;
+
+    &--tags {
+      text-align: right;
+    }
+  }
+
+  .profile-plan__transport {
+    order: 6;
     width: 385px;
   }
 }

@@ -1,17 +1,13 @@
 .user-list {
   @include list-reset;
   width: 100%;
-  padding: 10px 0;
-}
-
-.user-list__item {
-  margin-left: auto;
 }
 
 .user-list__login {
   display: block;
-  width: 100%;
   padding: 10px 0;
+
+  width: 270px;
   text-align: center;
 }
 
@@ -19,24 +15,24 @@
   .user-list {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     order: -1;
     width: 333px;
   }
 
+  .user-list__item {
+    margin-left: auto;
+  }
+
   .user-list__login {
     width: 190px;
-    font-size: 20px;
-    line-height: 30px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .user-list {
-    order: 1;
+    display: flex;
     width: 190px;
-  }
-
-  .user-list__login {
-    width: 185px;
+    order: 1;
   }
 }

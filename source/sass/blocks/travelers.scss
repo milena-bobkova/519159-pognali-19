@@ -1,83 +1,381 @@
 .travelers {
-  background-color: $color-blue;
-  padding-top: 100px;
+  position: relative;
+  padding-top: 90px;
   padding-bottom: 30px;
+  background-color: $color-blue;
+
+  background-image: url("../img/smolov-back-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: 150px 100px;
+  background-size: 143px 143px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/smolov-back-desktop@2x.png");
+    background-repeat: no-repeat;
+    background-position: 150px 100px;
+    background-size: 143px 143px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    content: "";
+    width: 110px;
+    height: 135px;
+    border-radius: 0 15px 15px 0;
+    background-color: #141b3b;
+    z-index: -1;
+  }
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+
+    top: 370px;
+    left: -10px;
+    content: "";
+
+    width: 71px;
+    height: 71px;
+
+    border-radius: 5px;
+
+    background-image: url("../img/rogovaya-back-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-size: 71px 71px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/rogovaya-back-mobile@2x.png");
+      background-repeat: no-repeat;
+      background-size: 71px 71px;
+    }
+  }
+}
+
+.travelers__wrap {
+  padding-top: 35px;
 }
 
 .travelers__item {
+  margin-bottom: 10px;
+
+  position: relative;
+  width: 270px;
   background-color: $color-light;
+}
+
+.travelers__card-wrap {
+  padding-bottom: 10px;
+}
+
+.travelers__info {
+  padding: 25px 30px;
+}
+
+.travelers__title {
+  padding-left: 25px;
 }
 
 .travelers__text {
   margin: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 215px;
+  padding: 20px 25px;
 
   &:last-of-type {
-    width: 200px;
     padding-top: 0;
     padding-bottom: 60px;
   }
 }
 
+.travelers__pic {
+  position: relative;
+}
+
+.travelers__level {
+  position: absolute;
+  top: 17px;
+  left: 18px;
+
+  display: flex;
+  align-items: center;
+}
+
+.travelers__score {
+  position: absolute;
+  top: 10px;
+  left: 16px;
+
+  border-bottom: 1px solid rgba($color-light, 0.3);
+}
+
+.travelers__circle {
+  width: 60px;
+  height: 60px;
+}
+
+.travelers__circle-bg {
+  fill: rgba(#000000, 0.6);
+}
+
+.travelers__lev {
+  position: absolute;
+  top: 33px;
+  left: 17px;
+
+  font-size: 14px;
+  font-weight: 400;
+  color: $color-light;
+}
+
+.travelers__img {
+  width: 270px;
+  height: 270px;
+
+  border-radius: 10px 10px 0 0;
+}
+
+.travelers__flags {
+  @include list-reset;
+  position: absolute;
+  top: 260px;
+  z-index: 1;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.travelers__flag {
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+}
+
+.travelers__flag-icon {
+  width: 34px;
+  height: 24px;
+}
+
+.travelers__title-link {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 10px;
+    left: -15px;
+
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+}
+
+.travelers__title-link--off {
+  &::before {
+    background-color: #f97676;
+  }
+}
+
+.travelers__title-link--on {
+  &::before {
+    background-color: #81e31e;
+  }
+}
+
+.travelers__habits {
+  padding: 15px 0;
+}
+
+.travelers__transport-list {
+  display: flex;
+  align-items: center;
+}
+
+.travelers__transport-item {
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+}
+
+
 @media (min-width: $tablet-width) {
   .travelers {
     padding-top: 160px;
     padding-bottom: 85px;
+
+    background-image: url("../img/rogovaya-back-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: 400px 130px;
+    background-size: 285px 285px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/rogovaya-back-desktop@2x.png");
+      background-repeat: no-repeat;
+      background-position: 400px 130px;
+      background-size: 285px 285px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 130px;
+      left: 40px;
+      content: "";
+      width: 210px;
+      height: 210px;
+      border-radius: 20px;
+      z-index: -1;
+    }
+
+    &::after {
+      position: absolute;
+      z-index: -1;
+
+      top: 450px;
+      left: 40px;
+      content: "";
+
+      width: 210px;
+      height: 210px;
+
+      border-radius: 15px;
+
+      background-image: url("../img/smolov-back-desktop@1x.png");
+      background-repeat: no-repeat;
+      background-size: 143px 143px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/smolov-back-desktop@2x.png");
+        background-repeat: no-repeat;
+        background-size: 143px 143px;
+      }
+    }
+  }
+
+  .travelers__wrap {
+    padding-top: 35px;
   }
 
   .travelers__item {
     width: 285px;
   }
 
+  .travelers__info {
+    padding: 30px;
+  }
+
+  .travelers__habits {
+    padding: 23px 0;
+  }
+
   .travelers__title {
-    padding-bottom: 50px;
+    padding: 0 30px 40px 30px;
   }
 
   .travelers__text {
-    padding-bottom: 30px;
+    padding: 20px 25px 30px 35px;
     width: 425px;
 
     &:last-of-type {
-      padding-bottom: 55px;
+      padding-bottom: 65px;
       width: 256px;
       font-size: 21px;
       line-height: 25px;
     }
   }
 
+  .travelers__card-wrap {
+    padding: 0 30px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .travelers__img {
+    width: 285px;
+    height: 285px;
+
+    border-radius: 10px 10px 0 0;
+  }
+
+  .travelers__level {
+    top: 20px;
+    left: 20px;
+  }
+
+  .travelers__flags {
+    top: 275px;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .travelers__flag {
+    padding: 0 10px;
+  }
+
   .travelers__button {
-    margin-top: 80px;
-    margin-left: 35px;
-    margin-right: 35px;
+    margin: 70px 35px 0 35px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .travelers {
-    padding-top: 180px;
+    padding-top: 150px;
     padding-bottom: 0;
+
+    background-position: 190px 450px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-position: 190px 450px;
+    }
+
+    &::before {
+      top: 130px;
+      left: 60px;
+    }
+
+    &::after {
+      top: 200px;
+      left: 540px;
+    }
   }
 
   .travelers__wrap {
+    padding: 40px 60px 130px 60px;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    box-sizing: border-box;
-    height: 750px;
   }
 
   .travelers__title {
-    padding-bottom: 50px;
+    padding: 0 30px 60px 65px;
   }
 
   .travelers__text {
-    padding-bottom: 35px;
+    padding: 0 30px 35px 65px;
+    width: 425px;
 
     &:last-of-type {
-      padding-bottom: 60px;
+      padding-bottom: 65px;
     }
+  }
+
+  .travelers__card-wrap {
+    padding: 0;
+    position: absolute;
+    top: 40px;
+    left: 750px;
+
+    width: 630px;
+  }
+
+  .travelers__item {
+    margin: 0;
   }
 
   .travelers__button {

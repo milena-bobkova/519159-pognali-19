@@ -1,51 +1,258 @@
 .main-nav {
-  margin: 0 auto;
+  position: fixed;
+  z-index: 15;
+
   padding-bottom: 35px;
-  background-color: $color-light;
+
   display: flex;
   flex-wrap: wrap;
+
+  background-color: $color-light;
+
+  &--closed {
+    position: fixed;
+    z-index: 15;
+    padding-bottom: 0;
+    background-color: $color-dark;
+  }
+}
+
+.main-nav__toggle {
+  position: relative;
+  padding: 0;
+
+  display: block;
+  width: 25px;
+  height: 25px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.main-nav__burger {
+  position: relative;
+
+  display: block;
+  width: 25px;
+  height: 25px;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 10px;
+    left: 2px;
+
+    width: 20px;
+    height: 2px;
+
+    background-color: #cccccc;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav--closed .main-nav__burger {
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    width: 25px;
+    height: 3px;
+
+    background-color: #cccccc;
+    transform: rotate(0);
+  }
+
+  &::before {
+    top: 7px;
+    left: 0;
+  }
+
+  &::after {
+    top: 15px;
+    left: 0;
+  }
+}
+
+.main-nav--closed .main-nav__list {
+  display: none;
 }
 
 .main-nav__logo {
+  display: block;
   width: 100px;
   height: 19px;
+
+  background-image: url("../img/logo-mobile-blue@1x.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/logo-mobile-blue@2x.png");
+  }
+}
+
+.main-nav--closed .main-nav__logo {
+  background-image: url("../img/logo-mobile-white@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/logo-mobile-white@2x.png");
+  }
 }
 
 .main-nav__logo-wrap {
+  padding: 26px 0;
+
+  min-width: 270px;
+
   display: flex;
   justify-content: space-between;
-  min-width: 270px;
-  padding: 26px 0;
+  align-items: center;
+}
+
+.main-nav__inner-icon {
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
   .main-nav {
-    width: auto;
+    width: 688px;
+
+    &--closed {
+      background-color: #182044;
+
+      .main-nav__inner-page {
+        background-color: $color-dark;
+      }
+    }
   }
 
   .main-nav__logo-wrap {
-    order: -1;
+    padding: 46px 0;
+
     width: 355px;
+    order: -1;
   }
 
   .main-nav__logo {
     width: 166px;
     height: 42px;
+
+    background-image: url("../img/logo-tablet-blue@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/logo-tablet-blue@2x.png");
+    }
+  }
+
+  .main-nav--closed .main-nav__logo {
+    background-image: url("../img/logo-tablet-white@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/logo-tablet-white@2x.png");
+    }
+  }
+
+  .main-nav--closed .main-nav__list:nth-of-type(2) {
+    display: flex;
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-nav {
+    padding: 30px 60px 0 60px;
     flex-direction: row;
-    justify-content: space-between;
-    width: 1320px;
-    margin: 0;
-    padding: 30px 0 0 0;
+    justify-content: flex-start;
+
     background-color: $color-dark;
   }
 
+  .main-nav--closed .main-nav__list:nth-of-type(1) {
+    display: flex;
+  }
+
+  .main-nav__inner-link span {
+    display: none;
+  }
+
+  .main-nav__inner-icon {
+    display: block;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+    overflow: visible;
+
+    &--phone {
+      padding: 16px;
+      background-color: $color-orange;
+      fill: $color-dark;
+    }
+
+    &--mail {
+      padding: 16px;
+      background-color: #ffbd30;
+      fill: $color-dark;
+    }
+  }
+
+  .main-nav__inner-link:hover .main-nav__inner-icon {
+    &--phone {
+      background-color: #f26926;
+    }
+
+    &--mail {
+      background-color: #ff8d30;
+    }
+  }
+
+  .main-nav__inner-link:active .main-nav__inner-icon {
+    &--phone {
+      fill: rgba($color-dark, 0.3);
+    }
+
+    &--mail {
+      fill: rgba($color-dark, 0.3);
+    }
+  }
+
   .main-nav__logo-wrap {
+    padding: 20px 0;
+
     width: 300px;
+
+    display: flex;
+
+    &::after {
+      content: "";
+      width: 60px;
+      height: 2px;
+
+      background-color: $color-light;
+    }
+  }
+
+  .main-nav__logo {
+    width: 200px;
+    height: 52px;
+
+    background-image: url("../img/logo-desktop-white@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/logo-desktop-white@2x.png");
+    }
   }
 
   .main-nav__toggle {

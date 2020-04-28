@@ -1,15 +1,13 @@
 .contact-list {
   @include list-reset;
-  padding: 40px 0;
-}
-
-.contact-list__item {
-  padding-left: 60px;
+  padding: 50px 0 45px;
+  width: 270px;
 }
 
 .contact-list__link {
-  display: block;
-  padding: 11px 0;
+  display: flex;
+  align-items: center;
+
   font-weight: 700;
   color: $color-blue;
   text-transform: uppercase;
@@ -19,39 +17,59 @@
   color: $color-yellow;
 }
 
-@media (min-width: $tablet-width) {
-  .contact-list {
-    width: 688px;
-    padding-left: 60px;
+.contact-list__icon {
+  margin-right: 15px;
+  overflow: visible;
+
+  background-color: #121836;
+  border-radius: 50%;
+
+  fill: $color-yellow;
+
+  &--phone {
+    padding: 13px;
   }
 
-  .contact-list__item {
-    padding-left: 90px;
-    width: 315px;
+  &--mail {
+    padding: 16px 13px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contact-list {
+    padding: 95px 60px;
+
+    width: 688px;
   }
 
   .contact-list__link {
     font-size: 28px;
     line-height: 28px;
   }
+
+  .contact-list__icon {
+    margin-right: 20px;
+
+    width: 28px;
+    height: 22px;
+
+    &--phone {
+      padding: 21px 20px;
+    }
+
+    &--mail {
+      padding: 23px 20px;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
-  .contact-list {
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-
-    &--header {
-      width: 100px;
-    }
+  .contact-list__icon {
+    display: none;
   }
 
   .contact-list__item {
-    padding-left: 120px;
-  }
-
-  .contact-list__link--header {
-    font-size: 0;
+    width: 50px;
+    height: 50px;
   }
 }

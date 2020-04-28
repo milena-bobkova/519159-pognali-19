@@ -13,44 +13,35 @@
 }
 
 .my-plans__item {
+  padding: 20px 25px;
+  margin-bottom: 15px;
+
   background-color: $color-light;
   border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 10px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .my-plans__country {
   margin: 0;
-  position: relative;
-  padding-bottom: 20px;
-  padding-left: 20px;
+  padding: 0 0 20px 0;
+
+  display: flex;
+  justify-content: flex-start;
+
   font-size: 16px;
   line-height: 16px;
   font-weight: 700;
   color: #14171f;
 }
 
-.my-plans__country-one::after {
-  content: "1.";
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 1px;
-  left: 1px;
-}
-
-.my-plans__country-two::after {
-  content: "2.";
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 1px;
-  left: 1px;
-}
-
 .my-plans__travellers,
 .my-plans__date {
   margin: 0;
+  padding: 2px 0;
+
   font-size: 14px;
   line-height: 14px;
   font-weight: 500;
@@ -58,27 +49,43 @@
   text-transform: uppercase;
 }
 
-.my-plans__date {
-  padding-bottom: 20px;
-}
-
 .my-plans__change {
+  margin-top: 20px;
+
+  display: block;
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
-  color: #000000;
-  opacity: 0.3;
+  color: rgba(#000000, 0.3);
   text-transform: uppercase;
 }
 
 @media (min-width: $tablet-width) {
+  .my-plans {
+    padding: 55px 0 130px;
+  }
+
+  .my-plans__title {
+    padding: 0 0 60px 30px;
+  }
+
+  .my-plans__list {
+    padding: 0 35px;
+  }
+
   .my-plans__item {
+    margin: 0 0 10px 0;
+    padding: 0;
+
+    width: 619px;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 619px;
-    margin: 10px 30px;
-    padding: 0;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
 
     &::after {
       content: "";
@@ -90,52 +97,66 @@
   }
 
   .my-plans__country {
+    padding: 40px 35px 45px;
+    width: 100%;
+
     order: 1;
-    position: relative;
-    padding: 40px 50px 30px 35px;
+    justify-content: space-between;
+
     font-size: 24px;
   }
 
-  .my-plans__country-one::after {
-    content: "1.";
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 35px;
-    left: 570px;
+  .my-plans__country-number {
+    order: 1;
+    font-size: 20px;
   }
 
-  .my-plans__country-two::after {
-    content: "2.";
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 35px;
-    left: 570px;
+  .my-plans__info {
+    padding: 0 35px;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    order: 3;
   }
 
   .my-plans__travellers {
-    order: 3;
-    padding: 25px 20px;
+    padding: 17px 0;
+
     font-size: 20px;
   }
 
   .my-plans__date {
-    order: 4;
-    padding: 25px 20px;
+    padding: 17px 0;
+
     font-size: 20px;
   }
 
   .my-plans__change {
-    order: 5;
-    padding: 25px 20px;
+    margin: 0;
+    padding: 17px 0;
+
     font-size: 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .my-plans {
+    padding-bottom: 125px;
+  }
+
+  .my-plans__title {
+    padding: 0 0 60px 70px;
+  }
+
+  .my-plans__list {
+    padding: 0 0 0 60px;
+  }
+
   .my-plans__item {
-    width: 1256px;
+    margin-bottom: 15px;
+    width: 100%;
 
     &::after {
       display: none;
@@ -144,44 +165,35 @@
 
   .my-plans__country {
     order: 0;
-    padding: 35px 0 35px 90px;
-    flex-grow: 5;
+    padding: 40px;
+
+    width: 500px;
+
+    justify-content: flex-start;
   }
 
-  .my-plans__country-one::after {
-    content: "1.";
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 35px;
-    left: 50px;
+  .my-plans__country-number {
+    margin-right: 40px;
+    order: 0;
   }
 
-  .my-plans__country-two::after {
-    content: "2.";
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 35px;
-    left: 50px;
+  .my-plans__info {
+    padding: 0 40px;
+
+    width: 600px;
   }
 
   .my-plans__travellers {
-    order: 0;
-    flex-grow: 1;
     padding: 35px 0;
-    font-size: 20px;
   }
 
   .my-plans__date {
-    flex-grow: 1;
-    order: 0;
     padding: 35px 0;
   }
 
   .my-plans__change {
-    flex-grow: 1;
-    order: 0;
     padding: 35px 0;
+
+    text-align: right;
   }
 }

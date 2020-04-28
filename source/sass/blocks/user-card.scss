@@ -4,8 +4,9 @@
 }
 
 .user-card {
+  position: relative;
+
   border-radius: 10px;
-  margin-bottom: 10px;
 }
 
 .user-card__picture {
@@ -13,7 +14,29 @@
   height: 270px;
 }
 
+.user-card__level {
+  position: relative;
+}
+
+.user-card__circle {
+  width: 45px;
+  height: 45px;
+}
+
+.user-card__circle-bg {
+  fill: transparent;
+}
+
+.user-card__circle-progress {
+  stroke: $color-orange;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  fill: transparent;
+}
+
 .user-card__score {
+  position: absolute;
+
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
@@ -29,13 +52,14 @@
   line-height: 14px;
   font-weight: 400;
   color: $color-light;
+
+  display: none;
 }
 
 .user-card__info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 25px;
 }
 
 .user-card__flags {
@@ -44,20 +68,19 @@
 
 .user-card__title {
   margin: 0;
-  padding-bottom: 15px;
 }
 
 .user-card__link {
-  padding-top: 25px;
+  display: block;
   text-align: center;
-  font-size: 21px;
+  font-size: 20px;
+  line-height: 20px;
   font-weight: 700;
   color: #1d2e5b;
 }
 
 .user-card__habits {
   margin: 0;
-  padding-bottom: 15px;
   text-align: center;
   font-size: 16px;
   line-height: 18px;
@@ -69,10 +92,15 @@
   @include list-reset;
 }
 
-.user-card__transport-item {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+.user-card__transport-icon {
+  width: 24px;
+  height: 21px;
+
+  fill: rgba(#000000, 0.15);
+
+  &--on {
+    fill: #1d2e5b;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -85,7 +113,6 @@
 
   .user-card {
     border-radius: 20px;
-    margin-bottom: 20px;
   }
 
   .user-card__picture {
@@ -94,8 +121,8 @@
   }
 
   .user-card__link {
-    padding-top: 30px;
     font-size: 24px;
+    display: inline-block;
   }
 
   .user-card__habits {
@@ -104,15 +131,13 @@
     font-size: 20px;
     line-height: 24px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .user-card__wrap {
-    flex-direction: row;
-    justify-content: space-between;
-    order: 1;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 180px;
+  .user-card__lev {
+    display: block;
+  }
+
+  .user-card__circle {
+    width: 60px;
+    height: 60px;
   }
 }
