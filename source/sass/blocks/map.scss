@@ -3,86 +3,146 @@
 }
 
 .map__title {
-  padding-top: 110px;
+  padding: 95px 0 35px;
+
   background-color: $color-yellow;
-  padding-bottom: 35px;
 }
 
 .map__address {
   margin: 0;
-  margin-left: 60px;
-  padding-bottom: 35px;
-  width: 145px;
+  padding-bottom: 30px;
+
+  display: flex;
+
+  width: 210px;
+
   font-weight: 700;
   color: $color-dark;
   text-transform: uppercase;
 }
 
 .map__btn {
-  display: block;
-  box-sizing: border-box;
-  padding: 20px 25px;
-  width: 270px;
-  font-weight: 700;
-  color: #1d2e5b;
+  padding: 17px 30px 17px 22px;
+
   border: 3px solid #1d2e5b;
-  border-radius: 10px;
+}
+
+.map__location-icon {
+  margin-right: 15px;
+  padding: 11px 16px;
+
+  fill: $color-yellow;
+  overflow: visible;
+  background-color: #121936;
+  border-radius: 50%;
 }
 
 .map__wrap {
-  min-height: 335px;
+  position: relative;
+  margin-top: -30px;
+  height: 335px;
+}
+
+.map__marker-icon {
+  position: absolute;
+  top: 140px;
+  left: 140px;
 }
 
 @media (min-width: $tablet-width) {
   .map__title {
-    padding-bottom: 85px;
+    padding: 105px 0 85px;
   }
 
   .map__address {
-    margin: 0;
-    margin-left: 125px;
+    margin: 0 auto;
     padding-bottom: 40px;
-    width: 440px;
+
+    width: 619px;
+
+    align-items: center;
+
     font-size: 28px;
+    line-height: 28px;
     font-weight: 700;
   }
 
+  .map__location-icon {
+    margin-right: 25px;
+    padding: 17px 23px;
+
+    width: 20px;
+    height: 34px;
+  }
+
   .map__btn {
-    padding: 30px 45px 30px 35px;
-    margin-left: 35px;
-    margin-right: 35px;
+    margin: 0 auto;
+    padding: 28px 40px 28px 35px;
+
     width: 619px;
+
     font-weight: 700;
     font-size: 24px;
+    line-height: 24px;
     border-radius: 20px;
+  }
+
+  .map__wrap {
+    margin-top: -80px;
+    height: 570px;
+  }
+
+  .map__marker-icon {
+    top: 270px;
+    left: 350px;
+
+    width: 55px;
+    height: 55px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .map__title {
-    padding-bottom: 50px;
+    padding: 110px 0 50px 0;
   }
 
   .map__title-wrap {
     display: flex;
-    padding-bottom: 40px;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .map__address {
-    padding: 0;
-    display: block;
-    flex-grow: 7;
-    width: 440px;
-    padding-left: 125px;
+    margin: 0;
+    padding: 0 0 0 220px;
+
+    width: 560px;
+
     font-weight: 700;
-    line-height: 78px;
+  }
+
+  .map__location-icon {
+    margin-right: 30px;
+    padding: 24px 32px;
+
+    width: 25px;
+    height: 45px;
   }
 
   .map__btn {
-    padding: 25px 45px 25px 30px;
-    margin: 0;
-    flex-grow: 3;
-    width: 225px;
-    border-radius: 15px;
+    margin: 0 70px 0 0;
+    padding: 27px 45px 27px 30px;
+
+    width: 320px;
+  }
+
+  .map__wrap {
+    margin-top: -200px;
+    height: 600px;
+  }
+
+  .map__marker-icon {
+    top: 350px;
+    left: 700px;
   }
 }

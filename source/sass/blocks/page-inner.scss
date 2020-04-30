@@ -1,0 +1,22 @@
+.page-inner__nav {
+  background-color: $color-light;
+
+  &--closed {
+    background-color: $color-dark;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-inner__nav--closed .page-inner__nav-list:nth-of-type(2) {
+    display: flex;
+  }
+
+  .page-inner__nav-list:nth-of-type(3) {
+    padding: 0;
+    margin-left: 20px;
+
+    display: flex;
+    align-items: center;
+    width: 100px;
+  }
+}

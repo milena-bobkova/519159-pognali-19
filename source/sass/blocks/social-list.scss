@@ -2,7 +2,7 @@
   @include list-reset;
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 270px;
 }
 
 .social-list__item {
@@ -13,9 +13,55 @@
   }
 }
 
+.social-list__link {
+  width: 24px;
+  height: 24px;
+
+  display: block;
+  text-align: center;
+}
+
+.social-list__icon {
+  stroke: $color-blue;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social-list {
+    padding: 35px 75px 50px;
+
+    width: 688px;
+    justify-content: flex-start;
+  }
+
+  .social-list__item {
+    margin-right: 30px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  .social-list__link {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-list__icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .social-list {
     display: none;
-    width: 688px;
   }
 }

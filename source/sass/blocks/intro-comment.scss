@@ -1,4 +1,5 @@
 .intro-comment {
+  padding-top: 40px;
   color: $color-light;
 }
 
@@ -7,12 +8,12 @@
   flex-wrap: wrap;
   width: 160px;
   margin: 0;
-  padding: 30px 25px 110px;
+  padding: 30px 85px 110px 25px;
 }
 
 .intro-comment__text {
   margin: 0;
-  padding-bottom: 20px;
+  padding-bottom: 18px;
   font-weight: 300;
 }
 
@@ -23,15 +24,15 @@
 
 @media (min-width: $tablet-width) {
   .intro-comment__review {
-    width: 265px;
+    width: 270px;
     margin: 0;
-    padding: 70px 355px 280px 30px;
+    padding: 50px 30px 295px;
   }
 
   .intro-comment__text {
     font-size: 28px;
     line-height: 33px;
-    padding-bottom: 40px;
+    padding-bottom: 45px;
   }
 
   .intro-comment__author {
@@ -41,8 +42,12 @@
 }
 
 @media (min-width: $desktop-width) {
+  .intro-comment {
+    padding-top: 220px;
+  }
+
   .intro-comment__review {
+    padding: 0 10px 0 0;
     justify-content: flex-end;
-    padding: 90px 10px 0 0;
   }
 }

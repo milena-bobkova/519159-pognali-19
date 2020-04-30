@@ -1,0 +1,216 @@
+.level {
+  width: 220px;
+}
+
+.level__controls {
+  position: relative;
+  margin-bottom: 25px;
+  display: flex;
+
+  &::before {
+    position: absolute;
+    top: 11px;
+    left: 100px;
+
+    content: "";
+    width: 16px;
+    height: 11px;
+    background-color: $color-light;
+  }
+
+  &::after {
+    position: absolute;
+    top: 16px;
+    left: 101px;
+
+    content: "";
+    width: 16px;
+    height: 1px;
+    background-color: rgba(#1d2e5b, 0.2);
+  }
+}
+
+.level__controls label {
+  display: inline-block;
+  vertical-align: top;
+
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 500;
+  color: #1d2e5b;
+
+  cursor: pointer;
+}
+
+.level__min-level input,
+.level__max-level input {
+  margin: 0;
+
+  width: 110px;
+  height: 34px;
+
+  box-sizing: border-box;
+
+  color: inherit;
+  font: inherit;
+  text-align: center;
+  border: 1px solid rgba(#1d2e5b, 0.2);
+}
+
+.level__min-level input {
+  margin-right: -1px;
+  border-radius: 5px 0 0 5px;
+}
+
+.level__max-level input {
+  border-radius: 0 5px 5px 0;
+}
+
+.level__range-controls {
+  position: relative;
+  height: 10px;
+}
+
+.level__scale {
+  height: 2px;
+  width: 220px;
+  background-color: rgba(#1d2e5b, 0.2);
+}
+
+.level__bar {
+  position: absolute;
+  top: 0;
+  left: 70px;
+  width: 68%;
+  height: 2px;
+  background-color: #1d2e5b;
+}
+
+.level__toggle {
+  position: absolute;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+
+  background-color: #1d2e5b;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &--min {
+    left: 70px;
+  }
+
+  &--max {
+    left: 210px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .level {
+    width: 495px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .level__controls {
+    margin: 0;
+
+    order: 1;
+
+    &::before {
+      top: 15px;
+      left: 63px;
+    }
+
+    &::after {
+      top: 20px;
+      left: 63px;
+    }
+  }
+
+  .level__min-level input,
+  .level__max-level input {
+    width: 75px;
+    height: 45px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .level__scale {
+    height: 3px;
+    width: 280px;
+  }
+
+  .level__bar {
+    width: 73%;
+    height: 3px;
+    background-color: #1d2e5b;
+  }
+
+  .level__toggle {
+    width: 13px;
+    height: 13px;
+
+    &--min {
+      left: 70px;
+    }
+
+    &--max {
+      left: 275px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .level {
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .level__controls {
+    padding-bottom: 40px;
+    order: -1;
+
+    &::before {
+      top: 15px;
+      left: 83px;
+    }
+
+    &::after {
+      top: 20px;
+      left: 83px;
+    }
+  }
+
+  .level__scale {
+    height: 2px;
+    width: 190px;
+  }
+
+  .level__bar {
+    top: 0;
+    left: 70px;
+    width: 68%;
+    height: 2px;
+  }
+
+  .level__toggle {
+    &--min {
+      left: 50px;
+    }
+
+    &--max {
+      left: 190px;
+    }
+  }
+
+  .level__min-level input,
+  .level__max-level input {
+    width: 95px;
+  }
+}

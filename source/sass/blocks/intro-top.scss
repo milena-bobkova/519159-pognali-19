@@ -1,33 +1,102 @@
 .intro-top {
+  position: relative;
+  padding-top: 75px;
+
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .intro-top__text {
-  width: 234px;
   margin: 0 auto 245px;
-  padding-top: 20px;
+  padding-top: 15px;
+  width: 234px;
+
   font-size: 35px;
   line-height: 40px;
   font-weight: 700;
+  text-align: center;
   color: $color-light;
+}
+
+.intro-top__login-wrap {
+  position: absolute;
+  top: 440px;
+  left: 0;
+  z-index: 10;
+
+  width: 270px;
+
+  display: flex;
+  align-items: center;
 }
 
 .intro-top__list {
   display: flex;
+
   padding: 0;
+
   width: 80px;
-  margin-bottom: -20px;
+}
+
+.intro-top__link {
+  width: 40px;
+  height: 40px;
+
+  display: block;
+}
+
+.intro-top__icon {
+  border-radius: 50%;
+  overflow: visible;
+
+  &--phone {
+    padding: 11px;
+    background-color: $color-orange;
+    fill: $color-dark;
+  }
+
+  &--mail {
+    padding: 13px 11px;
+    background-color: #ffbd30;
+    fill: $color-dark;
+  }
+}
+
+.intro-top__link:hover .intro-top__icon {
+  &--phone {
+    background-color: #f26926;
+  }
+
+  &--mail {
+    background-color: #ff8d30;
+  }
+}
+
+.intro-top__link:active .intro-top__icon {
+  &--phone {
+    fill: rgba($color-dark, 0.3);
+  }
+
+  &--mail {
+    fill: rgba($color-dark, 0.3);
+  }
 }
 
 .intro-top__login {
-  display: block;
-  padding: 10px 0;
-  text-align: center;
+  padding: 5px 0;
+
   width: 190px;
+
+  display: block;
+  text-align: center;
 }
 
 @media (min-width: $tablet-width) {
+  .intro-top {
+    padding-top: 120px;
+  }
+
   .intro-top__text {
     width: 400px;
     margin: 0 auto;
@@ -37,18 +106,16 @@
     text-align: center;
   }
 
-  .intro-top__list {
-    display: none;
-  }
-
-  .intro-top__login {
+  .intro-top__login-wrap {
     display: none;
   }
 }
 
 @media (min-width: $desktop-width) {
   .intro-top {
-    padding-top: 90px;
+    position: relative;
+
+    padding-top: 210px;
   }
 
   .intro-top__text {

@@ -1,19 +1,44 @@
 .about {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    content: "";
+    width: 105px;
+    height: 135px;
+    border-radius: 0 10px 10px 0;
+    background-color: #141b3b;
+    z-index: -1;
+  }
+}
+
+.about__wrap {
+  padding: 40px 25px 65px;
+
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: center 60px;
-  padding-top: 70px;
-  padding-bottom: 80px;
+  background-position: 25px center;
+  background-size: contain;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/about-mobile@2x.png");
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    background-size: contain;
+  }
+}
+
+.about__title {
+  padding: 0 25px;
 }
 
 .about__text {
-  margin: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 35px 20px 25px;
   width: 210px;
 
   &:last-of-type {
-    width: 200px;
     padding-top: 0;
   }
 }
@@ -24,17 +49,43 @@
 
 @media (min-width: $tablet-width) {
   .about {
+    &::before {
+      position: absolute;
+      top: 60px;
+      left: 40px;
+      content: "";
+      width: 688px;
+      height: 210px;
+      border-radius: 15px;
+    }
+  }
+
+  .about__wrap {
+    padding: 50px 40px 90px;
+
     background-image: url("../img/about-tablet@1x.png");
     background-repeat: no-repeat;
-    background-position: 385px 100px;
+    background-size: 376px 548px;
+    background-position: 385px 60px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/about-tablet@2x.png");
+      background-repeat: no-repeat;
+      background-size: 376px 548px;
+      background-position: 385px 60px;
+    }
+  }
+
+  .about__title {
+    padding: 0 35px;
   }
 
   .about__text {
-    padding-bottom: 40px;
+    padding: 40px 35px 30px 35px;
     width: 300px;
 
     &:last-of-type {
-      padding-bottom: 90px;
+      padding-bottom: 50px;
       width: 256px;
       font-size: 21px;
       line-height: 25px;
@@ -42,7 +93,7 @@
   }
 
   .about__button {
-    display: block;
+    display: flex;
     margin-left: 35px;
     width: 275px;
   }
@@ -50,33 +101,49 @@
 
 @media (min-width: $desktop-width) {
   .about {
-    background-image: url("../img/about-desktop@1x.png");
-    background-repeat: no-repeat;
-    background-position: 750px 85px;
-    border-bottom: 60px 0 0 60px;
+    &::before {
+      position: absolute;
+      top: 120px;
+      left: 60px;
+      content: "";
+      width: 210px;
+      height: 210px;
+      border-radius: 20px;
+    }
   }
 
   .about__wrap {
-    padding-top: 130px;
+    padding-top: 140px;
     padding-bottom: 160px;
+
+    background-image: url("../img/about-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: 750px 85px;
+    background-size: 630px 665px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/about-desktop@2x.png");
+      background-repeat: no-repeat;
+      background-position: 750px 90px;
+      background-size: 630px 665px;
+    }
   }
 
   .about__title {
-    padding-bottom: 58px;
+    padding: 0 90px;
   }
 
   .about__text {
-    padding-bottom: 40px;
-    padding-left: 70px;
+    padding: 50px 20px 40px 90px;
     width: 615px;
 
     &:last-of-type {
       padding-bottom: 90px;
-      width: 400px;
+      width: 410px;
     }
   }
 
   .about__button {
-    margin-left: 70px;
+    margin-left: 90px;
   }
 }

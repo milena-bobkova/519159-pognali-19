@@ -4,10 +4,53 @@
   box-shadow: 0 20px 25px 0 #dee5fc;
 }
 
+.title-business {
+  width: 100%;
+  padding: 0;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.rates-button--mod {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 18px auto;
+  background-color: #f3f4f8;
+}
+
 @media (min-width: $tablet-width) {
   .rates-modal {
     width: 680px;
     padding-top: 50px;
     border-radius: 25px;
+  }
+
+  .rates__business {
+    width: 680px;
+    padding-top: 50px;
+    border-radius: 25px;
+  }
+
+  .rates__business-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .rates__mosal .rates__title {
+    padding-bottom: 50px;
+    align-self: center;
+  }
+
+  .rates__business .rates__item {
+    margin: 0;
+    width: 500px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .rates__business {
+    width: 750px;
   }
 }
