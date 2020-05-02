@@ -1,5 +1,7 @@
 .intro-comment {
-  padding-top: 40px;
+  margin: 0 auto;
+  padding: 20px 25px 0 25px;
+  width: 270px;
   color: $color-light;
 }
 
@@ -23,8 +25,13 @@
 }
 
 @media (min-width: $tablet-width) {
+  .intro-comment {
+    padding: 20px 40px 0 40px;
+    width: 688px;
+  }
+
   .intro-comment__review {
-    width: 270px;
+    width: 280px;
     margin: 0;
     padding: 50px 30px 295px;
   }
@@ -43,7 +50,9 @@
 
 @media (min-width: $desktop-width) {
   .intro-comment {
-    padding-top: 220px;
+    margin: 0;
+    padding: 220px 0 0 0;
+    width: 270px;
   }
 
   .intro-comment__review {

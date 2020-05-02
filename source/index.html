@@ -6,7 +6,16 @@
   <title>HTML Academy: Погнали</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans-light.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement("picture");
+  </script>
+  <script src="js/picturefill.min.js" async></script>
   <!-- Pixel Glass -->
   <style>
     HTML {
@@ -321,7 +330,7 @@
 
     <section class="intro page-section page-section--intro">
       <h2 class="visually-hidden">Описание сервиса</h2>
-      <div class="intro__wrap container">
+      <div class="intro__wrap">
         <article class="intro-top">
           <h2 class="visually-hidden">Интро</h2>
           <p class="intro-top__text">В путешествие с крутыми попутчиками!</p>
@@ -615,38 +624,64 @@
     </section>
 
     <section class="rates page-section page-section--rates">
-      <div class="rates__wrap container">
-        <h2 class="visually-hidden">Тарифы</h2>
-        <p class="rates__title page-section__title">Добавьте свой профиль</p>
-        <ol class="rates__list">
-          <li class="rates__item">
-            <div class="rates__item-inner">
-              <p class="rates__term">Базовое размещение</p>
-              <p class="rates__price">Бесплатно</p>
-            </div>
-            <span class="rates__item-number rates__item-number--one">1</span>
-          </li>
-          <li class="rates__item">
-            <div class="rates__item-inner">
-              <p class="rates__term">Вывод на первых позициях</p>
-              <p class="rates__price">99 руб./мес</p>
-            </div>
-            <span class="rates__item-number rates__item-number--two">2</span>
-          </li>
-          <li class="rates__item">
-            <div class="rates__item-inner">
-              <p class="rates__term">Кастомный цвет карточки</p>
-              <p class="rates__price">59 руб./мес</p>
-            </div>
-            <span class="rates__item-number rates__item-number--three">3</span>
-          </li>
-        </ol>
-        <a class="rates__button" href="#">
-          <svg class="rates__button-icon">
-            <use xlink:href="#business"></use>
-          </svg>
-          <span>Показать тарифы для бизнеса</span></a>
-      </div>
+      <h2 class="visually-hidden">Тарифы</h2>
+      <article class="rates__wrap container">
+        <h3 class="visually-hidden">Все тарифы</h2>
+          <p class="rates__title page-section__title">Добавьте свой профиль</p>
+          <ol class="rates__list">
+            <li class="rates__item">
+              <div class="rates__item-inner">
+                <p class="rates__term">Базовое размещение</p>
+                <p class="rates__price">Бесплатно</p>
+              </div>
+              <span class="rates__item-number rates__item-number--one">1</span>
+            </li>
+            <li class="rates__item">
+              <div class="rates__item-inner">
+                <p class="rates__term">Вывод на первых позициях</p>
+                <p class="rates__price">99 руб./мес</p>
+              </div>
+              <span class="rates__item-number rates__item-number--two">2</span>
+            </li>
+            <li class="rates__item">
+              <div class="rates__item-inner">
+                <p class="rates__term">Кастомный цвет карточки</p>
+                <p class="rates__price">59 руб./мес</p>
+              </div>
+              <span class="rates__item-number rates__item-number--three">3</span>
+            </li>
+          </ol>
+          <a class="rates__button" href="#">
+            <svg class="rates__button-icon">
+              <use xlink:href="#business"></use>
+            </svg>
+            <span>Показать тарифы для бизнеса</span></a>
+      </article>
+
+      <article class="rates__business modal">
+        <div class="rates__business-wrap">
+          <h3 class="rates__title rates__title--business page-section__title">Бизнес-тарифы</h2>
+            <ul class="rates__list rates__list--business">
+              <li class="rates__item rates__item--business">
+                <p class="rates__term rates__term--business">Реклама у блоггера</p>
+                <p class="rates__price rates__price--business">300 000 руб./пост</p>
+              </li>
+              <li class="rates__item rates__item--business">
+                <p class="rates__term rates__term--business">Накрутка подписчиков</p>
+                <p class="rates__price rates__price--business">от 1 руб./шт.</p>
+              </li>
+              <li class="rates__item rates__item--business">
+                <p class="rates__term rates__term--business">Лайки от ботов</p>
+                <p class="rates__price rates__price--business">от 20 коп./лайк</p>
+              </li>
+              <li class="rates__item rates__item--business">
+                <p class="rates__term rates__term--business">Ваш продакт-плейсмент</p>
+                <p class="rates__price rates__price--business">Индивидуально</p>
+              </li>
+            </ul>
+        </div>
+        <button class="rates__button rates__button--mod">Закрыть окно</button>
+      </article>
     </section>
 
     <section class="cta-form page-section page-section--cta">
@@ -781,32 +816,6 @@
     </div>
   </footer>
 
-  <!--<section class="rates modal">
-    <div class="rates__business">
-      <div class="rates__business-wrap container">
-        <h2 class="rates__title rates__title--business page-section__title">Бизнес-тарифы</h2>
-        <ul class="rates__list">
-          <li class="rates__item">
-            <p class="rates__term">Реклама у блоггера</p>
-            <p class="rates__price">300 000 руб./пост</p>
-          </li>
-          <li class="rates__item">
-            <p class="rates__term">Накрутка подписчиков</p>
-            <p class="rates__price">от 1 руб./шт.</p>
-          </li>
-          <li class="rates__item">
-            <p class="rates__term">Лайки от ботов</p>
-            <p class="rates__price">от 20 коп./лайк</p>
-          </li>
-          <li class="ratest__item">
-            <p class="rates__term">Ваш продакт-плейсмент</p>
-            <p class="rates__price">Индивидуально</p>
-          </li>
-        </ul>
-      </div>
-      <button class="rates__button rates__button--mod">Закрыть окно</button>
-    </div>
-  </section>-->
   <script src="js/navMain.js"></script>
 </body>
 
