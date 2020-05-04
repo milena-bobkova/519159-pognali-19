@@ -362,7 +362,7 @@
   </svg>
 
   <header class="page-header">
-    <nav class="page-inner__nav page-inner__nav--closed main-nav main-nav--closed container">
+    <nav class="main-nav main-nav--closed page-inner__nav page-inner__nav--closed container">
       <div class="main-nav__logo-wrap">
         <a class="main-nav__logo" href="index.html" aria-label="Логотип сервиса Погнали">
         </a>
@@ -370,23 +370,29 @@
         </button>
       </div>
 
-      <ul class="page-inner__nav-list main-nav__list site-list">
+
+      <ul class="main-nav__list site-list">
         <li class="site-list__item">
-          <a class="site-list__link" href="index.html">О сервисе</a>
+          <a class="site-list__link" href="index.html">
+            <span>О сервисе</span>
+          </a>
         </li>
         <li class="site-list__item">
-          <a class="site-list__link" href="form.html">Направления</a>
+          <a class="site-list__link" href="form.html">
+            <span>Направления</span>
+          </a>
         </li>
         <li class="site-list__item">
-          <a class="site-list__link">Попутчики</a>
+          <a class="site-list__link"><span>Попутчики</span>
+          </a>
         </li>
       </ul>
-      <ul class="page-inner__nav-list main-nav__list user-list">
+      <ul class="main-nav__list user-list">
         <li class="user-list__item">
           <a class="user-list__login btn" href="login.html">Авторизация</a>
         </li>
       </ul>
-      <ul class="page-inner__nav-list main-nav__list contact-list contact-list--header">
+      <ul class="main-nav__list contact-list contact-list--header">
         <li class="contact-list__item">
           <a class="main-nav__inner-link contact-list__link contact-list__link-phone" href="tel:+78005558628">
             <svg class="contact-list__icon contact-list__icon--phone" width="18" height="18">
@@ -437,7 +443,7 @@
   </header>
 
   <main class="page-main">
-    <div class="page-main__title-wrap page-section page-section--travel">
+    <div class=" page-main__title-wrap page-section page-section--travel">
       <div class="page-main__title-wrapper container">
         <h1 class="page-main__title">
           <span class="page-main__title-line">Попутчики</span>
@@ -445,12 +451,12 @@
         <a class="page-main__title-button" href="index.html">
           <span>На главную</span>
           <svg class="page-main__title-icon" width="28" height="20">
-            <use xlink:href="#return" fill="#ffffff"></use>
+            <use xlink:href="#return"></use>
           </svg>
         </a>
       </div>
     </div>
-    <section class="page-main__filter countries-filter page-section page-section--countries">
+    <section class="countries-filter countries-filter--closed page-section page-section--countries">
       <div class="container">
         <div class="countries-filter__title-wrap">
           <svg class="countries-filter__icon countries-filter__icon--filter" width="15" height="10">
@@ -799,32 +805,37 @@
                   </div>
                   <div class="travelers-choice__list travelers-choice__list--closed">
                     <div class="travelers-choice__item">
-                      <input class="travelers-choice__input visually-hidden" type="checkbox" name="hobby" id="hobby1"
-                        checked>
-                      <span class="travelers-choice__tick-bg">
+                      <label class="travelers-choice__label"></label>
+                      <input class="travelers-choice__input visually-hidden" type="checkbox" name="hobby" checked>
+                      <span class="travelers-choice__tick-field">
                         <svg class="travelers-choice__tick" width="9" height="9">
                           <use xlink:href="#tick"></use>
                         </svg>
                       </span>
-                      <label class="travelers-choice__label" for="hobby1">Спортзал</label>
+                      <span>Спортзал</span>
+                      </label>
                     </div>
                     <div class="travelers-choice__item">
-                      <input class="travellers-choice__input visually-hidden" type="checkbox" name="hobby" id="hobby2">
-                      <span class="travelers-choice__tick-bg">
-                        <svg class="travelers-choice__tick" width="9" height="9">
-                          <use xlink:href="#tick"></use>
-                        </svg>
-                      </span>
-                      <label class="travelers-choice__label" for="hobby2">Кальян</label>
+                      <label class="travelers-choice__label">
+                        <input class="travellers-choice__input visually-hidden" type="checkbox" name="hobby">
+                        <span class="travelers-choice__tick-field">
+                          <svg class="travelers-choice__tick" width="9" height="9">
+                            <use xlink:href="#tick"></use>
+                          </svg>
+                        </span>
+                        <span>Кальян</span>
+                      </label>
                     </div>
                     <div class="travelers-choice__item">
-                      <input class="travellrs-choice__input visually-hidden" type="checkbox" name="hobby" id="hobby3">
-                      <span class="travelers-choice__tick-bg">
-                        <svg class="travelers-choice__tick" width="9" height="9">
-                          <use xlink:href="#tick"></use>
-                        </svg>
-                      </span>
-                      <label class="travelers-choice__label" for="hobby3">Диван</label>
+                      <label class="travelers-choice__label">
+                        <input class="travellrs-choice__input visually-hidden" type="checkbox" name="hobby">
+                        <span class="travelers-choice__tick-field">
+                          <svg class="travelers-choice__tick" width="9" height="9">
+                            <use xlink:href="#tick"></use>
+                          </svg>
+                        </span>
+                        <span>Диван</span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -841,32 +852,37 @@
                   </div>
                   <div class="travelers-choice__list travelers-choice__list--dropdown">
                     <div class="travelers-choice__item">
-                      <input class="travelers-choice__input visually-hidden" type="checkbox" name="music" id="music1"
-                        checked>
-                      <span class="travelers-choice__tick-bg">
-                        <svg class="travelers-choice__tick" width="9" height="9">
-                          <use xlink:href="#tick"></use>
-                        </svg>
-                      </span>
-                      <label class="travelers-choice__label" for="music1">Тяжелый рок</label>
+                      <label class="travelers-choice__label">
+                        <input class="travelers-choice__input visually-hidden" type="checkbox" name="music" checked>
+                        <span class="travelers-choice__tick-field">
+                          <svg class="travelers-choice__tick" width="9" height="9">
+                            <use xlink:href="#tick"></use>
+                          </svg>
+                        </span>
+                        <span>Тяжелый рок</span>
+                      </label>
                     </div>
                     <div class="travelers-choice__item">
-                      <input class="travelers-choice__input visually-hidden" type="checkbox" name="music" id="music2">
-                      <span class="travelers-choice__tick-bg">
-                        <svg class="travelers-choice__tick" width="9" height="9">
-                          <use xlink:href="#tick"></use>
-                        </svg>
-                      </span>
-                      <label class="travelers-choice__label" for="music2">Русский рэп</label>
+                      <label class="travelers-choice__label">
+                        <input class="travelers-choice__input visually-hidden" type="checkbox" name="music">
+                        <span class="travelers-choice__tick-field">
+                          <svg class="travelers-choice__tick" width="9" height="9">
+                            <use xlink:href="#tick"></use>
+                          </svg>
+                        </span>
+                        <span>Русский рэп</span>
+                      </label>
                     </div>
                     <div class="travelers-choice__item">
-                      <input class="travelers-choice__input visually-hidden" type="checkbox" name="music" id="music3">
-                      <span class="travelers-choice__tick-bg">
-                        <svg class="travelers-choice__tick" width="9" height="9">
-                          <use xlink:href="#tick"></use>
-                        </svg>
-                      </span>
-                      <label class="travelers-choice__label" for="music3">Евроденс</label>
+                      <label class="travelers-choice__label">
+                        <input class="travelers-choice__input visually-hidden" type="checkbox" name="music">
+                        <span class="travelers-choice__tick-field">
+                          <svg class="travelers-choice__tick" width="9" height="9">
+                            <use xlink:href="#tick"></use>
+                          </svg>
+                        </span>
+                        <span>Евроденс</span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -883,32 +899,37 @@
                   </div>
                   <div class="travelers-choice__list travelers-choice__list--closed">
                     <div class="travelers-choice__item">
-                      <input class="travellers-choice__input visually-hidden" type="checkbox" name="food" id="food1"
-                        checked>
-                      <span class="travelers-choice__tick-bg">
-                        <svg class="travelers-choice__tick" width="9" height="9">
-                          <use xlink:href="#tick"></use>
-                        </svg>
-                      </span>
-                      <label class="travelers-choice__label" for="food1">Мясоед</label>
+                      <label class="travelers-choice__label">
+                        <input class="travellers-choice__input visually-hidden" type="checkbox" name="food" checked>
+                        <span class="travelers-choice__tick-field">
+                          <svg class="travelers-choice__tick" width="9" height="9">
+                            <use xlink:href="#tick"></use>
+                          </svg>
+                        </span>
+                        <span>Мясоед</span>
+                      </label>
                     </div>
                     <div class="travelers-choice__item">
-                      <input class="travelers-choice__input visually-hidden" type="checkbox" name="food" id="food2">
-                      <span class="travelers-choice__tick-bg">
-                        <svg class="travelers-choice__tick" width="9" height="9">
-                          <use xlink:href="#tick"></use>
-                        </svg>
-                      </span>
-                      <label class="travelers-choice__label" for="food2">Сидит на ПП</label>
+                      <label class="travelers-choice__label">
+                        <input class="travelers-choice__input visually-hidden" type="checkbox" name="food">
+                        <span class="travelers-choice__tick-field">
+                          <svg class="travelers-choice__tick" width="9" height="9">
+                            <use xlink:href="#tick"></use>
+                          </svg>
+                        </span>
+                        <span>Сидит на ПП</span>
+                      </label>
                     </div>
                     <div class="travelers-choice__item">
-                      <input class="travelers-choice__input visually-hidden" type="checkbox" name="food" id="food3">
-                      <span class="travelers-choice__tick-bg">
-                        <svg class="travelers-choice__tick" width="9" height="9">
-                          <use xlink:href="#tick"></use>
-                        </svg>
-                      </span>
-                      <label class="travelers-choice__label" for="food3">Веган-сыроед</label>
+                      <label class="travelers-choice__label">
+                        <input class="travelers-choice__input visually-hidden" type="checkbox" name="food">
+                        <span class="travelers-choice__tick-field">
+                          <svg class="travelers-choice__tick" width="9" height="9">
+                            <use xlink:href="#tick"></use>
+                          </svg>
+                        </span>
+                        <span>Веган-сыроед</span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -924,7 +945,7 @@
                     </button>
                   </div>
                   <div class="travelers-choice__list travelers-choice__list--transport user-card__transport-list">
-                    <div class="travelers-choice__item travelers-choice__item--transport">
+                    <div class="travelers-choice__item travelers-choice__item--transport tooltip">
                       <label><input class="travelers-choice__input visually-hidden" type="checkbox" name="transport"
                           value="авиа">
                         <svg
@@ -932,8 +953,9 @@
                           <use xlink:href="#plane"></use>
                         </svg>
                       </label>
+                      <span>Авиаперелет</span>
                     </div>
-                    <div class="travelers-choice__item travelers-choice__item--transport">
+                    <div class="travelers-choice__item travelers-choice__item--transport tooltip">
                       <label><input class="travelers-choice__input visually-hidden" type="checkbox" name="transport"
                           value="авто">
                         <svg
@@ -941,8 +963,9 @@
                           <use xlink:href="#bus"></use>
                         </svg>
                       </label>
+                      <span>Автотранспорт</span>
                     </div>
-                    <div class="travelers-choice__item travelers-choice__item--transport">
+                    <div class="travelers-choice__item travelers-choice__item--transport tooltip">
                       <label><input class="travelers-choice__input visually-hidden" type="checkbox" name="transport"
                           value="вело">
                         <svg
@@ -950,8 +973,9 @@
                           <use xlink:href="#bike"></use>
                         </svg>
                       </label>
+                      <span>Велосипед</span>
                     </div>
-                    <div class="travelers-choice__item travelers-choice__item--transport">
+                    <div class="travelers-choice__item travelers-choice__item--transport tooltip">
                       <label><input class="travelers-choice__input visually-hidden" type="checkbox" name="transport"
                           value="пешком">
                         <svg
@@ -959,6 +983,7 @@
                           <use xlink:href="#run"></use>
                         </svg>
                       </label>
+                      <span>Пешком</span>
                     </div>
                   </div>
                 </div>
@@ -1052,27 +1077,31 @@
               <div class="travelers-catalog__transport user-card__transport">
                 <p class="travelers-catalog__text travelers-catalog__text--none">транспорт:</p>
                 <ul class=" travelers-catalog__transport-list user-card__transport-list">
-                  <li class="travelers-catalog__transport-item user-card__transport-item">
+                  <li class="travelers-catalog__transport-item user-card__transport-item tooltip">
                     <svg
                       class="travelers-catalog__transport-icon user-card__transport-icon user-card__transport-icon--on"
                       width="18" height="16">
                       <use xlink:href="#plane"></use>
                     </svg>
+                    <span>Авиаперелет</span>
                   </li>
-                  <li class="travelers-catalog__transport-item user-card__transport-item">
+                  <li class="travelers-catalog__transport-item user-card__transport-item tooltip">
                     <svg class="travelers-catalog__transport-icon user-card__transport-icon" width="18" height="16">
                       <use xlink:href="#bus"></use>
                     </svg>
+                    <span>Автотранспорт</span>
                   </li>
-                  <li class="travelers-catalog__transport-item user-card__transport-item">
+                  <li class="travelers-catalog__transport-item user-card__transport-item tooltip">
                     <svg class="travelers-catalog__transport-icon user-card__transport-icon" width="18" height="16">
                       <use xlink:href="#bike"></use>
                     </svg>
+                    <span>Велосипед</span>
                   </li>
-                  <li class="travelers-catalog__transport-item user-card__transport-item">
+                  <li class="travelers-catalog__transport-item user-card__transport-item tooltip">
                     <svg class="travelers-catalog__transport-icon user-card__transport-icon" width="18" height="16">
                       <use xlink:href="#run"></use>
                     </svg>
+                    <span>Пешком</span>
                   </li>
                 </ul>
               </div>
@@ -1144,31 +1173,31 @@
               <div class="travelers-catalog__transport user-card__transport">
                 <p class="travelers-catalog__text travelers-catalog__text--none">транспорт:</p>
                 <ul class=" travelers-catalog__transport-list user-card__transport-list">
-                  <li class="travelers-catalog__transport-item user-card__transport-item">
+                  <li class="travelers-catalog__transport-item user-card__transport-item tooltip">
                     <svg
                       class="travelers-catalog__transport-icon user-card__transport-icon user-card__transport-icon--on"
                       width="18" height="16">
                       <use xlink:href="#plane"></use>
                     </svg>
+                    <span>Авиаперелет</span>
                   </li>
-                  <li class="travelers-catalog__transport-item user-card__transport-item">
-                    <svg
-                      class="travelers-catalog__transport-icon user-card__transport-icon user-card__transport-icon--on"
-                      width="18" height="16">
+                  <li class="travelers-catalog__transport-item user-card__transport-item tooltip">
+                    <svg class="travelers-catalog__transport-icon user-card__transport-icon" width="18" height="16">
                       <use xlink:href="#bus"></use>
                     </svg>
+                    <span>Автотранспорт</span>
                   </li>
-                  <li class="travelers-catalog__transport-item user-card__transport-item">
+                  <li class="travelers-catalog__transport-item user-card__transport-item tooltip">
                     <svg class="travelers-catalog__transport-icon user-card__transport-icon" width="18" height="16">
                       <use xlink:href="#bike"></use>
                     </svg>
+                    <span>Велосипед</span>
                   </li>
-                  <li class="travelers-catalog__transport-item user-card__transport-item">
-                    <svg
-                      class="travelers-catalog__transport-icon user-card__transport-icon user-card__transport-icon--on"
-                      width="18" height="16">
+                  <li class="travelers-catalog__transport-item user-card__transport-item tooltip">
+                    <svg class="travelers-catalog__transport-icon user-card__transport-icon" width="18" height="16">
                       <use xlink:href="#run"></use>
                     </svg>
+                    <span>Пешком</span>
                   </li>
                 </ul>
               </div>
@@ -1246,29 +1275,31 @@
               <div class="travelers-catalog__transport user-card__transport">
                 <p class="travelers-catalog__text travelers-catalog__text--none">транспорт:</p>
                 <ul class=" travelers-catalog__transport-list user-card__transport-list">
-                  <li class="travelers-catalog__transport-item user-card__transport-item">
+                  <li class="travelers-catalog__transport-item user-card__transport-item tooltip">
                     <svg
                       class="travelers-catalog__transport-icon user-card__transport-icon user-card__transport-icon--on"
                       width="18" height="16">
                       <use xlink:href="#plane"></use>
                     </svg>
+                    <span>Авиаперелет</span>
                   </li>
-                  <li class="travelers-catalog__transport-item user-card__transport-item">
+                  <li class="travelers-catalog__transport-item user-card__transport-item tooltip">
                     <svg class="travelers-catalog__transport-icon user-card__transport-icon" width="18" height="16">
                       <use xlink:href="#bus"></use>
                     </svg>
+                    <span>Автотранспорт</span>
                   </li>
-                  <li class="travelers-catalog__transport-item user-card__transport-item">
-                    <svg
-                      class="travelers-catalog__transport-icon user-card__transport-icon user-card__transport-icon--on"
-                      width="18" height="16">
+                  <li class="travelers-catalog__transport-item user-card__transport-item tooltip">
+                    <svg class="travelers-catalog__transport-icon user-card__transport-icon" width="18" height="16">
                       <use xlink:href="#bike"></use>
                     </svg>
+                    <span>Велосипед</span>
                   </li>
-                  <li class="travelers-catalog__transport-item user-card__transport-item">
+                  <li class="travelers-catalog__transport-item user-card__transport-item tooltip">
                     <svg class="travelers-catalog__transport-icon user-card__transport-icon" width="18" height="16">
                       <use xlink:href="#run"></use>
                     </svg>
+                    <span>Пешком</span>
                   </li>
                 </ul>
               </div>
@@ -1342,29 +1373,31 @@
               <div class="travelers-catalog__transport user-card__transport">
                 <p class="travelers-catalog__text travelers-catalog__text--none">транспорт:</p>
                 <ul class=" travelers-catalog__transport-list user-card__transport-list">
-                  <li class="travelers-catalog__transport-item user-card__transport-item">
+                  <li class="travelers-catalog__transport-item user-card__transport-item tooltip">
                     <svg
                       class="travelers-catalog__transport-icon user-card__transport-icon user-card__transport-icon--on"
                       width="18" height="16">
                       <use xlink:href="#plane"></use>
                     </svg>
+                    <span>Авиаперелет</span>
                   </li>
-                  <li class="travelers-catalog__transport-item user-card__transport-item">
-                    <svg
-                      class="travelers-catalog__transport-icon user-card__transport-icon user-card__transport-icon--on"
-                      width="18" height="16">
+                  <li class="travelers-catalog__transport-item user-card__transport-item tooltip">
+                    <svg class="travelers-catalog__transport-icon user-card__transport-icon" width="18" height="16">
                       <use xlink:href="#bus"></use>
                     </svg>
+                    <span>Автотранспорт</span>
                   </li>
-                  <li class="travelers-catalog__transport-item user-card__transport-item">
+                  <li class="travelers-catalog__transport-item user-card__transport-item tooltip">
                     <svg class="travelers-catalog__transport-icon user-card__transport-icon" width="18" height="16">
                       <use xlink:href="#bike"></use>
                     </svg>
+                    <span>Велосипед</span>
                   </li>
-                  <li class="travelers-catalog__transport-item user-card__transport-item">
+                  <li class="travelers-catalog__transport-item user-card__transport-item tooltip">
                     <svg class="travelers-catalog__transport-icon user-card__transport-icon" width="18" height="16">
                       <use xlink:href="#run"></use>
                     </svg>
+                    <span>Пешком</span>
                   </li>
                 </ul>
               </div>
@@ -1392,21 +1425,21 @@
 
         <div class="travelers-catalog__pagination pagination">
           <ul class="paginetion__pages">
-            <li class="paginetion__item"><a href="#" class="pagination__link pagination__link--active">1</a></li>
-            <li class="paginetion__item"><a href="#" class="pagination__link">2</a></li>
-            <li class="paginetion__item"><a href="#" class="pagination__link">3</a></li>
-            <li class="paginetion__item"><a href="#" class="pagination__link">4</a></li>
+            <li class="paginetion__item"><a class="pagination__link pagination__link--active" href="#">1</a></li>
+            <li class="paginetion__item"><a class="pagination__link" href="#">2</a></li>
+            <li class="paginetion__item"><a class="pagination__link" href="#">3</a></li>
+            <li class="paginetion__item"><a class="pagination__link" href="#">4</a></li>
           </ul>
           <ul class="pagination__list">
             <li class="pagination__item pagination__item--prev">
-              <a class="pagination__link" href="#" aria-label="Предыдущая страница">
+              <a class="pagination__link-prev" href="#" aria-label="Предыдущая страница">
                 <svg class="pagination__icon pagination__icon--prev" width="20" height="10">
                   <use xlink:href="#dropdown"></use>
                 </svg>
               </a>
             </li>
             <li class="pagination__item pagination__item--next">
-              <a class="pagination__link  pagination__link--next" href="#" aria-label="Следующая страница">
+              <a class="pagination__link-next" href="#" aria-label="Следующая страница">
                 <svg class="pagination__icon pagination__icon--next" width="20" height="10">
                   <use xlink:href="#dropdown"></use>
                 </svg>
@@ -1469,6 +1502,7 @@
     </div>
   </footer>
   <script src="js/navMain.js"></script>
+  <script src="js/countryFilter.js"></script>
 </body>
 
 </html>

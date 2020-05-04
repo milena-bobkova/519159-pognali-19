@@ -250,7 +250,7 @@
   </svg>
 
   <header class="page-header">
-    <nav class="main-nav main-nav--closed container">
+    <nav class="main-nav main-nav--closed main-nav--nojs container">
       <div class="main-nav__logo-wrap">
         <a class="main-nav__logo" aria-label="Логотип сервиса Погнали">
         </a>
@@ -260,13 +260,18 @@
 
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
-          <a class="site-list__link">О сервисе</a>
+          <a class="site-list__link">
+            <span>О сервисе</span>
+          </a>
         </li>
         <li class="site-list__item">
-          <a class="site-list__link" href="form.html">Направления</a>
+          <a class="site-list__link" href="form.html">
+            <span>Направления</span>
+          </a>
         </li>
         <li class="site-list__item">
-          <a class="site-list__link" href="catalog.html">Попутчики</a>
+          <a class="site-list__link" href="catalog.html"><span>Попутчики</span>
+          </a>
         </li>
       </ul>
       <ul class="main-nav__list user-list">
@@ -274,7 +279,7 @@
           <a class="user-list__login btn" href="login.html">Авторизация</a>
         </li>
       </ul>
-      <ul class="page-inner__nav-list main-nav__list contact-list contact-list--header">
+      <ul class="main-nav__list contact-list contact-list--header">
         <li class="contact-list__item">
           <a class="main-nav__inner-link contact-list__link contact-list__link-phone" href="tel:+78005558628">
             <svg class="contact-list__icon contact-list__icon--phone" width="18" height="18">
@@ -511,20 +516,23 @@
               </div>
             </div>
             <ul class="travelers__flags">
-              <li class="travelers__flag">
+              <li class="travelers__flag tooltip">
                 <svg class="travelers__flag-icon">
                   <use xlink:href="#flag-sri-lanka"></use>
                 </svg>
+                <span>Шри-Ланка</span>
               </li>
-              <li class="travelers__flag">
+              <li class="travelers__flag tooltip">
                 <svg class="travelers__flag-icon">
                   <use xlink:href="#flag-thailand"></use>
                 </svg>
+                <span>Тайланд</span>
               </li>
-              <li class="travelers__flag">
+              <li class="travelers__flag tooltip">
                 <svg class="travelers__flag-icon">
                   <use xlink:href="#flag-seychelles"></use>
                 </svg>
+                <span>Сейшеллы</span>
               </li>
             </ul>
             <div class="travelers__info user-card__info">
@@ -533,25 +541,29 @@
               </h3>
               <p class="travelers__habits user-card__habits">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
               <ul class=" travelers__transport-list user-card__transport-list">
-                <li class="travelers__transport-item user-card__transport-item">
+                <li class="travelers__transport-item user-card__transport-item tooltip">
                   <svg class="travelers__transport-icon user-card__transport-icon user-card__transport-icon--on">
                     <use xlink:href="#plane"></use>
                   </svg>
+                  <span>Авиаперелет</span>
                 </li>
-                <li class="travelers__transport-item user-card__transport-item">
+                <li class="travelers__transport-item user-card__transport-item tooltip">
                   <svg class="travelers__transport-icon user-card__transport-icon">
                     <use xlink:href="#bus"></use>
                   </svg>
+                  <span>Автотранспорт</span>
                 </li>
-                <li class="travelers__transport-item user-card__transport-item">
+                <li class="travelers__transport-item user-card__transport-item tooltip">
                   <svg class="travelers__transport-icon user-card__transport-icon">
                     <use xlink:href="#bike"></use>
                   </svg>
+                  <span>Велосипед</span>
                 </li>
-                <li class="travelers__transport-item user-card__transport-item">
+                <li class="travelers__transport-item user-card__transport-item tooltip">
                   <svg class="travelers__transport-icon user-card__transport-icon">
                     <use xlink:href="#run"></use>
                   </svg>
+                  <span>Пешком</span>
                 </li>
               </ul>
             </div>
@@ -575,15 +587,17 @@
               </div>
             </div>
             <ul class="travelers__flags">
-              <li class="travelers__flag">
+              <li class="travelers__flag tooltip">
                 <svg class="travelers__flag-icon">
                   <use xlink:href="#flag-belgium"></use>
                 </svg>
+                <span>Бельгия</span>
               </li>
-              <li class="travelers__flag">
+              <li class="travelers__flag tooltip">
                 <svg class="travelers__flag-icon">
                   <use xlink:href="#flag-czech"></use>
                 </svg>
+                <span>Чехия</span>
               </li>
             </ul>
             <div class="travelers__info user-card__info">
@@ -591,25 +605,29 @@
                   class="travelers__title-link travelers__title-link--on user-card__link" href="#">Петя Демин</a></h3>
               <p class="travelers__habits user-card__habits">#бургер #бар #футбол #концерт #крафт</p>
               <ul class=" travelers__transport-list user-card__transport-list">
-                <li class="travelers__transport-item user-card__transport-item">
+                <li class="travelers__transport-item user-card__transport-item tooltip">
                   <svg class="travelers__transport-icon user-card__transport-icon user-card__transport-icon--on">
                     <use xlink:href="#plane"></use>
                   </svg>
+                  <span>Авиаперелет</span>
                 </li>
-                <li class="travelers__transport-item user-card__transport-item">
-                  <svg class="travelers__transport-icon user-card__transport-icon user-card__transport-icon--on">
+                <li class="travelers__transport-item user-card__transport-item tooltip">
+                  <svg class="travelers__transport-icon user-card__transport-icon">
                     <use xlink:href="#bus"></use>
                   </svg>
+                  <span>Автотранспорт</span>
                 </li>
-                <li class="travelers__transport-item user-card__transport-item">
+                <li class="travelers__transport-item user-card__transport-item tooltip">
                   <svg class="travelers__transport-icon user-card__transport-icon">
                     <use xlink:href="#bike"></use>
                   </svg>
+                  <span>Велосипед</span>
                 </li>
-                <li class="travelers__transport-item user-card__transport-item">
-                  <svg class="travelers__transport-icon user-card__transport-icon user-card__transport-icon--on">
+                <li class="travelers__transport-item user-card__transport-item tooltip">
+                  <svg class="travelers__transport-icon user-card__transport-icon">
                     <use xlink:href="#run"></use>
                   </svg>
+                  <span>Пешком</span>
                 </li>
               </ul>
             </div>
@@ -657,31 +675,31 @@
             </svg>
             <span>Показать тарифы для бизнеса</span></a>
       </article>
+    </section>
 
-      <article class="rates__business modal">
-        <div class="rates__business-wrap">
-          <h3 class="rates__title rates__title--business page-section__title">Бизнес-тарифы</h2>
-            <ul class="rates__list rates__list--business">
-              <li class="rates__item rates__item--business">
-                <p class="rates__term rates__term--business">Реклама у блоггера</p>
-                <p class="rates__price rates__price--business">300 000 руб./пост</p>
-              </li>
-              <li class="rates__item rates__item--business">
-                <p class="rates__term rates__term--business">Накрутка подписчиков</p>
-                <p class="rates__price rates__price--business">от 1 руб./шт.</p>
-              </li>
-              <li class="rates__item rates__item--business">
-                <p class="rates__term rates__term--business">Лайки от ботов</p>
-                <p class="rates__price rates__price--business">от 20 коп./лайк</p>
-              </li>
-              <li class="rates__item rates__item--business">
-                <p class="rates__term rates__term--business">Ваш продакт-плейсмент</p>
-                <p class="rates__price rates__price--business">Индивидуально</p>
-              </li>
-            </ul>
-        </div>
-        <button class="rates__button rates__button--mod">Закрыть окно</button>
-      </article>
+    <section class="rates__business rates__business--closed modal">
+      <div class="rates__business-wrap">
+        <h3 class="rates__title rates__title--business page-section__title">Бизнес-тарифы</h2>
+          <ul class="rates__list rates__list--business">
+            <li class="rates__item rates__item--business">
+              <p class="rates__term rates__term--business">Реклама у блоггера</p>
+              <p class="rates__price rates__price--business">300 000 руб./пост</p>
+            </li>
+            <li class="rates__item rates__item--business">
+              <p class="rates__term rates__term--business">Накрутка подписчиков</p>
+              <p class="rates__price rates__price--business">от 1 руб./шт.</p>
+            </li>
+            <li class="rates__item rates__item--business">
+              <p class="rates__term rates__term--business">Лайки от ботов</p>
+              <p class="rates__price rates__price--business">от 20 коп./лайк</p>
+            </li>
+            <li class="rates__item rates__item--business">
+              <p class="rates__term rates__term--business">Ваш продакт-плейсмент</p>
+              <p class="rates__price rates__price--business">Индивидуально</p>
+            </li>
+          </ul>
+      </div>
+      <button class="rates__button-mod"><span>Закрыть окно</span></button>
     </section>
 
     <section class="cta-form page-section page-section--cta">
@@ -698,8 +716,10 @@
         </p>
         <form class="cta-form__form" action="https://echo.htmlacademy.ru/courses" method="get">
           <div class="cta-form__wrap">
-            <input class="cta-form__input" type="email" name="user-email" placeholder="E-mail">
-            <button class="cta-form__btn page-section__btn btn" type="button"><span>Регистрация</span>
+            <input class="cta-form__input" type="email" name="user-email" placeholder="E-mail"
+              onfocus="this.value='Введенный текст'" onblur="this.value=''">
+            <button class="cta-form__btn page-section__btn btn" type="button" aria-label="Регистрация">
+              <span>Регистрация</span>
               <svg class="page-section__btn-icon">
                 <use xlink:href="#triangle-arrow-right"></use>
               </svg>
@@ -758,7 +778,8 @@
           <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
           <source media="(min-width: 1440px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
-          <img class="routes__img" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта">
+          <img class="map__img" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта" width="320"
+            height="546">
         </picture>
       </div>
     </section>
@@ -817,6 +838,7 @@
   </footer>
 
   <script src="js/navMain.js"></script>
+  <script src="js/modalBusiness.js"></script>
 </body>
 
 </html>

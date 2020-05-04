@@ -8,7 +8,8 @@
 }
 
 .page-main__title-wrapper {
-  padding: 5px 25px 13px;
+  padding-top: 5px;
+  padding-bottom: 13px;
 }
 
 .page-main__title {
@@ -49,7 +50,8 @@
   }
 
   .page-main__title-wrapper {
-    padding: 70px 40px 65px;
+    padding-top: 70px;
+    padding-bottom: 65px;
 
     display: flex;
     justify-content: space-between;
@@ -70,6 +72,10 @@
     }
   }
 
+  .page-main__title-icon {
+    fill: $color-light;
+  }
+
   .page-main__title-button {
     margin-right: 40px;
 
@@ -83,12 +89,30 @@
     color: $color-light;
     font-weight: 700;
     text-transform: uppercase;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      color: rgba($color-light, 0.6);
+
+      .page-main__title-icon {
+        fill: rgba($color-light, 0.6);
+      }
+    }
+
+    &:active {
+      color: rgba($color-light, 0.3);
+
+      .page-main__title-icon {
+        fill: rgba($color-light, 0.3);
+      }
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-main__title {
-    padding-left: 50px;
+    padding-left: 30px;
   }
 
   .page-main__title-longline {
@@ -96,7 +120,7 @@
   }
 
   .page-main__title-button {
-    margin-right: 80px;
+    margin-right: 60px;
 
     &--form {
       display: none;

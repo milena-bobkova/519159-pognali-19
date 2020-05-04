@@ -87,6 +87,15 @@
   background-color: #dfe3f0;
   text-align: center;
   border-radius: 20px;
+
+  &:hover,
+  &:focus {
+    background-color: #d1d7e9;
+  }
+
+  &:active {
+    color: rgba(#1d2e5b, 0.3);
+  }
 }
 
 .profile-plan__fieldset {
@@ -95,6 +104,14 @@
   border: 1px solid #cbced9;
   border-radius: 5px;
   text-align: center;
+
+  &:hover {
+    border: 1px solid #aeb4cb;
+  }
+
+  &:focus {
+    border: 1px solid #161c35;
+  }
 }
 
 .profile-plan__transport {
@@ -117,6 +134,8 @@
   resize: none;
   background-color: transparent;
   text-align: left;
+  outline: none;
+  appearance: none;
 }
 
 .profile-plan__title {
@@ -140,6 +159,37 @@
 
   background-color: $color-light;
   border-radius: 50%;
+}
+
+.profile-plan__input:focus ~ .profile-plan__transport-icon {
+  transform: scale(1.05);
+  transition-duration: 0.3s;
+  fill: #b2b2b2;
+  box-shadow: 6px 6px 21px 0 rgba(#000000, 0.08);
+
+  &--on {
+    fill: #57617c;
+  }
+}
+
+.profile-plan__input:checked ~ .profile-plan__transport-icon {
+  fill: #cbced8;
+  box-shadow: none;
+
+  &--on {
+    fill: #a3a9bd;
+  }
+}
+
+.profile-plan__fieldset--tags {
+  &:hover,
+  &:focus {
+    border: 1px solid #aeb4cb;
+  }
+
+  &:active {
+    border: 1px solid #161c35;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -183,6 +233,7 @@
 
   .profile-plan__level {
     padding: 0 35px 0 30px;
+    float: none;
     order: -2;
   }
 
@@ -324,7 +375,7 @@
 
   .profile-plan__btn {
     margin: 0 95px 25px 0;
-    margin-left: auto;
+    margin-left: 1035px;
     padding: 10px 0;
 
     width: 190px;

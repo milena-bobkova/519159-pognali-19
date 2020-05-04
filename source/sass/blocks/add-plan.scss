@@ -114,6 +114,22 @@
   &--country {
     margin-bottom: 15px;
   }
+
+  &:hover {
+    border: 1px solid #959bb2;
+
+    .add-plan__icon {
+      fill: #959bb2;
+    }
+  }
+
+  &:active {
+    border: 1px solid #161c35;
+
+    .add-plan__icon {
+      fill: #161c35;
+    }
+  }
 }
 
 .add-plan__form-label {
@@ -134,6 +150,7 @@
   font-weight: 500;
   color: #1d2e5b;
   text-align: center;
+  outline: none;
 }
 
 .add-plan__form-btn {
@@ -146,6 +163,7 @@
   align-items: center;
   border: none;
   background-color: transparent;
+  outline: none;
 
   &--decrease {
     justify-content: flex-start;
@@ -153,6 +171,21 @@
 
   &--increase {
     justify-content: flex-end;
+  }
+
+  &:hover,
+  &:focus {
+    .add-plan__icon,
+    .add-plan__month-icon {
+      fill: rgba(#000000, 0.6);
+    }
+  }
+
+  &:active {
+    .add-plan__icon,
+    .add-plan__month-icon {
+      fill: rgba(#000000, 0.1);
+    }
   }
 }
 
@@ -170,7 +203,8 @@
 }
 
 .add-plan__form-child {
-  padding: 5px 10px;
+  display: flex;
+  align-items: center;
 
   font-size: 15px;
   line-height: 15px;
@@ -178,16 +212,48 @@
   color: $color-grey;
 }
 
-.add-plan__tick {
-  padding: 7px;
+.add-plan__tick-field {
+  margin-right: 10px;
 
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $color-light;
+  border: 1px solid rgba(#1d2e5b, 0.3);
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  &:hover {
+    border: 1px solid #959bb2;
+  }
+
+  &:active {
+    border: none;
+    background-color: #e2e5f1;
+
+    .add-plan__tick {
+      fill: #b7bbcc;
+    }
+  }
+}
+
+.add-plan__tick {
   width: 9px;
   height: 9px;
 
   fill: #1d2e5b;
-  background-color: $color-light;
-  border: 1px solid rgba(#1d2e5b, 0.3);
-  border-radius: 5px;
+}
+
+.add-plan__form-input--child:not(:checked) + .add-plan__tick-field svg {
+  display: none;
+}
+
+.add-plan__form-input--child:checked + .add-plan__tick-field svg {
+  display: block;
 }
 
 .add-plan__form-month {
@@ -259,12 +325,14 @@
 }
 
 .add-plane__day {
+  display: none;
+
   &--red {
     color: #ff5c23;
   }
 
-  &--tab {
-    display: none;
+  &--mob {
+    display: block;
   }
 }
 
@@ -377,6 +445,24 @@
 
   background-color: transparent;
   border: none;
+  outline: none;
+
+  &--dropdown {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    .add-plan__select-cross-icon {
+      fill: #a5a7ac;
+    }
+  }
+
+  &:active {
+    .add-plan__select-cross-icon {
+      fill: #e1e3e9;
+    }
+  }
 }
 
 .add-plan__select-cross-icon {
@@ -421,6 +507,24 @@
   &--last {
     margin-top: 5px;
     padding-bottom: 0;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: rgba(#1d2e5b, 0.7);
+
+      .add-plan__btn-icon--last {
+        fill: rgba(#1d2e5b, 0.7);
+      }
+    }
+
+    &:active {
+      color: rgba(#1d2e5b, 0.3);
+
+      .add-plan__btn-icon--last {
+        fill: rgba(#1d2e5b, 0.3);
+      }
+    }
   }
 
   &--disabled {
@@ -455,16 +559,28 @@
   text-transform: uppercase;
   text-align: left;
   border-radius: 5px;
-
-  &--country {
-    margin-bottom: 15px;
-    border: 1px solid rgba(#1d2e5b, 0.3);
-    background-color: transparent;
-  }
+  outline: none;
 
   &--plus {
     box-sizing: border-box;
     background-color: #edeff6;
+
+    &:hover,
+    &:focus {
+      background-color: #dfe3f0;
+
+      .add-plan__choice-cross-icon {
+        fill: #9c9ea8;
+      }
+    }
+
+    &:active {
+      color: rgba(#1d2e5b, 0.3);
+
+      .add-plan__choice-cross-icon {
+        fill: #c8ccd8;
+      }
+    }
   }
 
   &::after {
@@ -482,6 +598,64 @@
   }
 }
 
+.add-plan__choice-btn-country {
+  position: relative;
+
+  margin: 10px 0 15px 0;
+  padding: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 220px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #1d2e5b;
+  text-transform: uppercase;
+  text-align: left;
+  border-radius: 5px;
+
+  border: 1px solid rgba(#1d2e5b, 0.3);
+  background-color: transparent;
+  outline: none;
+
+  &::after {
+    position: absolute;
+    top: 15px;
+    right: 49px;
+
+    content: "";
+    width: 8px;
+    height: 8px;
+
+    border: 1px solid #cdd0db;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+
+  &:hover {
+    border: 1px solid #959bb2;
+
+    .add-plan__dropdown-choice-icon {
+      fill: #959bb2;
+    }
+  }
+}
+
+.add-plan__choice-btn-country--active {
+  background-color: #1d2e5b;
+  color: $color-light;
+  border-radius: 5px 5px 0 0;
+  outline: none;
+
+  &::after {
+    display: none;
+  }
+}
+
 .add-plan__label {
   font-size: 18px;
   line-height: 18px;
@@ -489,34 +663,34 @@
   color: #1d2e5b;
 }
 
-
-.add-plan__select-inner--show-dropdown .add-plan__choice-btn--country {
-  background-color: #1d2e5b;
-  color: $color-light;
-  border-radius: 5px 5px 0 0;
-
-  &::after {
-    display: none;
-  }
-}
-
-.add-plan__select-inner--show-dropdown .add-plan__dropdown-choice-icon {
+.add-plan__choice-btn-country--active .add-plan__dropdown-choice-icon {
   display: none;
 }
 
-.add-plan__select-inner--show-dropdown .add-plan__select-cross--dropdown {
-  top: 18px;
+.add-plan__choice-btn-country--active ~ .add-plan__select-cross--dropdown {
+  top: 10px;
   right: 15px;
+
+  display: block;
 }
 
-.add-plan__select-inner--show-dropdown .add-plan__select-cross-icon--dropdown {
-  fill: $color-light;
+.add-plan__select-cross--dropdown .add-plan__select-cross-icon--dropdown {
+  padding: 0;
+  fill: #616d8d;
   background-color: transparent;
+}
+
+.add-plan__select-cross--dropdown:hover .add-plan__select-cross-icon--dropdown {
+  fill: $color-light;
+}
+
+.add-plan__select-cross--dropdown:active .add-plan__select-cross-icon--dropdown {
+  fill: #34436c;
 }
 
 .add-plan__dropdown {
   position: absolute;
-  top: 50px;
+  top: 40px;
   left: -1px;
   z-index: 10;
 
@@ -530,7 +704,7 @@
   box-sizing: border-box;
 }
 
-.add-plan__dropdown--shown {
+.add-plan__choice-btn-country--active + .add-plan__dropdown {
   display: flex;
 }
 
@@ -538,8 +712,8 @@
   @include list-reset;
   padding: 1px 0;
 
-  width: 220px;
-  height: 206px;
+  width: 217px;
+  height: 207px;
 
   box-sizing: border-box;
   display: flex;
@@ -556,14 +730,6 @@
   width: 42px;
   height: 40px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-color: $color-light;
-  color: $color-blue;
-  text-transform: uppercase;
-
   &:nth-of-type(5n) {
     padding-right: 0;
   }
@@ -571,6 +737,23 @@
   &--active {
     background-color: #edeff6;
   }
+}
+
+.add-plan__country-text {
+  width: 42px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $color-light;
+  color: $color-blue;
+  text-transform: uppercase;
+}
+
+.add-plan__country-input:checked ~ .add-plan__country-text {
+  background-color: #edeff6;
 }
 
 .add-plan__list {
@@ -581,9 +764,20 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
 
+.add-plan__list-item {
   font-weight: 400;
   color: $color-grey;
+
+  &:hover,
+  &:focus {
+    color: #1d2e5b;
+  }
+
+  &:active {
+    color: rgba(#1d2e5b, 0.3);
+  }
 }
 
 .add-plan__textarea-wrap {
@@ -604,6 +798,25 @@
   }
 }
 
+.add-plan__textarea-invalid {
+  position: absolute;
+  left: 1px;
+  bottom: 7px;
+
+  padding: 16px 20px;
+
+  width: 215px;
+
+  display: none;
+
+  color: #ff0000;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: #ffefef;
+  border-radius: 0 0 3px 3px;
+  box-sizing: border-box;
+}
+
 .add-plan__textarea {
   padding: 10px;
   width: 195px;
@@ -611,13 +824,27 @@
   resize: none;
   border: 1px solid rgba(#1d2e5b, 0.3);
   border-radius: 5px;
+  outline: none;
+
+  &:hover {
+    border: 1px solid #959bb2;
+  }
+
+  &:focus {
+    border: 1px solid #1d2e5b;
+  }
+
+  &:invalid {
+    border: 1px solid #f47e7e;
+  }
 }
 
-.add-plan__list-item {
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 400;
-  color: #444444;
+.add-plan__textarea-inner {
+  position: relative;
+}
+
+.add-plan__textarea:invalid + .add-plan__textarea-invalid {
+  display: block;
 }
 
 .add-plan__activity-inner {
@@ -776,7 +1003,7 @@
     }
 
     &--duration {
-      padding: 45px 0 0 0;
+      padding: 25px 0 0 0;
     }
   }
 
@@ -792,8 +1019,13 @@
     }
   }
 
+  .add-plan__tick-field {
+    margin-right: 20px;
+    width: 37px;
+    height: 37px;
+  }
+
   .add-plan__tick {
-    padding: 10px;
     width: 12px;
     height: 12px;
   }
@@ -809,8 +1041,7 @@
   }
 
   .add-plan__form-child {
-    padding: 10px 20px;
-    margin: 0;
+    margin: 0 0 25px 0;
     font-size: 20px;
     font-weight: 500;
     color: #1d2e5b;
@@ -864,12 +1095,12 @@
     line-height: 18px;
   }
 
-  .add-plan__day--tab {
+  .add-plan__day {
     display: block;
-  }
 
-  .add-plan__day--mob {
-    display: none;
+    &--mob {
+      display: none;
+    }
   }
 
   .add-plane__date-wrap {
@@ -988,9 +1219,34 @@
     }
   }
 
-  .add-plan__select-inner--show-dropdown .add-plan__select-cross--dropdown {
+  .add-plan__choice-btn-country {
+    margin: 0 30px 15px 0;
+    padding: 25px;
+    width: 365px;
+    font-size: 20px;
+
+    &::after {
+      top: 30px;
+      right: -33px;
+      z-index: 2;
+
+      width: 14px;
+      height: 14px;
+
+      background-color: $color-light;
+    }
+  }
+
+  .add-plan__choice-btn-country--active ~ .add-plan__select-cross--dropdown {
     top: 20px;
-    right: 190px;
+    right: 200px;
+
+    display: block;
+  }
+
+  .add-plan__select-cross--dropdown .add-plan__select-cross-icon--dropdown {
+    width: 20px;
+    height: 20px;
   }
 
   .add-plan__dropdown {
@@ -1023,6 +1279,16 @@
       background-color: #1d2e5b;
       color: $color-light;
     }
+  }
+
+  .add-plan__country-text {
+    width: 52px;
+    height: 68px;
+  }
+
+  .add-plan__country-input:checked ~ .add-plan__country-text {
+    background-color: #1d2e5b;
+    color: $color-light;
   }
 
   .add-plan__list-item {
@@ -1123,6 +1389,12 @@
     font-size: 20px;
   }
 
+  .add-plan__textarea-invalid {
+    width: 500px;
+
+    font-size: 24px;
+  }
+
   .add-plan__activity-inner {
     width: 500px;
     align-items: start;
@@ -1149,7 +1421,7 @@
 
 @media (min-width: $desktop-width) {
   .add-plan {
-    padding-bottom: 30px;
+    padding-bottom: 85px;
   }
 
   .add-plan__title {
@@ -1184,13 +1456,19 @@
 
     border: none;
     background-color: transparent;
+
+    &--active {
+      .add-plan__slider-text {
+        color: rgba(#000000, 1);
+      }
+    }
   }
 
   .add-plan__slider-text {
     display: block;
     font-size: 20px;
     font-weight: 400;
-    color: $color-grey;
+    color: rgba(#000000, 0.6);
     text-transform: uppercase;
     text-align: left;
   }
@@ -1225,13 +1503,13 @@
     }
 
     &--duration {
-      padding: 10px 0 40px 0;
+      padding: 10px 0 30px 0;
       width: 485px;
       border: none;
     }
 
     &--child {
-      margin-top: 20px;
+      margin-top: 50px;
       margin-left: auto;
       width: 245px;
     }
@@ -1310,14 +1588,21 @@
   }
 
   .add-plan__table {
-    margin: 20px 0 50px 0;
+    margin: 0 0 50px 0;
   }
 
   .add-plane__date-wrap {
-    padding-left: 15px;
+    padding: 15px;
 
-    width: 140px;
+    width: 143px;
     height: 70px;
+    text-align: left;
+    vertical-align: top;
+    box-sizing: border-box;
+  }
+
+  .add-plan__table th {
+    padding: 10px;
     text-align: left;
   }
 
@@ -1337,6 +1622,14 @@
       display: inline-block;
       vertical-align: top;
       color: $color-grey;
+    }
+
+    &--mar {
+      margin-left: 5px;
+      width: 30px;
+      display: inline-block;
+      vertical-align: top;
+      color: rgba($color-grey, 0.3);
     }
   }
 
@@ -1371,6 +1664,16 @@
     }
   }
 
+  .add-plan__choice-btn-country {
+    margin-right: 30px;
+    padding: 25px;
+    width: 730px;
+
+    &::after {
+      right: -50px;
+    }
+  }
+
   .add-plan__choice {
     &::after {
       top: -235px;
@@ -1379,12 +1682,12 @@
     }
   }
 
-  .add-plan__select-inner--show-dropdown .add-plan__select-cross--dropdown {
+  .add-plan__choice-btn-country--active ~ .add-plan__select-cross--dropdown {
     top: 20px;
-    right: 25px;
+    right: 20px;
   }
 
-  .add-plan__select-inner--show-dropdown .add-plan__select-cross-icon--dropdown {
+  .add-plan__select-cross--dropdown .add-plan__select-cross-icon--dropdown {
     fill: #cbced9;
   }
 
@@ -1393,6 +1696,11 @@
     left: 0;
 
     width: 730px;
+  }
+
+  .add-plan__dropdown-form-icon {
+    top: 30px;
+    left: 690px;
   }
 
   .add-plan__country-list {
@@ -1414,6 +1722,15 @@
 
     border: 1px solid #cbced9;
     border-radius: 3px;
+
+    &:hover {
+      order: 1px solid #959bb2;
+    }
+  }
+
+  .add-plan__country-text {
+    width: 60px;
+    height: 70px;
   }
 
   .add-plan__btn-wrap {
@@ -1446,5 +1763,9 @@
   .add-plan__textarea {
     padding: 20px;
     width: 690px;
+  }
+
+  .add-plan__textarea-invalid {
+    width: 730px;
   }
 }

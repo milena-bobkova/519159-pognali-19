@@ -2,6 +2,9 @@
   @include list-reset;
   padding: 50px 0 45px;
   width: 270px;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .contact-list__link {
@@ -39,7 +42,7 @@
   .contact-list {
     padding: 95px 60px;
 
-    width: 688px;
+    width: 568px;
   }
 
   .contact-list__link {
@@ -64,11 +67,18 @@
 }
 
 @media (min-width: $desktop-width) {
+  .contact-list {
+    padding: 0;
+    width: 100px;
+    align-items: center;
+  }
+
   .contact-list__icon {
     display: none;
   }
 
   .contact-list__item {
+    margin: 0;
     width: 50px;
     height: 50px;
   }

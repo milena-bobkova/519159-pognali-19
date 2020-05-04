@@ -29,8 +29,12 @@
   width: 270px;
 
   background-color: $color-light;
-  box-shadow: 0 20px 25px 0 #dee5fc;
+  box-shadow: 0 20px 25px 0 rgba(#1d2e5b, 0.1);
   border-radius: 20px;
+
+  &--closed {
+    display: none;
+  }
 }
 
 .rates__business-wrap {
@@ -127,19 +131,43 @@
   padding-top: 30px;
   padding-bottom: 25px;
   font-weight: 700;
-  color: $color-blue;
+  color: #132576;
   text-align: center;
 
-  &--mod {
-    display: block;
-    width: 100%;
-    border: none;
-    padding: 20px 0;
-    text-align: center;
-    background-color: #f3f4f8;
-    text-transform: uppercase;
-    border-radius: 0 0 20px 20px;
+  &:hover,
+  &:focus {
+    opacity: 0.7;
   }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.rates__button-mod {
+  font-weight: 700;
+  color: #132576;
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #f3f4f8;
+  text-transform: uppercase;
+  border-radius: 0 0 20px 20px;
+
+  &:hover,
+  &:focus {
+    background-color: #edeff6;
+  }
+
+  &:active {
+    background-color: #edeff6;
+  }
+}
+
+.rates__button-mod:active span {
+  opacity: 0.3;
 }
 
 .rates__button-icon {
@@ -264,14 +292,18 @@
 
     font-size: 20px;
     text-align: left;
+  }
 
-    &--mod {
-      padding: 40px 0;
+  .rates__button-mod {
+    padding: 40px 0;
 
-      font-size: 24px;
-      text-transform: none;
-      justify-content: center;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+
+    font-size: 24px;
+    text-transform: none;
   }
 
   .rates__button-icon {
@@ -354,9 +386,9 @@
 
   .rates__button {
     margin-left: 70px;
+  }
 
-    &--mod {
-      margin: 0;
-    }
+  .rates__button-mod {
+    margin: 0;
   }
 }

@@ -21,7 +21,7 @@
   }
 
   .user-list__item {
-    margin-left: auto;
+    margin-left: 143px;
   }
 
   .user-list__login {
@@ -34,5 +34,9 @@
     display: flex;
     width: 190px;
     order: 1;
+  }
+
+  .user-list__item {
+    margin-left: 0;
   }
 }
