@@ -53,6 +53,12 @@
   left: 50%;
 }
 
+.map__iframe {
+  margin-top: 60px;
+  width: 100%;
+  height: 546px;
+}
+
 @media (min-width: $tablet-width) {
   .map__title {
     padding: 105px 0 85px;
@@ -123,6 +129,11 @@
     width: 768px;
     height: 700px;
   }
+
+  .map__iframe {
+    margin-top: 110px;
+    height: 700px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -168,6 +179,11 @@
 
   .map__img {
     width: 1440px;
+    height: 750px;
+  }
+
+  .map__iframe {
+    margin-top: 130px;
     height: 750px;
   }
 }

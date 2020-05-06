@@ -1,5 +1,7 @@
 .main-nav {
   position: fixed;
+  left: 50%;
+  margin-left: -160px;
   z-index: 15;
 
   padding-top: 25px;
@@ -26,6 +28,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
 .main-nav__burger {
@@ -133,6 +136,7 @@
   .main-nav {
     padding-top: 46px;
     padding-bottom: 46px;
+    margin-left: -384px;
 
     &--closed {
       background-color: #182044;
@@ -174,6 +178,7 @@
 
 @media (min-width: $desktop-width) {
   .main-nav {
+    margin-left: -720px;
     padding-top: 30px;
     padding-bottom: 0;
     width: 1320px;

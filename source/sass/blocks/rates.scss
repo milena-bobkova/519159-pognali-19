@@ -210,6 +210,7 @@
     padding: 30px 90px 0 90px;
 
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
   }
@@ -237,6 +238,7 @@
     padding: 0;
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 565px;
   }
@@ -300,7 +302,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: left;
 
     font-size: 24px;
     text-transform: none;
@@ -324,7 +325,7 @@
 
 @media (min-width: $desktop-width) {
   .rates__wrap {
-    padding: 170px 70px 145px 70px;
+    padding: 170px 60px 145px 60px;
 
     &::before {
       top: 300px;

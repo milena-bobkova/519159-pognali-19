@@ -73,12 +73,11 @@
 
 .countries-filter__icon-close {
   fill: #121936;
-  display: none;
 }
 
 .countries-filter__icon-dots {
   fill: #121936;
-  display: block;
+  display: none;
 }
 
 .countries-filter__continents {
@@ -115,7 +114,7 @@
   padding: 1px 0;
 
   width: 220px;
-  height: 206px;
+  height: 208px;
 
   box-sizing: border-box;
   display: flex;
@@ -214,6 +213,14 @@
 
 
 .countries-filter--closed .countries-filter__continents {
+  display: none;
+}
+
+.countries-filter--closed .countries-filter__icon-dots {
+  display: inline-block;
+}
+
+.countries-filter--closed .countries-filter__icon-close {
   display: none;
 }
 

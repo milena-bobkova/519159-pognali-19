@@ -17,9 +17,6 @@
 .travelers-catalog__card-pic {
   float: left;
   margin-right: 15px;
-
-  width: 70px;
-  height: 70px;
 }
 
 .travelers-catalog__img {
@@ -279,8 +276,8 @@
   }
 
   .travelers-catalog__card-wrap {
-    margin-bottom: 35px;
-    padding: 35px 25px 25px 35px;
+    margin-bottom: 40px;
+    padding: 30px 25px 20px 35px;
     width: 630px;
   }
 
@@ -296,12 +293,11 @@
 
   .travelers-catalog__card-pic {
     margin-right: 35px;
-
-    width: 190px;
-    height: 190px;
   }
 
   .travelers-catalog__img {
+    width: 190px;
+    height: 190px;
     border-radius: 20px;
   }
 
@@ -545,6 +541,8 @@
   }
 
   .travelers-catalog__img {
+    width: 285px;
+    height: 285px;
     border-radius: 20px 0 0 20px;
   }
 

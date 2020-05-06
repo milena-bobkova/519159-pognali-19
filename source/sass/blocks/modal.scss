@@ -1,20 +1,21 @@
 .modal {
   position: fixed;
-  top: 100px;
-  left: 0;
-  right: 0;
-  margin: auto;
+  top: 200px;
+  left: 50%;
+  margin-left: -135px;
   z-index: 30;
 }
 
 @media (min-width: $tablet-width) {
   .modal {
     top: 125px;
+    margin-left: -340px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .modal {
     top: 165px;
+    margin-left: -375px;
   }
 }

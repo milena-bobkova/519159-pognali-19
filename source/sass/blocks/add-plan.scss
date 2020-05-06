@@ -1,5 +1,5 @@
 .add-plan {
-  padding-bottom: 85px;
+  padding-bottom: 60px;
   background-color: #d4d9eb;
 }
 
@@ -63,7 +63,7 @@
 
 .add-plan__text {
   margin: 0;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
 
   font-size: 16px;
   line-height: 22px;
@@ -95,7 +95,7 @@
 }
 
 .add-plan__input-wrap {
-  margin: 10px 0 20px 0;
+  margin: 10px 0 15px 0;
   display: flex;
   justify-content: space-between;
   border: 1px solid rgba(#1d2e5b, 0.3);
@@ -175,14 +175,20 @@
 
   &:hover,
   &:focus {
-    .add-plan__icon,
+    .add-plan__icon {
+      fill: #959bb2;
+    }
+
     .add-plan__month-icon {
       fill: rgba(#000000, 0.6);
     }
   }
 
   &:active {
-    .add-plan__icon,
+    .add-plan__icon {
+      fill: #161c35;
+    }
+
     .add-plan__month-icon {
       fill: rgba(#000000, 0.1);
     }
@@ -190,16 +196,7 @@
 }
 
 .add-plan__icon {
-  width: 14px;
-  fill: rgba(#000000, 0.3);
-
-  &--minus {
-    height: 2px;
-  }
-
-  &--plus {
-    height: 14px;
-  }
+  fill: #cbced9;
 }
 
 .add-plan__form-child {
@@ -353,6 +350,10 @@
   height: 10px;
 
   fill: #cbced9;
+
+  &--choice {
+    top: 45px;
+  }
 }
 
 .add-plan__select-inner {
@@ -409,6 +410,11 @@
   }
 }
 
+.add-plan__option {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .add-plan__flag-icon {
   width: 34px;
   height: 24px;
@@ -448,7 +454,7 @@
   outline: none;
 
   &--dropdown {
-    display: none;
+    top: -10px;
   }
 
   &:hover,
@@ -475,17 +481,6 @@
   fill: rgba(#000000, 0.3);
   background-color: #edeff6;
   border-radius: 50%;
-}
-
-.add-plan__choice-cross-icon {
-  width: 14px;
-  height: 14px;
-
-  fill: rgba(#000000, 0.3);
-  background-color: #edeff6;
-  border-radius: 50%;
-
-  transform: rotate(45deg);
 }
 
 .add-plan__btn {
@@ -540,10 +535,21 @@
   display: none;
 }
 
+.add-plan__choice-cross-icon {
+  width: 14px;
+  height: 14px;
+
+  fill: rgba(#000000, 0.3);
+  background-color: #edeff6;
+  border-radius: 50%;
+
+  transform: rotate(45deg);
+}
+
 .add-plan__choice-btn {
   position: relative;
 
-  margin: 10px 0 25px 0;
+  margin: 20px 0 20px 0;
   padding: 10px;
 
   display: flex;
@@ -654,6 +660,10 @@
   &::after {
     display: none;
   }
+
+  .add-plan__dropdown-choice-icon {
+    display: none;
+  }
 }
 
 .add-plan__label {
@@ -663,25 +673,19 @@
   color: #1d2e5b;
 }
 
-.add-plan__choice-btn-country--active .add-plan__dropdown-choice-icon {
-  display: none;
-}
-
 .add-plan__choice-btn-country--active ~ .add-plan__select-cross--dropdown {
   top: 10px;
   right: 15px;
-
-  display: block;
 }
 
-.add-plan__select-cross--dropdown .add-plan__select-cross-icon--dropdown {
-  padding: 0;
-  fill: #616d8d;
+.add-plan__choice-btn-country--active ~ .add-plan__select-cross--dropdown svg {
+  fill: #606c8c;
   background-color: transparent;
 }
 
 .add-plan__select-cross--dropdown:hover .add-plan__select-cross-icon--dropdown {
   fill: $color-light;
+  background-color: transparent;
 }
 
 .add-plan__select-cross--dropdown:active .add-plan__select-cross-icon--dropdown {
@@ -894,6 +898,8 @@
   font-size: 18px;
   font-weight: 500;
   color: #1d2e5b;
+  white-space: nowrap;
+  overflow: hidden;
 
   &::before {
     position: absolute;
@@ -910,7 +916,7 @@
 
 @media (min-width: $tablet-width) {
   .add-plan__title {
-    padding: 60px 35px;
+    padding: 60px 35px 55px;
   }
 
   .add-plan__fieldset {
@@ -988,7 +994,7 @@
     }
 
     &--country-1 {
-      padding: 45px 0 0 0;
+      padding: 40px 0 0 0;
       margin: 0;
     }
 
@@ -1284,6 +1290,9 @@
   .add-plan__country-text {
     width: 52px;
     height: 68px;
+
+    font-size: 20px;
+    font-weight: 500;
   }
 
   .add-plan__country-input:checked ~ .add-plan__country-text {
@@ -1353,7 +1362,7 @@
   .add-plan__choice {
     &::after {
       position: absolute;
-      top: -208px;
+      top: -203px;
       right: 145px;
 
       content: "";
@@ -1362,6 +1371,11 @@
       height: 410px;
       background: linear-gradient(to bottom, #cbced9 90%, transparent 100%);
     }
+  }
+
+  .add-plan__choice-cross-icon {
+    width: 20px;
+    height: 20px;
   }
 
   .add-plan__textarea-wrap {
@@ -1478,7 +1492,7 @@
   }
 
   .add-plan__legend-container {
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     width: 570px;
   }
 
@@ -1588,7 +1602,7 @@
   }
 
   .add-plan__table {
-    margin: 0 0 50px 0;
+    margin: 0 0 60px 0;
   }
 
   .add-plane__date-wrap {
@@ -1676,7 +1690,7 @@
 
   .add-plan__choice {
     &::after {
-      top: -235px;
+      top: -230px;
       right: 227px;
       height: 500px;
     }
