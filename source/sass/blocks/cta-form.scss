@@ -18,14 +18,39 @@
 
 .cta-form__link {
   color: $color-yellow;
-  text-decoration: underline;
+  border-bottom: 1px solid $color-yellow;
+  font-size: 300;
 
-  &:hover {
-    color: $color-orange;
+  &:hover,
+  &:focus {
+    color: #ff8d30;
+    border-bottom: 1px solid #ff8d30;
   }
 
   &:active {
-    color: rgba($color-orange, 0.3);
+    color: rgba(#ff8d30, 0.3);
+    border-bottom: 1px solid rgba(#ff8d30, 0.3);
+  }
+}
+
+.cta-form__list-link {
+  color: $color-yellow;
+
+  &:hover,
+  &:focus {
+    color: #ffbd30;
+
+    .cta-form__list-icon {
+      fill: #ffbd30;
+    }
+  }
+
+  &:active {
+    color: rgba(#ffbd30, 0.3);
+
+    .cta-form__list-icon {
+      fill: rgba(#ffbd30, 0.3);
+    }
   }
 }
 
@@ -43,21 +68,55 @@
 }
 
 .cta-form__input {
-  width: 250px;
+  padding: 22px 25px;
   height: 60px;
+  width: 250px;
 
   border-radius: 8px 0 0 8px;
   border: none;
   outline: none;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 700;
+  color: $color-light;
+
+  &:hover {
+    background-color: #edeff6;
+
+    &::placeholder {
+      color: rgba($color-grey, 0.5);
+      background-color: #edeff6;
+    }
+  }
+
+  &:active,
+  &:focus {
+    border: 3px solid $color-light;
+    color: $color-light;
+    background-color: $color-blue;
+
+    &::placeholder {
+      color: $color-light;
+      background-color: $color-blue;
+    }
+  }
+
+  &:invalid {
+    background-color: #ffefef;
+    color: #ff0000;
+
+    &::placeholder {
+      background-color: #ffefef;
+    }
+  }
 }
 
 .cta-form__input::placeholder {
-  padding-left: 25px;
-
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
   color: rgba(#000000, 0.3);
+  background-color: $color-light;
 }
 
 .cta-form__btn {
@@ -102,9 +161,11 @@
   }
 
   .cta-form__input {
+    padding: 31px 35px;
     width: 540px;
-    height: 78px;
+    height: 80px;
     border-radius: 15px 0 0 15px;
+    font-size: 24px;
   }
 
   .cta-form__btn {

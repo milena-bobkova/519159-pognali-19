@@ -2,6 +2,8 @@
   position: relative;
 
   margin-top: -60px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: $color-blue;
   border-radius: 0 0 25px 25px;
 
@@ -116,7 +118,7 @@
   color: #1d2e5b;
 
   &:hover {
-    background-color: $color-orange;
+    background-color: #ffbd30;
   }
 
   &:active {

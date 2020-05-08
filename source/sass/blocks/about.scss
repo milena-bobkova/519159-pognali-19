@@ -15,7 +15,8 @@
 }
 
 .about__wrap {
-  padding: 40px 25px 65px;
+  padding-top: 40px;
+  padding-bottom: 65px;
 
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
@@ -61,7 +62,8 @@
   }
 
   .about__wrap {
-    padding: 50px 40px 90px;
+    padding-top: 50px;
+    padding-bottom: 90px;
 
     background-image: url("../img/about-tablet@1x.png");
     background-repeat: no-repeat;
@@ -130,11 +132,11 @@
   }
 
   .about__title {
-    padding: 0 90px;
+    padding: 0 75px;
   }
 
   .about__text {
-    padding: 50px 20px 40px 90px;
+    padding: 50px 20px 40px 75px;
     width: 615px;
 
     &:last-of-type {
@@ -144,6 +146,6 @@
   }
 
   .about__button {
-    margin-left: 90px;
+    margin-left: 75px;
   }
 }

@@ -7,6 +7,13 @@
   position: relative;
 
   border-radius: 10px;
+
+  &:hover {
+    background-color: $color-light;
+    transform: scale(1.03);
+    transition-duration: 0.3s;
+    box-shadow: 6px 6px 21px 0 rgba(#000000, 0.08);
+  }
 }
 
 .user-card__picture {
@@ -77,6 +84,15 @@
   line-height: 20px;
   font-weight: 700;
   color: #1d2e5b;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .user-card__habits {

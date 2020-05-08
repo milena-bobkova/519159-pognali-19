@@ -55,6 +55,17 @@
   font: inherit;
   text-align: center;
   border: 1px solid rgba(#1d2e5b, 0.2);
+  appearance: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border: 1px solid #959bb2;
+  }
+
+  &:active {
+    border: 1px solid #161c35;
+  }
 }
 
 .level__min-level input {
@@ -95,6 +106,16 @@
   background-color: #1d2e5b;
   border-radius: 50%;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    transform: scale(2);
+    transition-duration: 0.3s;
+  }
+
+  &:active {
+    box-shadow: 3px 3px 7px rgba(#1d2e5b, 0.35);
+  }
 
   &--min {
     left: 70px;
@@ -178,12 +199,12 @@
 
     &::before {
       top: 15px;
-      left: 83px;
+      left: 85px;
     }
 
     &::after {
       top: 20px;
-      left: 83px;
+      left: 85px;
     }
   }
 
@@ -201,7 +222,7 @@
 
   .level__toggle {
     &--min {
-      left: 50px;
+      left: 58px;
     }
 
     &--max {

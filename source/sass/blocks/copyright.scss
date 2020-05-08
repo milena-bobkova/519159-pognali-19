@@ -15,6 +15,15 @@
 
 .copyright__logo {
   display: flex;
+
+  &:hover,
+  &:focus .copyright__icon {
+    fill: rgba($color-blue, 0.6);
+  }
+
+  &:active .copyright__icon {
+    fill: rgba($color-blue, 0.3);
+  }
 }
 
 .copyright__icon {

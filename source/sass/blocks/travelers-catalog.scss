@@ -17,9 +17,6 @@
 .travelers-catalog__card-pic {
   float: left;
   margin-right: 15px;
-
-  width: 70px;
-  height: 70px;
 }
 
 .travelers-catalog__img {
@@ -78,6 +75,30 @@
   border: none;
   font-size: 0;
   background-color: transparent;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    .travelers-catalog__like-icon {
+      background-color: #e2e5f2;
+      fill: #8f94aa;
+
+      &--active {
+        background-color: #f9d8d8;
+        fill: #f02323;
+      }
+    }
+
+    &:active {
+      .travelers-catalog__like-icon {
+        fill: #d0d4e3;
+
+        &--active {
+          fill: #f6a1a1;
+        }
+      }
+    }
+  }
 }
 
 .travelers-catalog__like-icon {
@@ -87,7 +108,7 @@
   height: 11px;
 
   overflow: visible;
-  fill: #b1b4c3;
+  fill: #bdc0ce;
 
   border-radius: 50%;
   background-color: #edeff6;
@@ -216,6 +237,15 @@
   color: #1d2e5b;
   text-transform: uppercase;
   text-align: center;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .travelers-catalog__more-icon {
@@ -246,8 +276,8 @@
   }
 
   .travelers-catalog__card-wrap {
-    margin-bottom: 35px;
-    padding: 35px 25px 25px 35px;
+    margin-bottom: 40px;
+    padding: 30px 25px 20px 35px;
     width: 630px;
   }
 
@@ -263,12 +293,11 @@
 
   .travelers-catalog__card-pic {
     margin-right: 35px;
-
-    width: 190px;
-    height: 190px;
   }
 
   .travelers-catalog__img {
+    width: 190px;
+    height: 190px;
     border-radius: 20px;
   }
 
@@ -474,7 +503,7 @@
 
 @media (min-width: $desktop-width) {
   .travelers-catalog {
-    padding-bottom: 40px;
+    padding-bottom: 100px;
     width: 950px;
   }
 
@@ -512,6 +541,8 @@
   }
 
   .travelers-catalog__img {
+    width: 285px;
+    height: 285px;
     border-radius: 20px 0 0 20px;
   }
 
@@ -528,7 +559,7 @@
 
   .travelers-catalog__button {
     position: absolute;
-    bottom: 50px;
+    bottom: 55px;
     left: 335px;
   }
 

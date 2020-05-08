@@ -1,8 +1,11 @@
 .main-nav {
   position: fixed;
+  left: 50%;
+  margin-left: -160px;
   z-index: 15;
 
-  padding-bottom: 35px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 
   display: flex;
   flex-wrap: wrap;
@@ -10,9 +13,6 @@
   background-color: $color-light;
 
   &--closed {
-    position: fixed;
-    z-index: 15;
-    padding-bottom: 0;
     background-color: $color-dark;
   }
 }
@@ -28,6 +28,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
 .main-nav__burger {
@@ -112,8 +113,6 @@
 }
 
 .main-nav__logo-wrap {
-  padding: 26px 0;
-
   min-width: 270px;
 
   display: flex;
@@ -125,9 +124,19 @@
   display: none;
 }
 
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__list {
+  display: flex;
+}
+
 @media (min-width: $tablet-width) {
   .main-nav {
-    width: 688px;
+    padding-top: 46px;
+    padding-bottom: 46px;
+    margin-left: -384px;
 
     &--closed {
       background-color: #182044;
@@ -139,8 +148,6 @@
   }
 
   .main-nav__logo-wrap {
-    padding: 46px 0;
-
     width: 355px;
     order: -1;
   }
@@ -171,7 +178,10 @@
 
 @media (min-width: $desktop-width) {
   .main-nav {
-    padding: 30px 60px 0 60px;
+    margin-left: -720px;
+    padding-top: 30px;
+    padding-bottom: 0;
+    width: 1320px;
     flex-direction: row;
     justify-content: flex-start;
 
@@ -179,6 +189,10 @@
   }
 
   .main-nav--closed .main-nav__list:nth-of-type(1) {
+    display: flex;
+  }
+
+  .main-nav--closed .main-nav__list:nth-of-type(3) {
     display: flex;
   }
 
@@ -256,6 +270,10 @@
   }
 
   .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__list:last-of-type {
     display: none;
   }
 }
