@@ -3,11 +3,6 @@
   background-color: #d4d9eb;
 }
 
-.add-plan__title {
-  margin: 0;
-  padding: 30px 0;
-}
-
 .add-plan__fieldset {
   position: relative;
 
@@ -101,18 +96,12 @@
   border: 1px solid rgba(#1d2e5b, 0.3);
   border-radius: 5px;
 
-  &--flag {
-    width: 50px;
-    margin-left: -1px;
-    margin-bottom: 15px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  &--country1 {
+    margin-top: 5px;
   }
 
-  &--country {
-    margin-bottom: 15px;
+  &--duration {
+    margin-bottom: 20px;
   }
 
   &:hover {
@@ -128,6 +117,21 @@
 
     .add-plan__icon {
       fill: #161c35;
+    }
+  }
+
+  &--flag {
+    width: 50px;
+    margin-left: -1px;
+    margin-bottom: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover,
+    &:active {
+      border: none;
     }
   }
 }
@@ -284,7 +288,7 @@
   color: $color-grey;
 }
 
-.add-plane__date-wrap {
+.add-plan__date-wrap {
   padding: 0;
   margin: 0;
 
@@ -304,9 +308,28 @@
   &--next {
     background-color: #edeff6;
   }
+
+  &:hover {
+    background-color: #1d2e5b;
+    outline: 2px solid #ff5c23;
+    box-sizing: border-box;
+
+    .add-plan__date {
+      color: $color-light;
+    }
+  }
+
+  &:active {
+    background-color: #101d41;
+    outline: none;
+
+    .add-plan__date {
+      color: $color-light;
+    }
+  }
 }
 
-.add-plane__date {
+.add-plan__date {
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -321,9 +344,7 @@
   }
 }
 
-.add-plane__day {
-  display: none;
-
+.add-plan__day {
   &--red {
     color: #ff5c23;
   }
@@ -331,6 +352,10 @@
   &--mob {
     display: block;
   }
+}
+
+.add-plan__day-tab {
+  display: none;
 }
 
 .add-plan__day-status {
@@ -350,10 +375,6 @@
   height: 10px;
 
   fill: #cbced9;
-
-  &--choice {
-    top: 45px;
-  }
 }
 
 .add-plan__select-inner {
@@ -452,10 +473,6 @@
   background-color: transparent;
   border: none;
   outline: none;
-
-  &--dropdown {
-    top: -10px;
-  }
 
   &:hover,
   &:focus {
@@ -607,7 +624,7 @@
 .add-plan__choice-btn-country {
   position: relative;
 
-  margin: 10px 0 15px 0;
+  margin: 10px 0 5px;
   padding: 10px;
 
   display: flex;
@@ -854,10 +871,10 @@
 .add-plan__activity-inner {
   position: relative;
 
-  width: 215px;
+  width: 220px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: top;
 
   &::before {
     position: absolute;
@@ -915,13 +932,13 @@
 }
 
 @media (min-width: $tablet-width) {
-  .add-plan__title {
-    padding: 60px 35px 55px;
+  .add-plan {
+    padding-top: 50px;
   }
 
   .add-plan__fieldset {
     margin: 0 35px 40px 35px;
-    padding: 50px 45px 60px;
+    padding: 45px 45px 60px;
     border-radius: 25px;
   }
 
@@ -941,7 +958,7 @@
   }
 
   .add-plan__legend {
-    padding-bottom: 30px;
+    padding-bottom: 35px;
 
     display: flex;
     flex-direction: column;
@@ -994,7 +1011,7 @@
     }
 
     &--country-1 {
-      padding: 40px 0 0 0;
+      padding: 30px 0 0 0;
       margin: 0;
     }
 
@@ -1102,19 +1119,27 @@
   }
 
   .add-plan__day {
+    display: none;
+  }
+
+  .add-plan__day-tab {
     display: block;
 
-    &--mob {
-      display: none;
+    font-size: 18px;
+    line-height: 30px;
+    color: $color-grey;
+
+    &--red {
+      color: #ff5c23;
     }
   }
 
-  .add-plane__date-wrap {
+  .add-plan__date-wrap {
     width: 75px;
     height: 68px;
   }
 
-  .add-plane__date {
+  .add-plan__date {
     font-size: 20px;
   }
 
@@ -1144,22 +1169,18 @@
     display: block;
   }
 
-  .page-section__btn-icon--last {
-    margin-right: 20px;
-  }
-
   .add-plan__input-wrap {
     margin: 20px 0;
 
     &--flag {
       width: 75px;
-      margin: 10px  40px 0 55px;
+      margin: 10px 40px 10px 55px;
       border: none;
       display: flex;
-      align-items: start;
+      align-items: flex-start;
     }
 
-    &--country {
+    &--country1 {
       margin: 0;
       margin-bottom: 15px;
     }
@@ -1170,7 +1191,7 @@
   }
 
   .add-plan__select {
-    padding: 23px;
+    padding: 25px;
 
     width: 365px;
 
@@ -1185,6 +1206,7 @@
     position: relative;
 
     justify-content: flex-start;
+    align-items: center;
   }
 
   .add-plan__select-input {
@@ -1332,7 +1354,7 @@
 
   .add-plan__select-cross {
     top: 20px;
-    right: 20px;
+    right: 10px;
   }
 
   .add-plan__select-cross-icon {
@@ -1435,17 +1457,13 @@
 
 @media (min-width: $desktop-width) {
   .add-plan {
-    padding-bottom: 85px;
-  }
-
-  .add-plan__title {
-    padding: 60px 0 60px 65px;
+    padding: 45px 0 85px;
   }
 
   .add-plan__fieldset {
     margin: 0;
     margin-bottom: 45px;
-    padding: 100px 160px 110px;
+    padding: 90px 160px 115px;
     border-radius: 50px;
   }
 
@@ -1592,7 +1610,7 @@
     }
 
     &--flag {
-      margin: 10px 110px 0 0;
+      margin: 10px 110px 20px 0;
     }
   }
 
@@ -1605,7 +1623,7 @@
     margin: 0 0 60px 0;
   }
 
-  .add-plane__date-wrap {
+  .add-plan__date-wrap {
     padding: 15px;
 
     width: 143px;
@@ -1620,7 +1638,7 @@
     text-align: left;
   }
 
-  .add-plane__date {
+  .add-plan__date {
     font-size: 18px;
   }
 
@@ -1698,7 +1716,7 @@
 
   .add-plan__choice-btn-country--active ~ .add-plan__select-cross--dropdown {
     top: 20px;
-    right: 20px;
+    right: 10px;
   }
 
   .add-plan__select-cross--dropdown .add-plan__select-cross-icon--dropdown {

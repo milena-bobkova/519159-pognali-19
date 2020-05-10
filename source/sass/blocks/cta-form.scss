@@ -89,7 +89,6 @@
     }
   }
 
-  &:active,
   &:focus {
     border: 3px solid $color-light;
     color: $color-light;
@@ -166,6 +165,10 @@
     height: 80px;
     border-radius: 15px 0 0 15px;
     font-size: 24px;
+
+    &::placeholder {
+      font-size: 24px;
+    }
   }
 
   .cta-form__btn {

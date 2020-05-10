@@ -1,10 +1,14 @@
 .site-list {
   @include list-reset;
-  padding: 40px 0 50px;
+  padding: 65px 0 50px;
+
+  width: 270px;
 
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .site-list__link {
@@ -19,13 +23,14 @@
 
 @media (min-width: $tablet-width) {
   .site-list {
-    padding: 45px 60px 45px 60px;
+    padding: 80px 60px 45px 60px;
 
     width: 568px;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: start;
   }
 
   .site-list__link {
@@ -41,9 +46,9 @@
 
   .site-list {
     margin: 0;
-    padding: 30px 40px;
+    padding: 30px 40px 10px 40px;
 
-    width: auto;
+    width: 610px;
 
     flex-direction: row;
     justify-content: flex-start;

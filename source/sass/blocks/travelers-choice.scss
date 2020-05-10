@@ -35,6 +35,8 @@
 
   &:hover,
   &:focus {
+    cursor: pointer;
+
     .travelers-choice__legend-text {
       color: rgba(#1d2e5b, 0.6);
     }
@@ -97,6 +99,16 @@
 
   background-color: $color-light;
   border-radius: 3px;
+  box-sizing: border-box;
+
+  &:hover {
+    border: 1px solid #959bb2;
+  }
+
+  &:active {
+    background-color: #e2e5f1;
+    border: none;
+  }
 }
 
 .travelers-choice__input:not(:checked) + .travelers-choice__tick-field svg {
@@ -105,6 +117,27 @@
 
 .travelers-choice__input:checked + .travelers-choice__tick-field svg {
   display: block;
+}
+
+.travelers-choice__input:hover ~ .travelers-choice__transport-icon {
+  transform: scale(1.05);
+  transition-duration: 0.3s;
+  fill: #b2b2b2;
+  box-shadow: 6px 6px 21px 0 rgba(#000000, 0.08);
+  cursor: pointer;
+
+  &--on {
+    fill: #57617c;
+  }
+}
+
+.travelers-choice__input:active ~ .travelers-choice__transport-icon {
+  fill: #cbced8;
+  box-shadow: none;
+
+  &--on {
+    fill: #a3a9bd;
+  }
 }
 
 .travelers-choice__label {
@@ -119,6 +152,7 @@
   &:hover,
   &:focus {
     color: rgba($color-grey, 0.6);
+    cursor: pointer;
   }
 
   &:active {
@@ -131,6 +165,8 @@
 }
 
 .travelers-choice__list {
+  @include list-reset;
+  margin: 0;
   padding-bottom: 15px;
 
   &--transport {
@@ -152,6 +188,11 @@
 
   display: flex;
   align-items: center;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
 }
 
 .travelers-choice__transport-icon {
@@ -163,6 +204,10 @@
   overflow: visible;
   background-color: $color-light;
   border-radius: 50%;
+
+  &--on {
+    fill: #1d2e5b;
+  }
 }
 
 .travelers-choice__btn {
@@ -178,6 +223,7 @@
     box-shadow: 2px 2px 10px rgba(#000000, 0.08);
     transform: scale(1.03);
     transition-duration: 0.3s;
+    cursor: pointer;
   }
 
   &:active {
@@ -188,16 +234,16 @@
 
 @media (min-width: $tablet-width) {
   .travelers-choice {
-    margin: 40px 0;
+    margin: 50px 0 0;
   }
 
   .travelers-choice__wrap {
-    padding: 40px 30px;
+    padding: 35px 30px;
   }
 
   .travelers-choice__title {
     width: 619px;
-    padding-bottom: 30px;
+    padding: 0 0 30px 0;
     font-size: 30px;
     line-height: 30px;
   }
@@ -218,7 +264,7 @@
     display: flex;
 
     &--transport {
-      padding-top: 15px;
+      padding-top: 10px;
     }
 
     &--level {
@@ -320,7 +366,7 @@
   .travelers-choice__wrap {
     display: flex;
     flex-direction: column;
-    padding: 50px 40px 40px 40px;
+    padding: 40px;
   }
 
   .travelers-choice {

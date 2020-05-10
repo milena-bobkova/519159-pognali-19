@@ -63,6 +63,12 @@
   position: relative;
   width: 270px;
   background-color: $color-light;
+
+  &:hover {
+    transform: scale(1.03);
+    transition-duration: 0.3s;
+    box-shadow: 6px 6px 21px 0 rgba(#000000, 0.08);
+  }
 }
 
 .travelers__card-wrap {

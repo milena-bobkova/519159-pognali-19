@@ -16,34 +16,6 @@
     document.createElement("picture");
   </script>
   <script src="js/picturefill.min.js" async=""></script>
-  <!-- Pixel Glass -->
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* По умолчанию показывается мобильный макет */
-      background-image: url("img/preview/pognali-catalog-mobile.png");
-    }
-
-    /* Планшет */
-    @media (min-width: 768px) {
-      HTML {
-        /* Планшетный макет */
-        background-image: url("img/preview/pognali-catalog-tablet.png");
-      }
-    }
-
-    /* Десктоп */
-    @media (min-width: 1440px) {
-      HTML {
-        /* Десктопный макет */
-        background-image: url("img/preview/pognali-catalog-desktop.png");
-      }
-    }
-  </style>
-  <link rel="stylesheet" href="https://yoksel.github.io/pixel-glass-js/styles.css">
-  <script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>
-  <!-- // Pixel Glass -->
 </head>
 
 <body class="page-inner">
@@ -52,7 +24,7 @@
     <include src="build/img/sprite.svg"></include>
   </div>
 
-  <header class="page-header">
+  <header class="page-inner__header page-header">
     <nav class="main-nav main-nav--closed page-inner__nav page-inner__nav--closed container">
       <div class="main-nav__logo-wrap">
         <a class="main-nav__logo" href="index.html" aria-label="Логотип сервиса Погнали">
@@ -61,8 +33,6 @@
           <span class="main-nav__burger"></span>
         </button>
       </div>
-
-
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
           <a class="site-list__link" href="index.html">
@@ -480,11 +450,11 @@
       </div>
     </section>
 
-    <div class="page-main__content container">
-      <section class="page-main__content-item travelers-choice">
+    <div class="page-main__catalog-wrap container">
+      <section class="travelers-choice">
         <div class="travelers-choice__wrap">
           <h2 class="travelers-choice__title">Подберите идеального попутчика</h2>
-          <form class="travellers-choice__content" method="get" action="https://echo.htmlacademy.ru/courses">
+          <form method="get" action="https://echo.htmlacademy.ru/courses">
             <div class="travelers-choice__inner">
               <fieldset class="travelers-choice__fieldset">
                 <div class="travelers-choice__fieldset-wrap">
@@ -510,7 +480,7 @@
                     </div>
                     <div class="travelers-choice__item">
                       <label class="travelers-choice__label">
-                        <input class="travellers-choice__input visually-hidden" type="checkbox" name="hobby">
+                        <input class="travelers-choice__input visually-hidden" type="checkbox" name="hobby">
                         <span class="travelers-choice__tick-field">
                           <svg class="travelers-choice__tick" width="9" height="9">
                             <use xlink:href="#tick"></use>
@@ -521,7 +491,7 @@
                     </div>
                     <div class="travelers-choice__item">
                       <label class="travelers-choice__label">
-                        <input class="travellrs-choice__input visually-hidden" type="checkbox" name="hobby">
+                        <input class="travelers-choice__input visually-hidden" type="checkbox" name="hobby">
                         <span class="travelers-choice__tick-field">
                           <svg class="travelers-choice__tick" width="9" height="9">
                             <use xlink:href="#tick"></use>
@@ -593,7 +563,7 @@
                   <div class="travelers-choice__list travelers-choice__list--closed">
                     <div class="travelers-choice__item">
                       <label class="travelers-choice__label">
-                        <input class="travellers-choice__input visually-hidden" type="checkbox" name="food" checked>
+                        <input class="travelers-choice__input visually-hidden" type="checkbox" name="food" checked>
                         <span class="travelers-choice__tick-field">
                           <svg class="travelers-choice__tick" width="9" height="9">
                             <use xlink:href="#tick"></use>
@@ -637,13 +607,12 @@
                       </svg>
                     </button>
                   </div>
-                  <div class="travelers-choice__list travelers-choice__list--transport user-card__transport-list">
+                  <div class="travelers-choice__list travelers-choice__list--transport">
                     <div class="travelers-choice__item travelers-choice__item--transport tooltip">
                       <label><input class="travelers-choice__input visually-hidden" type="checkbox" name="transport"
                           value="авиа">
-                        <svg
-                          class="travelers-choice__transport-icon user-card__transport-icon user-card__transport-icon--on"
-                          width="14" height="16" aria-label="Авиаперелет">
+                        <svg class="travelers-choice__transport-icon travelers-choice__transport-icon--on" width="14"
+                          height="16" aria-label="Авиаперелет">
                           <use xlink:href="#plane"></use>
                         </svg>
                       </label>
@@ -652,9 +621,8 @@
                     <div class="travelers-choice__item travelers-choice__item--transport tooltip">
                       <label><input class="travelers-choice__input visually-hidden" type="checkbox" name="transport"
                           value="авто" aria-label="Автотранспорт">
-                        <svg
-                          class="travelers-choice__transport-icon user-card__transport-icon user-card__transport-icon--on"
-                          width="14" height="16">
+                        <svg class="travelers-choice__transport-icon travelers-choice__transport-icon--on" width="14"
+                          height="16">
                           <use xlink:href="#bus"></use>
                         </svg>
                       </label>
@@ -663,9 +631,7 @@
                     <div class="travelers-choice__item travelers-choice__item--transport tooltip">
                       <label><input class="travelers-choice__input visually-hidden" type="checkbox" name="transport"
                           value="вело">
-                        <svg
-                          class="travelers-choice__transport-icon user-card__transport-icon user-card__transport-icon--off"
-                          width="19" height="16" aria-label="Велосипед">
+                        <svg class="travelers-choice__transport-icon" width="19" height="16" aria-label="Велосипед">
                           <use xlink:href="#bike"></use>
                         </svg>
                       </label>
@@ -674,9 +640,8 @@
                     <div class="travelers-choice__item travelers-choice__item--transport tooltip">
                       <label><input class="travelers-choice__input visually-hidden" type="checkbox" name="transport"
                           value="пешком">
-                        <svg
-                          class="travelers-choice__transport-icon user-card__transport-icon user-card__transport-icon--on"
-                          width="15" height="16" aria-label="Пешком">
+                        <svg class="travelers-choice__transport-icon travelers-choice__transport-icon--on" width="15"
+                          height="16" aria-label="Пешком">
                           <use xlink:href="#run"></use>
                         </svg>
                       </label>
@@ -812,7 +777,7 @@
               </div>
               <div class="travelers-catalog__level user-card__level">
                 <p class="travelers-catalog__text travelers-catalog__text--none">левел:</p>
-                <svg class="tarvelers-catalog__circle user-card__circle" viewBox="0 0 60 60">
+                <svg class="travelers-catalog__circle user-card__circle" viewBox="0 0 60 60">
                   <circle class="user-card__circle-bg" cx="28" cy="28" r="27"></circle>
                   <circle class="user-card__circle-progress" cx="28" cy="28" r="27" stroke-dasharray="150 8"
                     stroke-dashoffset="29"></circle>
@@ -911,7 +876,7 @@
               </div>
               <div class="travelers-catalog__level user-card__level">
                 <p class="travelers-catalog__text travelers-catalog__text--none">левел:</p>
-                <svg class="tarvelers-catalog__circle user-card__circle" viewBox="0 0 60 60">
+                <svg class="travelers-catalog__circle user-card__circle" viewBox="0 0 60 60">
                   <circle class="user-card__circle-bg" cx="28" cy="28" r="27"></circle>
                   <circle class="user-card__circle-progress" cx="28" cy="28" r="27" stroke-dasharray="100 28"
                     stroke-dashoffset="4"></circle>
@@ -1015,7 +980,7 @@
               </div>
               <div class="travelers-catalog__level user-card__level">
                 <p class="travelers-catalog__text travelers-catalog__text--none">левел:</p>
-                <svg class="tarvelers-catalog__circle user-card__circle" viewBox="0 0 60 60">
+                <svg class="travelers-catalog__circle user-card__circle" viewBox="0 0 60 60">
                   <circle class="user-card__circle-bg" cx="28" cy="28" r="27"></circle>
                   <circle class="user-card__circle-progress" cx="28" cy="28" r="27" stroke-dasharray="50 150"
                     stroke-dashoffset="74"></circle>
@@ -1115,7 +1080,7 @@
               </div>
               <div class="travelers-catalog__level user-card__level">
                 <p class="travelers-catalog__text travelers-catalog__text--none">левел:</p>
-                <svg class="tarvelers-catalog__circle user-card__circle" viewBox="0 0 60 60">
+                <svg class="travelers-catalog__circle user-card__circle" viewBox="0 0 60 60">
                   <circle class="user-card__circle-bg" cx="28" cy="28" r="27"></circle>
                   <circle class="user-card__circle-progress" cx="28" cy="28" r="27" stroke-dasharray="90 90"
                     stroke-dashoffset="50"></circle>
@@ -1130,17 +1095,17 @@
 
         <a class="travelers-catalog__more-button" href="#">
           <svg class="travelers-catalog__more-icon" width="18" height="18">
-            <use xlink:href="#plus-mobile"></use>
+            <use xlink:href="#qty-plus"></use>
           </svg>
           <span>Показать еще</span>
         </a>
 
         <div class="travelers-catalog__pagination pagination">
-          <ul class="paginetion__pages">
-            <li class="paginetion__item"><a class="pagination__link pagination__link--active" href="#">1</a></li>
-            <li class="paginetion__item"><a class="pagination__link" href="#">2</a></li>
-            <li class="paginetion__item"><a class="pagination__link" href="#">3</a></li>
-            <li class="paginetion__item"><a class="pagination__link" href="#">4</a></li>
+          <ul class="pagination__pages">
+            <li class="pagination__item"><a class="pagination__link pagination__link--active" href="#">1</a></li>
+            <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+            <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+            <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
           </ul>
           <ul class="pagination__list">
             <li class="pagination__item pagination__item--prev">
@@ -1176,8 +1141,8 @@
             <source media="(min-width: 1440px)"
               srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-            <img class="page-footer__img main-nav__img" src="img/logo-mobile-blue@1x.png"
-              srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип сервиса Погнали" width="100" height="19">
+            <img class="page-footer__img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x"
+              alt="Логотип сервиса Погнали" width="100" height="19">
           </picture>
         </a>
       </div>
@@ -1204,7 +1169,7 @@
           </a>
         </li>
       </ul>
-      <div class="footer__copyright copyright">
+      <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
         <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип HTML Academy">
           <svg class="copyright__icon" width="28" height="34">
@@ -1213,6 +1178,7 @@
       </div>
     </div>
   </footer>
+
   <script src="js/mainMenu.min.js"></script>
   <script src="js/countryFilter.min.js"></script>
 </body>

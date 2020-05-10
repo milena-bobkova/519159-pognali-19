@@ -16,34 +16,6 @@
     document.createElement("picture");
   </script>
   <script src="js/picturefill.min.js" async=""></script>
-  <!-- Pixel Glass -->
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* По умолчанию показывается мобильный макет */
-      background-image: url("img/preview/pognali-index-mobile.png");
-    }
-
-    /* Планшет */
-    @media (min-width: 768px) {
-      HTML {
-        /* Планшетный макет */
-        background-image: url("img/preview/pognali-index-tablet.png");
-      }
-    }
-
-    /* Десктоп */
-    @media (min-width: 1440px) {
-      HTML {
-        /* Десктопный макет */
-        background-image: url("img/preview/pognali-index-desktop.png");
-      }
-    }
-  </style>
-  <link rel="stylesheet" href="https://yoksel.github.io/pixel-glass-js/styles.css">
-  <script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>
-  <!-- // Pixel Glass -->
 </head>
 
 <body>
@@ -61,7 +33,6 @@
           <span class="main-nav__burger"></span>
         </button>
       </div>
-
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
           <a class="site-list__link">
@@ -107,7 +78,7 @@
           </a>
         </li>
       </ul>
-      <ul class="page-inner__nav-list main-nav__list social-list">
+      <ul class="main-nav__list social-list">
         <li class="social-list__item">
           <a class="social-list__link social-list__link--fb" href="#" aria-label="Facebook">
             <svg class="social-list__icon social-list__icon--fb" width="11" height="21">
@@ -131,12 +102,10 @@
         </li>
       </ul>
     </nav>
-
   </header>
 
   <main class="page-main">
     <h1 class="visually-hidden">"Погнали?" - сервис поиска попутчиков</h1>
-
     <section class="intro page-section page-section--intro">
       <h2 class="visually-hidden">Описание сервиса</h2>
       <div class="intro__wrap">
@@ -145,14 +114,14 @@
           <p class="intro-top__text">В путешествие с крутыми попутчиками!</p>
           <div class="intro-top__login-wrap">
             <ul class="intro-top__list">
-              <li class="intro-top__item contact-list__item">
+              <li class="intro-top__item">
                 <a class="intro-top__link" href="tel:+78005558628" aria-label="Телефон 8 800 555-86-28">
                   <svg class="intro-top__icon intro-top__icon--phone" width="18" height="18">
                     <use xlink:href="#topmenu-phone"></use>
                   </svg>
                 </a>
               </li>
-              <li class="intro-top__item contact-list__item">
+              <li class="intro-top__item">
                 <a class="intro-top__link" href="mailto:mail@htmlacademy.ru"
                   aria-label="Электронная почта mail@htmlacademy.ru">
                   <svg class="intro-top__icon intro-top__icon--mail" width="18" height="14">
@@ -226,13 +195,13 @@
               <use xlink:href="#flag-thailand"></use>
             </svg>
             <div class="routes__info">
-              <h3 class="routes__country-title routes__title--th">Таиланд</h3>
+              <h3 class="routes__country-title">Таиланд</h3>
               <p class="routes__users">
                 <svg class="routes__user-icon" width="11" height="11">
                   <use xlink:href="#user"></use>
                 </svg>
                 18321</p>
-              <p class="routs__description">Джунгли зовут!</p>
+              <p class="routes__description">Джунгли зовут!</p>
             </div>
           </li>
           <li class="routes__item">
@@ -248,13 +217,13 @@
               <use xlink:href="#flag-france"></use>
             </svg>
             <div class="routes__info">
-              <h3 class="routes__country-title routes__title--fr">Франция</h3>
+              <h3 class="routes__country-title">Франция</h3>
               <p class="routes__users">
                 <svg class="routes__user-icon" width="11" height="11">
                   <use xlink:href="#user"></use>
                 </svg>
                 12518</p>
-              <p class="routs__description">Трэ бьен, манифик!</p>
+              <p class="routes__description">Трэ бьен, манифик!</p>
             </div>
           </li>
           <li class="routes__item">
@@ -270,13 +239,13 @@
               <use xlink:href="#flag-czech"></use>
             </svg>
             <div class="routes__info">
-              <h3 class="routes__country-title routes__title--cz">Чехия</h3>
+              <h3 class="routes__country-title">Чехия</h3>
               <p class="routes__users">
                 <svg class="routes__user-icon" width="11" height="11">
                   <use xlink:href="#user"></use>
                 </svg>
                 5326</p>
-              <p class="routs__description">Закоулки старой Европы</p>
+              <p class="routes__description">Закоулки старой Европы</p>
             </div>
           </li>
         </ul>
@@ -488,29 +457,29 @@
       </article>
     </section>
 
-    <section class="rates__business rates__business--closed modal">
-      <div class="rates__business-wrap">
-        <h3 class="rates__title rates__title--business page-section__title">Бизнес-тарифы</h3>
-        <ul class="rates__list rates__list--business">
-          <li class="rates__item rates__item--business">
-            <p class="rates__term rates__term--business">Реклама у блоггера</p>
-            <p class="rates__price rates__price--business">300 000 руб./пост</p>
+    <section class="rates rates-business rates-business--closed modal">
+      <div class="rates-business__wrap">
+        <h3 class="rates__title rates-business__title">Бизнес-тарифы</h3>
+        <ul class="rates__list rates-business__list">
+          <li class="rates__item rates-business__item">
+            <p class="rates__term rates-business__term">Реклама у блоггера</p>
+            <p class="rates__price rates-business__price">300 000 руб./пост</p>
           </li>
-          <li class="rates__item rates__item--business">
-            <p class="rates__term rates__term--business">Накрутка подписчиков</p>
-            <p class="rates__price rates__price--business">от 1 руб./шт.</p>
+          <li class="rates__item rates-business__item">
+            <p class="rates__term rates-business__term">Накрутка подписчиков</p>
+            <p class="rates__price rates-business__price">от 1 руб./шт.</p>
           </li>
-          <li class="rates__item rates__item--business">
-            <p class="rates__term rates__term--business">Лайки от ботов</p>
-            <p class="rates__price rates__price--business">от 20 коп./лайк</p>
+          <li class="rates__item rates-business__item">
+            <p class="rates__term rates-business__term">Лайки от ботов</p>
+            <p class="rates__price rates-business__price">от 20 коп./лайк</p>
           </li>
-          <li class="rates__item rates__item--business">
-            <p class="rates__term rates__term--business">Ваш продакт-плейсмент</p>
-            <p class="rates__price rates__price--business">Индивидуально</p>
+          <li class="rates__item rates-business__item">
+            <p class="rates__term rates-business__term">Ваш продакт-плейсмент</p>
+            <p class="rates__price rates-business__price">Индивидуально</p>
           </li>
         </ul>
       </div>
-      <button class="rates__button-mod">
+      <button class="rates-business__button">
         <span>Закрыть окно</span>
       </button>
     </section>
@@ -526,8 +495,7 @@
         </p>
         <form class="cta-form__form" action="https://echo.htmlacademy.ru/courses" method="get">
           <div class="cta-form__wrap">
-            <input class="cta-form__input" type="email" name="user-email" placeholder="E-mail"
-              onfocus="this.value='Введенный текст'" onblur="this.value=''">
+            <input class="cta-form__input" type="email" name="user-email" placeholder="E-mail">
             <button class="cta-form__btn page-section__btn btn" type="button" aria-label="Регистрация">
               <span>Регистрация</span>
               <svg class="page-section__btn-icon">
@@ -583,7 +551,6 @@
           style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
     </section>
-
   </main>
 
   <footer class="page-footer page-section page-section--footer">
@@ -599,8 +566,8 @@
             <source media="(min-width: 1440px)"
               srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-            <img class="page-footer__img main-nav__img" src="img/logo-mobile-blue@1x.png"
-              srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип сервиса Погнали" width="100" height="19">
+            <img class="page-footer__img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x"
+              alt="Логотип сервиса Погнали" width="100" height="19">
           </picture>
         </a>
       </div>

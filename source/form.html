@@ -16,34 +16,6 @@
     document.createElement("picture");
   </script>
   <script src="js/picturefill.min.js" async=""></script>
-  <!-- Pixel Glass -->
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* По умолчанию показывается мобильный макет */
-      background-image: url("img/preview/pognali-form-mobile.png");
-    }
-
-    /* Планшет */
-    @media (min-width: 768px) {
-      HTML {
-        /* Планшетный макет */
-        background-image: url("img/preview/pognali-form-tablet.png");
-      }
-    }
-
-    /* Десктоп */
-    @media (min-width: 1440px) {
-      HTML {
-        /* Десктопный макет */
-        background-image: url("img/preview/pognali-form-desktop.png");
-      }
-    }
-  </style>
-  <link rel="stylesheet" href="https://yoksel.github.io/pixel-glass-js/styles.css">
-  <script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>
-  <!-- // Pixel Glass -->
 </head>
 
 <body class="page-inner">
@@ -52,7 +24,7 @@
     <include src="build/img/sprite.svg"></include>
   </div>
 
-  <header class="page-header">
+  <header class="page-inner__header page-header">
     <nav class="main-nav main-nav--closed page-inner__nav page-inner__nav--closed container">
       <div class="main-nav__logo-wrap">
         <a class="main-nav__logo" href="index.html" aria-label="Логотип сервиса Погнали">
@@ -61,8 +33,6 @@
           <span class="main-nav__burger"></span>
         </button>
       </div>
-
-
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
           <a class="site-list__link" href="index.html">
@@ -150,22 +120,22 @@
       </div>
     </div>
 
-    <div class="profile-plan">
-      <form class="profile-plan__form" method="post" action="https://echo.htmlacademy.ru/courses">
-        <section class="profile-plan__card page-section page-section--plan">
+    <div class="page-main__content">
+      <form method="post" action="https://echo.htmlacademy.ru/courses">
+        <section class="page-main__content-section page-main__content-section--plan profile-plan">
           <h2 class="visually-hidden">Карточка участника</h2>
           <div class="profile-plan__wrap container">
-            <div class="profile-plan__level user-card__level">
-              <svg class="profile-plan__circle user-card__circle" width="100" height="100">
-                <circle class="user-card__circle-bg" cx="50" cy="50" r="48"></circle>
-                <circle class="user-card__circle-progress" cx="50" cy="50" r="48" stroke-dasharray="180 50"
+            <div class="profile-plan__level">
+              <svg class="profile-plan__circle" width="100" height="100">
+                <circle class="profile-plan__circle-bg" cx="50" cy="50" r="48"></circle>
+                <circle class="profile-plan__circle-progress" cx="50" cy="50" r="48" stroke-dasharray="180 50"
                   stroke-dashoffset="1"></circle>
               </svg>
-              <span class="profile-plan__score user-card__score user-card__score--catalog">80</span>
+              <span class="profile-plan__score">80</span>
               <span class="profile-plan__lev">level</span>
             </div>
-            <div class="prifile-plan__pic-wrap clearfix">
-              <div class="profile-plan__pic user-card__pic">
+            <div class="profile-plan__pic-wrap">
+              <div class="profile-plan__pic">
                 <picture>
                   <source type="image/webp" media="(min-width: 768px)"
                     srcset="img/photo-account-tablet@1x.webp 1x, img/photo-account-tablet@2x.webp 2x">
@@ -187,8 +157,7 @@
               <fieldset class="profile-plan__fieldset  profile-plan__fieldset--tags">
                 <legend class="profile-plan__legend">Тэги</legend>
                 <label class="visually-hidden">Тэги</label>
-                <textarea class="profile-plan__tags-text user-card__habits"
-                  onfocus="this.value='Коротко о себе в виде 5-8 хештегов'"
+                <textarea class="profile-plan__tags-text" onfocus="this.value='Коротко о себе в виде 5-8 хештегов'"
                   onblur="this.value='#бургер #бар #футбол #концерт #крафт'">#бургер #бар #футбол #концерт #крафт</textarea>
               </fieldset>
             </div>
@@ -200,9 +169,8 @@
                     <label>
                       <input class="profile-plan__input visually-hidden" type="checkbox" name="transport" value="авиа"
                         checked>
-                      <svg
-                        class="profile-plan__transport-icon profile-plan__transport-icon--on user-card__transport-icon user-card__transport-icon--on"
-                        width="14" height="16" aria-label="Авиаперелет">
+                      <svg class="profile-plan__transport-icon profile-plan__transport-icon--on" width="14" height="16"
+                        aria-label="Авиаперелет">
                         <use xlink:href="#plane"></use>
                       </svg>
                     </label>
@@ -211,9 +179,8 @@
                   <div class="profile-plan__item tooltip">
                     <label>
                       <input class="profile-plan__input visually-hidden" type="checkbox" name="transport" value="авто">
-                      <svg
-                        class="profile-plan__transport-icon profile-plan__transport-icon--on user-card__transport-icon user-card__transport-icon--on"
-                        width="13" height="16" aria-label="Автотранспорт">
+                      <svg class="profile-plan__transport-icon profile-plan__transport-icon--on" width="13" height="16"
+                        aria-label="Автотранспорт">
                         <use xlink:href="#bus"></use>
                       </svg>
                     </label>
@@ -222,8 +189,7 @@
                   <div class="profile-plan__item tooltip">
                     <label>
                       <input class="profile-plan__input visually-hidden" type="checkbox" name="transport" value="вело">
-                      <svg class="profile-plan__transport-icon user-card__transport-icon" width="19" height="16"
-                        aria-label="Велосипед">
+                      <svg class="profile-plan__transport-icon" width="19" height="16" aria-label="Велосипед">
                         <use xlink:href="#bike"></use>
                       </svg>
                     </label>
@@ -233,9 +199,8 @@
                     <label>
                       <input class="profile-plan__input visually-hidden" type="checkbox" name="transport"
                         value="пешком">
-                      <svg
-                        class="profile-plan__transport-icon profile-plan__transport-icon--on user-card__transport-icon user-card__transport-icon--on"
-                        width="15" height="16" aria-label="Пешком">
+                      <svg class="profile-plan__transport-icon profile-plan__transport-icon--on" width="15" height="16"
+                        aria-label="Пешком">
                         <use xlink:href="#run"></use>
                       </svg>
                     </label>
@@ -247,9 +212,9 @@
           </div>
         </section>
 
-        <section class="my-plans page-section page-section--my-plans">
+        <section class="page-main__content-section page-main__content-section--my-plans my-plans">
           <div class="container">
-            <h2 class="my-plans__title profile-plan__title">Мои планы:</h2>
+            <h2 class="page-main__content-title">Мои планы:</h2>
             <ol class="my-plans__list">
               <li class="my-plans__item">
                 <p class="my-plans__country">
@@ -277,10 +242,9 @@
           </div>
         </section>
 
-        <section class="add-plan page-section page-section--add-plan">
+        <section class="page-main__content-section page-main__content-section--add-plan add-plan page-section">
           <div class="container">
-            <h2 class="add-plan__title profile-plan__title">Добавить план:</h2>
-
+            <h2 class="page-main__content-title">Добавить план:</h2>
             <fieldset class="add-plan__fieldset add-plan__fieldset--one" id="step1">
               <div class="add-plan__slider-buttons add-plan__slider-buttons--step1">
                 <a class="add-plan__slider-button add-plan__slider-button--active">
@@ -304,15 +268,17 @@
               </div>
               <div class="add-plan__legend-container">
                 <div class="add-plan__legend">
-                  <span class="add-plan__legend--title">Шаг 1.</span>
-                  <span class="add-plan__legend--title">Даты пребывания</span>
+                  <span>Шаг 1.</span>
+                  <span>Даты пребывания</span>
                 </div>
                 <p class="add-plan__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в
                   поездку и ее предполагаемую длительность.</p>
               </div>
               <div class="add-plan__forms-wrap">
                 <div class="add-plan__form-wrap add-plan__form-wrap--people">
-                  <label class="add-plan__form-label" for="num-people"><span>Ищу попутчиков:</span></label>
+                  <label class="add-plan__form-label" for="num-people">
+                    <span>Ищу попутчиков:</span>
+                  </label>
                   <span class="add-plan__form-text">чел.</span>
                   <div class="add-plan__input-wrap add-plan__input-wrap--people">
                     <button class="add-plan__form-btn" type="button" aria-label="Кнопка уменьшения количества">
@@ -377,176 +343,176 @@
                     <thead>
                       <tr>
                         <th>
-                          <span class="add-plane__day">Пн</span>
-                          <span class="add-plane__day add-plane__day--mob">П</span>
+                          <span class="add-plan__day">П</span>
+                          <span class="add-plan__day-tab">Пн</span>
                         </th>
                         <th>
-                          <span class="add-plane__day">Вт</span>
-                          <span class="add-plane__day add-plane__day--mob">В</span>
+                          <span class="add-plan__day">В</span>
+                          <span class="add-plan__day-tab">Вт</span>
                         </th>
                         <th>
-                          <span class="add-plane__day">Ср</span>
-                          <span class="add-plane__day add-plane__day--mob">С</span>
+                          <span class="add-plan__day">С</span>
+                          <span class="add-plan__day-tab">Ср</span>
                         </th>
                         <th>
-                          <span class="add-plane__day">Чт</span>
-                          <span class="add-plane__day add-plane__day--mob">Ч</span>
+                          <span class="add-plan__day">Ч</span>
+                          <span class="add-plan__day-tab">Чт</span>
                         </th>
                         <th>
-                          <span class="add-plane__day">Пт</span>
-                          <span class="add-plane__day add-plane__day--mob">П</span>
+                          <span class="add-plan__day">П</span>
+                          <span class="add-plan__day-tab">Пт</span>
                         </th>
                         <th>
-                          <span class="add-plane__day add-plane__day--red">Сб</span>
-                          <span class="add-plane__day add-plane__day--red add-plane__day--mob">C</span>
+                          <span class="add-plan__day add-plan__day--red">С</span>
+                          <span class="add-plan__day-tab add-plan__day-tab--red">Сб</span>
                         </th>
                         <th>
-                          <span class="add-plane__day add-plane__day--red">Вс</span>
-                          <span class="add-plane__day add-plane__day--red add-plane__day--mob">В</span>
+                          <span class="add-plan__day add-plan__day--red">В</span>
+                          <span class="add-plan__day-tab add-plan__day-tab--red">Вс</span>
                         </th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">23</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">23</div>
                         </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">24</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">24</div>
                         </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">25</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">25</div>
                         </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">26</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">26</div>
                         </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">27</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">27</div>
                         </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">28</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">28</div>
                         </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">1<span
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">1<span
                               class="add-plan__day-status add-plan__day-status--mar">мар</span></div>
                         </td>
                       </tr>
                       <tr>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">2</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">2</div>
                         </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">>3</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">3</div>
                         </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">4</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">4</div>
                         </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">5</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">5</div>
                         </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">6</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">6</div>
                         </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">7</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">7</div>
                         </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">8</div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">9</div>
-                        </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">10</div>
-                        </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">11</div>
-                        </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">12</div>
-                        </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">13</div>
-                        </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">14</div>
-                        </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">15</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">8</div>
                         </td>
                       </tr>
                       <tr>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">16</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">9</div>
                         </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">17</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">10</div>
                         </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">18</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">11</div>
                         </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">19</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">12</div>
                         </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">20</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">13</div>
                         </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">21</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">14</div>
                         </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">22</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">15</div>
                         </td>
                       </tr>
                       <tr>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">23</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">16</div>
                         </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">24</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">17</div>
                         </td>
-                        <td class="add-plane__date-wrap">
-                          <div class="add-plane__date add-plane__date--disabled">25</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">18</div>
                         </td>
-                        <td class="add-plane__date-wrap add-plane__date-wrap--trip add-plane__date-wrap--current">
-                          <div class="add-plane__date add-plane__date--trip">26</div>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">19</div>
+                        </td>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">20</div>
+                        </td>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">21</div>
+                        </td>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">22</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">23</div>
+                        </td>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">24</div>
+                        </td>
+                        <td class="add-plan__date-wrap">
+                          <div class="add-plan__date add-plan__date--disabled">25</div>
+                        </td>
+                        <td class="add-plan__date-wrap add-plan__date-wrap--trip add-plan__date-wrap--current">
+                          <div class="add-plan__date add-plan__date--trip">26</div>
                           <span class="add-plan__day-status">Заезд</span>
                         </td>
-                        <td class="add-plane__date-wrap add-plane__date-wrap--trip">
-                          <div class="add-plane__date add-plane__date--trip">27</div>
+                        <td class="add-plan__date-wrap add-plan__date-wrap--trip">
+                          <div class="add-plan__date add-plan__date--trip">27</div>
                         </td>
-                        <td class="add-plane__date-wrap add-plane__date-wrap--trip">
-                          <div class="add-plane__date add-plane__date--trip">28</div>
+                        <td class="add-plan__date-wrap add-plan__date-wrap--trip">
+                          <div class="add-plan__date add-plan__date--trip">28</div>
                           <span class="add-plan__day-status">Выезд</span>
                         </td>
-                        <td class="add-plane__date-wrap add-plane__date-wrap--next">
-                          <div class="add-plane__date">29</div>
+                        <td class="add-plan__date-wrap add-plan__date-wrap--next">
+                          <div class="add-plan__date">29</div>
                         </td>
                       </tr>
                       <tr>
-                        <td class="add-plane__date-wrap add-plane__date-wrap--next">
-                          <div class="add-plane__date">30</div>
+                        <td class="add-plan__date-wrap add-plan__date-wrap--next">
+                          <div class="add-plan__date">30</div>
                         </td>
-                        <td class="add-plane__date-wrap add-plane__date-wrap--next">
-                          <div class="add-plane__date">31</div>
+                        <td class="add-plan__date-wrap add-plan__date-wrap--next">
+                          <div class="add-plan__date">31</div>
                         </td>
-                        <td class="add-plane__date-wrap add-plane__date-wrap--next">
-                          <div class="add-plane__date"><span>1</span><span
-                              class="add-plan__day-status add-plan__day-status--apr">апр</span></div>
+                        <td class="add-plan__date-wrap add-plan__date-wrap--next">
+                          <div class="add-plan__date"><span>1</span>
+                            <span class="add-plan__day-status add-plan__day-status--apr">апр</span></div>
                         </td>
-                        <td class="add-plane__date-wrap add-plane__date-wrap--next">
-                          <div class="add-plane__date">2</div>
+                        <td class="add-plan__date-wrap add-plan__date-wrap--next">
+                          <div class="add-plan__date">2</div>
                         </td>
-                        <td class="add-plane__date-wrap add-plane__date-wrap--next">
-                          <div class="add-plane__date">3</div>
+                        <td class="add-plan__date-wrap add-plan__date-wrap--next">
+                          <div class="add-plan__date">3</div>
                         </td>
-                        <td class="add-plane__date-wrap add-plane__date-wrap--next">
-                          <div class="add-plane__date">4</div>
+                        <td class="add-plan__date-wrap add-plan__date-wrap--next">
+                          <div class="add-plan__date">4</div>
                         </td>
-                        <td class="add-plane__date-wrap add-plane__date-wrap--next">
-                          <div class="add-plane__date">5</div>
+                        <td class="add-plan__date-wrap add-plan__date-wrap--next">
+                          <div class="add-plan__date">5</div>
                         </td>
                       </tr>
                     </tbody>
@@ -584,8 +550,8 @@
               </div>
               <div class="add-plan__legend-container">
                 <div class="add-plan__legend">
-                  <span class="add-plan__legend--title">Шаг 2.</span>
-                  <span class="add-plan__legend--title">Маршрут</span>
+                  <span>Шаг 2.</span>
+                  <span>Маршрут</span>
                 </div>
                 <p class="add-plan__text"><span>Укажите страны, которые вы хотели посетить.</span><span>Это может быть
                     одна или сразу несколько.</span>
@@ -593,7 +559,7 @@
               </div>
               <div class="add-plan__form-wrap add-plan__form-wrap--country-1 add-plan__select-wrap">
                 <div class="add-plan__select-inner">
-                  <div class="add-plan__input-wrap add-plan__input-wrap--country add-plan__select-input">
+                  <div class="add-plan__input-wrap add-plan__input-wrap--country1 add-plan__select-input">
                     <select class="add-plan__select">
                       <option class="add-plan__option">Босния и Герцеговина</option>
                     </select>
@@ -619,7 +585,7 @@
               <div
                 class="add-plan__form-wrap add-plan__form-wrap--country-2 add-plan__select-input add-plan__select-wrap">
                 <div class="add-plan__select-inner">
-                  <div class="add-plan__input-wrap add-plan__input-wrap--country">
+                  <div class="add-plan__input-wrap add-plan__input-wrap--country2">
                     <select class="add-plan__select">
                       <option class="add-plan__option">Чехия</option>
                     </select>
@@ -643,9 +609,9 @@
                 </svg>
               </div>
               <div class="add-plan__choice add-plan__choice-input add-plan__select-wrap">
-                <div class="add-plas__select-inner">
+                <div class="add-plan__select-inner">
 
-                  <button class="add-plan__choice-btn-country add-plan__choice-btn-country--active">
+                  <button class="add-plan__choice-btn-country">
                     <span>Выберите страну</span>
                     <svg class="add-plan__dropdown-choice-icon" width="12" height="7">
                       <use xlink:href="#dropdown-form"></use>
@@ -857,8 +823,8 @@
               </div>
               <div class="add-plan__legend-container">
                 <div class="add-plan__legend">
-                  <span class="add-plan__legend--title">Шаг 3.</span>
-                  <span class="add-plan__legend--title">Развлечения</span>
+                  <span>Шаг 3.</span>
+                  <span>Развлечения</span>
                 </div>
                 <p class="add-plan__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной
                   форме и ставить тэги.</p>
@@ -917,7 +883,6 @@
         </section>
       </form>
     </div>
-
   </main>
 
   <footer class="page-footer page-section page-section--footer page-section--footer-form">
@@ -933,8 +898,8 @@
             <source media="(min-width: 1440px)"
               srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-            <img class="page-footer__img main-nav__img" src="img/logo-mobile-blue@1x.png"
-              srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип сервиса Погнали" width="100" height="19">
+            <img class="page-footer__img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x"
+              alt="Логотип сервиса Погнали" width="100" height="19">
           </picture>
         </a>
       </div>
@@ -961,7 +926,7 @@
           </a>
         </li>
       </ul>
-      <div class="footer__copyright copyright">
+      <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
         <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип HTML Academy">
           <svg class="copyright__icon" width="28" height="34">
@@ -970,6 +935,7 @@
       </div>
     </div>
   </footer>
+
   <script src="js/mainMenu.min.js"></script>
   <script src="js/formDropdown.min.js"></script>
 </body>

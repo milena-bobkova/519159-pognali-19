@@ -19,6 +19,10 @@
       background-color: $color-dark;
     }
   }
+
+  .page-inner__header {
+    background-color: $color-dark;
+  }
 }
 
 @media (min-width: $desktop-width) {
