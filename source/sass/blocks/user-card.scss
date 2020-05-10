@@ -1,19 +1,12 @@
 .user-card__wrap {
-  display: flex;
-  flex-direction: column;
+  background-color: $color-light;
 }
 
 .user-card {
   position: relative;
 
   border-radius: 10px;
-
-  &:hover {
-    background-color: $color-light;
-    transform: scale(1.03);
-    transition-duration: 0.3s;
-    box-shadow: 6px 6px 21px 0 rgba(#000000, 0.08);
-  }
+  background-color: $color-light;
 }
 
 .user-card__picture {
@@ -116,6 +109,34 @@
 
   &--on {
     fill: #1d2e5b;
+  }
+}
+
+.user-card__transport-item {
+  &:hover,
+  &:focus {
+    .user-card__transport-icon {
+      transform: scale(1.05);
+      transition-duration: 0.3s;
+      fill: #b2b2b2;
+      box-shadow: 6px 6px 21px 0 rgba(#000000, 0.08);
+      cursor: pointer;
+
+      &--on {
+        fill: #57617c;
+      }
+    }
+  }
+
+  &:active {
+    .user-card__transport-icon {
+      fill: #cbced8;
+      box-shadow: none;
+
+      &--on {
+        fill: #a3a9bd;
+      }
+    }
   }
 }
 

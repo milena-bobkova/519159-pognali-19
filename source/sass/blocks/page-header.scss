@@ -1,4 +1,22 @@
 .page-header {
-  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 15;
+
+  width: 100%;
   background-color: $color-dark;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    background-color: #182044;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    background-color: $color-dark;
+  }
 }

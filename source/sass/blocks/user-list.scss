@@ -1,6 +1,6 @@
 .user-list {
   @include list-reset;
-  width: 100%;
+  width: 270px;
 }
 
 .user-list__login {
@@ -26,6 +26,8 @@
 
   .user-list__login {
     width: 190px;
+
+    border-radius: 25px;
   }
 }
 

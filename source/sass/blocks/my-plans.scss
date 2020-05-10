@@ -1,11 +1,6 @@
 .my-plans {
-  padding-bottom: 90px;
+  padding-bottom: 95px;
   background-color: #dfe3f0;
-}
-
-.my-plans__title {
-  margin: 0;
-  padding: 30px 0;
 }
 
 .my-plans__list {
@@ -71,11 +66,7 @@
 
 @media (min-width: $tablet-width) {
   .my-plans {
-    padding: 55px 0 130px;
-  }
-
-  .my-plans__title {
-    padding: 0 0 60px 30px;
+    padding: 35px 0 120px;
   }
 
   .my-plans__list {
@@ -106,7 +97,7 @@
   }
 
   .my-plans__country {
-    padding: 40px 35px 45px;
+    padding: 40px 35px;
     width: 100%;
 
     order: 1;
@@ -152,11 +143,7 @@
 
 @media (min-width: $desktop-width) {
   .my-plans {
-    padding-bottom: 125px;
-  }
-
-  .my-plans__title {
-    padding: 0 0 60px 70px;
+    padding: 40px 0 125px;
   }
 
   .my-plans__list {

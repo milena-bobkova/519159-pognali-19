@@ -4,7 +4,7 @@
   justify-content: center;
 }
 
-.paginetion__pages {
+.pagination__pages {
   display: none;
 }
 
@@ -52,8 +52,7 @@
 }
 
 .pagination__link-prev {
-  margin: 20px 0;
-
+  padding: 20px 0;
   width: 134px;
 
   display: flex;
@@ -76,8 +75,8 @@
 }
 
 .pagination__link-next {
+  padding: 20px 0;
   border-radius: 0 20px 20px 0;
-  margin: 20px 0;
 
   width: 134px;
 
@@ -112,7 +111,7 @@
     background-color: $color-light;
   }
 
-  .paginetion__pages {
+  .pagination__pages {
     @include list-reset;
     display: flex;
   }

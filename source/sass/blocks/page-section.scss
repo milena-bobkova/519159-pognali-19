@@ -2,8 +2,6 @@
   position: relative;
 
   margin-top: -60px;
-  margin-left: auto;
-  margin-right: auto;
   background-color: $color-blue;
   border-radius: 0 0 25px 25px;
 
@@ -52,25 +50,6 @@
 
   &--countries {
     z-index: 2;
-  }
-
-  &--plans {
-    z-index: 2;
-  }
-
-  &--plan {
-    border-radius: 25px 25px 0 0;
-    z-index: 1;
-  }
-
-  &--my-plans {
-    border-radius: 25px 25px 0 0;
-    z-index: 2;
-  }
-
-  &--add-plan {
-    border-radius: 25px 25px 0 0;
-    z-index: 3;
   }
 
   &--footer-form {
@@ -173,6 +152,10 @@
     padding: 30px;
     border-radius: 20px;
     font-size: 24px;
+  }
+
+  .page-section__btn-icon--last {
+    margin-right: 20px;
   }
 }
 

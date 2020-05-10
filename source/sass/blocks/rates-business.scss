@@ -1,0 +1,140 @@
+.rates-business {
+  width: 270px;
+
+  background-color: $color-light;
+  box-shadow: 0 20px 25px 0 rgba(#1d2e5b, 0.1);
+  border-radius: 20px;
+
+  &--closed {
+    display: none;
+  }
+}
+
+.rates-business__wrap {
+  padding: 35px 25px 0 25px;
+}
+
+.rates-business__title {
+  padding: 0 0 30px 0;
+  width: 100%;
+
+  text-align: center;
+  font-size: 24px;
+  line-height: 24px;
+  color: $color-orange;
+}
+
+.rates-business__item {
+  padding: 10px 0;
+
+  width: 220px;
+  flex-direction: column;
+
+  border-top: 1px solid #e1e3e9;
+
+  &:last-of-type {
+    border-bottom: 1px solid #e1e3e9;
+  }
+}
+
+.rates-business__button {
+  font-weight: 700;
+  color: #132576;
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #f3f4f8;
+  text-transform: uppercase;
+  border-radius: 0 0 20px 20px;
+
+  &:hover,
+  &:focus {
+    background-color: #edeff6;
+  }
+
+  &:active {
+    background-color: #edeff6;
+
+    span {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .rates-business {
+    width: 680px;
+
+    border-radius: 25px;
+  }
+
+  .rates-business__wrap {
+    padding: 30px 90px 0 90px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .rates-business__title {
+    padding: 20px 0 40px 0;
+    align-self: center;
+
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .rates-business__item {
+    padding: 15px 0;
+    width: 500px;
+
+    flex-direction: row;
+  }
+
+  .rates-business__term {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .rates-business__price {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .rates-business__button {
+    padding: 40px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+    text-transform: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .rates-business__wrap {
+    padding: 50px 60px 0 60px;
+  }
+
+  .rates-business {
+    width: 750px;
+  }
+
+  .rates-business__title {
+    padding: 0 0 45px 0;
+  }
+
+  .rates-business__list {
+    margin: 0;
+    width: 630px;
+  }
+
+  .rates-business__item {
+    padding: 15px 0;
+  }
+}
