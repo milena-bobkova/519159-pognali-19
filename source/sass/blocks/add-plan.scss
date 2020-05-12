@@ -228,8 +228,9 @@
   border-radius: 5px;
   box-sizing: border-box;
 
-  &:hover {
-    border: 1px solid #959bb2;
+  &:hover,
+  &:focus {
+    border: 1px solid $color-dark;
   }
 
   &:active {
@@ -255,6 +256,10 @@
 
 .add-plan__form-input--child:checked + .add-plan__tick-field svg {
   display: block;
+}
+
+.add-plan__form-input--child:focus + .add-plan__tick-field {
+  border: 1px solid $color-dark;
 }
 
 .add-plan__form-month {
@@ -477,7 +482,7 @@
   &:hover,
   &:focus {
     .add-plan__select-cross-icon {
-      fill: #a5a7ac;
+      fill: rgba(#000000, 0.6);
     }
   }
 
@@ -594,6 +599,7 @@
 
       .add-plan__choice-cross-icon {
         fill: #9c9ea8;
+        background-color: #dfe3f0;
       }
     }
 
@@ -933,7 +939,7 @@
 
 @media (min-width: $tablet-width) {
   .add-plan {
-    padding-top: 50px;
+    padding-top: 40px;
   }
 
   .add-plan__fieldset {
@@ -1469,7 +1475,7 @@
 
   .add-plan__slider-buttons {
     position: absolute;
-    top: 100px;
+    top: 90px;
     right: 190px;
 
     width: 190px;

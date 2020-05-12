@@ -9,9 +9,24 @@
   background-color: $color-dark;
 }
 
+.page-header--nojs {
+  position: relative;
+  z-index: 6;
+  background-color: $color-light;
+  margin-bottom: 1px;
+}
+
 @media (min-width: $tablet-width) {
   .page-header {
     background-color: #182044;
+
+    &--inner-page {
+      background-color: $color-dark;
+    }
+  }
+
+  .page-header--nojs {
+    background-color: $color-light;
   }
 }
 

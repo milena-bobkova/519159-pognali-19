@@ -2,6 +2,8 @@ var countryFilter = document.querySelector(".countries-filter");
 var openFilter = countryFilter.querySelector(".countries-filter__btn");
 var closeFilter = countryFilter.querySelector(".countries-filter__collapse");
 
+countryFilter.classList.remove("countries-filter--nojs");
+
 openFilter.addEventListener("click", function () {
   if (countryFilter.classList.contains("countries-filter--closed")) {
     countryFilter.classList.remove("countries-filter--closed")

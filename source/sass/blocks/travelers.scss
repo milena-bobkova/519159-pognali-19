@@ -296,7 +296,7 @@
   }
 
   .travelers__card-wrap {
-    padding: 0 30px;
+    padding: 0 35px;
 
     display: flex;
     justify-content: space-between;
@@ -334,7 +334,7 @@
 
 @media (min-width: $desktop-width) {
   .travelers {
-    padding-top: 150px;
+    padding-top: 140px;
     padding-bottom: 0;
 
     background-position: 190px 450px;
@@ -363,11 +363,11 @@
   }
 
   .travelers__title {
-    padding: 0 30px 60px 65px;
+    padding: 0 30px 55px 65px;
   }
 
   .travelers__text {
-    padding: 0 30px 35px 65px;
+    padding: 0 30px 40px 70px;
     width: 425px;
 
     &:last-of-type {
@@ -378,7 +378,7 @@
   .travelers__card-wrap {
     padding: 0;
     position: absolute;
-    top: 40px;
+    top: 50px;
     left: 750px;
 
     width: 630px;

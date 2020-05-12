@@ -120,13 +120,13 @@
 
     background-image: url("../img/about-desktop@1x.png");
     background-repeat: no-repeat;
-    background-position: 750px 85px;
+    background-position: 92% 95px;
     background-size: 630px 665px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/about-desktop@2x.png");
       background-repeat: no-repeat;
-      background-position: 750px 90px;
+      background-position: 92% 95px;
       background-size: 630px 665px;
     }
   }
@@ -136,7 +136,7 @@
   }
 
   .about__text {
-    padding: 50px 20px 40px 75px;
+    padding: 55px 20px 40px 75px;
     width: 615px;
 
     &:last-of-type {

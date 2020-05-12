@@ -18,15 +18,15 @@
   <script src="js/picturefill.min.js" async=""></script>
 </head>
 
-<body class="page-inner">
+<body>
 
   <div style="display:none">
     <include src="build/img/sprite.svg"></include>
   </div>
 
-  <header class="page-inner__header page-header">
-    <nav class="main-nav main-nav--closed page-inner__nav page-inner__nav--closed container">
-      <div class="main-nav__logo-wrap">
+  <header class="page-header page-header--inner-page page-header--nojs">
+    <nav class="main-nav main-nav--inner-page main-nav--closed main-nav--nojs container">
+      <div class="main-nav__logo-wrap main-nav__logo-wrap--inner-page">
         <a class="main-nav__logo" href="index.html" aria-label="Логотип сервиса Погнали">
         </a>
         <button class="main-nav__toggle" type="button" aria-label="Открыть меню">
@@ -50,36 +50,38 @@
           </a>
         </li>
       </ul>
-      <ul class="main-nav__list user-list">
+      <ul class="main-nav__list main-nav__list--inner-page user-list user-list--inner-page">
         <li class="user-list__item">
           <a class="user-list__login btn" href="login.html">Авторизация</a>
         </li>
       </ul>
       <ul class="main-nav__list contact-list contact-list--header">
         <li class="contact-list__item">
-          <a class="main-nav__inner-link contact-list__link contact-list__link-phone" href="tel:+78005558628">
+          <a class="main-nav__inner-link contact-list__link contact-list__link--top contact-list__link-phone"
+            href="tel:+78005558628">
             <svg class="contact-list__icon contact-list__icon--phone" width="18" height="18">
               <use xlink:href="#contacts-phone"></use>
             </svg>
             <svg class="main-nav__inner-icon main-nav__inner-icon--phone" width="18" height="18">
               <use xlink:href="#topmenu-phone"></use>
             </svg>
-            <span>8 800 555-86-28</span>
+            <span class="contact-list__link-text">8 800 555-86-28</span>
           </a>
         </li>
         <li class="contact-list__item">
-          <a class="main-nav__inner-link contact-list__link contact-list__link-mail" href="mailto:mail@htmlacademy.ru">
+          <a class="main-nav__inner-link contact-list__link contact-list__link--top  contact-list__link-mail"
+            href="mailto:mail@htmlacademy.ru">
             <svg class="contact-list__icon contact-list__icon--mail" width="18" height="13">
               <use xlink:href="#contacts-mail"></use>
             </svg>
             <svg class="main-nav__inner-icon main-nav__inner-icon--mail" width="18" height="13">
               <use xlink:href="#topmenu-mail"></use>
             </svg>
-            <span>mail@htmlacademy.ru</span>
+            <span class="contact-list__link-text">mail@htmlacademy.ru</span>
           </a>
         </li>
       </ul>
-      <ul class="page-inner__nav-list main-nav__list social-list">
+      <ul class="main-nav__list social-list">
         <li class="social-list__item">
           <a class="social-list__link social-list__link--fb" href="#" aria-label="Facebook">
             <svg class="social-list__icon social-list__icon--fb" width="11" height="21">
@@ -105,7 +107,7 @@
     </nav>
   </header>
 
-  <main class="page-main">
+  <main class="page-main page-main--nojs">
     <div class="page-main__title-wrap page-section page-section--travel">
       <div class="page-main__title-wrapper container">
         <h1 class="page-main__title">
@@ -150,8 +152,8 @@
             </div>
             <label class="profile-plan__btn">
               <input class="profile-plan__change visually-hidden" type="text">
-              <span class="profile-plan__btn-name profile-plan__btn-name--desk">Фото</span>
-              <span class="profile-plan__btn-name profile-plan__btn-name--mob">Сменить фото</span>
+              <span class="profile-plan__btn-name">
+                <span class="profile-plan__btn-name-mob">Сменить</span>Фото</span>
             </label>
             <div class="profile-plan__tags">
               <fieldset class="profile-plan__fieldset  profile-plan__fieldset--tags">
@@ -936,7 +938,7 @@
     </div>
   </footer>
 
-  <script src="js/mainMenu.min.js"></script>
+  <script src="js/innerMenu.min.js"></script>
   <script src="js/formDropdown.min.js"></script>
 </body>
 

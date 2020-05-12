@@ -20,7 +20,7 @@
   margin: 0;
   padding: 15px 0;
 
-  width: 200px;
+  width: 210px;
 
   font-weight: 700;
   font-size: $text-size;
@@ -143,15 +143,29 @@
 .countries-filter__link {
   display: block;
 
+  width: 42px;
+  height: 39px;
+
   font-size: 14px;
   line-height: 42px;
   font-weight: 500;
   color: #1d2e5b;
   text-transform: uppercase;
   text-align: center;
+  background-color: $color-light;
 
   &--active {
     color: #1d2e5b;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-dark;
+    color: $color-light;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -175,6 +189,15 @@
 
   font-weight: 400;
   color: $color-grey;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .countries-filter__collapse {
@@ -236,6 +259,26 @@
   display: none;
 }
 
+.countries-filter--nojs {
+  padding-bottom: 10px;
+
+  .countries-filter__continents {
+    display: block;
+  }
+
+  .countries-filter__btn {
+    display: none;
+  }
+
+  .countries-filter__letters {
+    display: flex;
+  }
+
+  .countries-filter__list--dropdown {
+    display: block;
+  }
+}
+
 
 @media (min-width: $tablet-width) {
   .countries-filter {
@@ -254,6 +297,9 @@
   .countries-filter__btn {
     margin-left: auto;
     margin-right: 30px;
+
+    padding-top: 50px;
+    padding-bottom: 60px;
 
     width: 180px;
     height: 24px;
@@ -274,7 +320,7 @@
   }
 
   .countries-filter__continents {
-    padding: 60px 0 50px 40px;
+    padding: 60px 0 50px 35px;
     width: 365px;
 
     display: flex;
@@ -325,6 +371,19 @@
     color: $color-blue;
     opacity: 0.2;
     font-weight: 700;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: $color-blue;
+      opacity: 1;
+      background-color: transparent;
+    }
+
+    &:active {
+      color: $color-blue;
+      opacity: 0.6;
+    }
   }
 
   .countries-filter__collapse {
@@ -368,6 +427,16 @@
 
   .countries-filter--closed .countries-filter__btn-close {
     display: none;
+  }
+
+  .countries-filter--nojs {
+    .countries-filter__continents {
+      display: flex;
+    }
+
+    .countries-filter__letter {
+      display: flex;
+    }
   }
 }
 
@@ -439,10 +508,27 @@
     margin: 50px 0 60px 0;
     opacity: 1;
     text-align: left;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
   }
 
   .countries-filter__collapse {
     width: 100%;
-    margin: 50px 0;
+    margin: 60px 0 50px;
+  }
+
+  .countries-filter--nojs {
+    background-color: #edeff6;
+
+    .countries-filter__continents {
+      background-color: #edeff6;
+    }
+
+    .countries-filter__list {
+      display: block;
+    }
   }
 }

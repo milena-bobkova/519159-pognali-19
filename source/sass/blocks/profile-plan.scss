@@ -63,17 +63,16 @@
   border-radius: 50%;
 }
 
-.profile-plan__btn-name--desk {
-  display: none;
-}
-
 .profile-plan__btn {
   margin: 20px 0 25px 0;
 
   width: 270px;
 
   display: block;
+}
 
+.profile-plan__btn-name {
+  display: block;
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
@@ -82,15 +81,15 @@
   background-color: #dfe3f0;
   text-align: center;
   border-radius: 20px;
+}
 
-  &:hover,
-  &:focus {
-    background-color: #d1d7e9;
-  }
+.profile-plan__change:hover + .profile-plan__btn-name,
+.profile-plan__change:focus + .profile-plan__btn-name {
+  background-color: #d1d7e9;
+}
 
-  &:active {
-    color: rgba(#1d2e5b, 0.3);
-  }
+.profile-plan__change:active + .profile-plan__btn-name {
+  color: rgba(#1d2e5b, 0.3);
 }
 
 .profile-plan__fieldset {
@@ -161,8 +160,9 @@
   }
 }
 
-.profile-plan__input:hover ~ .profile-plan__transport-icon {
-  transform: scale(1.05);
+.profile-plan__input:hover ~ .profile-plan__transport-icon,
+.profile-plan__input:focus ~ .profile-plan__transport-icon {
+  transform: scale(1.2);
   transition-duration: 0.3s;
   fill: #b2b2b2;
   box-shadow: 6px 6px 21px 0 rgba(#000000, 0.08);
@@ -237,12 +237,15 @@
   }
 
   .profile-plan__btn {
-    margin: 35px 35px 40px 35px;
-    padding: 15px 0;
+    margin: 30px 35px 50px 35px;
 
     width: 615px;
 
     order: 5;
+  }
+
+  .profile-plan__btn-name {
+    padding: 15px 0;
     border-radius: 20px;
     font-size: 20px;
   }
@@ -264,7 +267,7 @@
 
   .profile-plan__fieldset {
     margin: 0;
-    padding: 5px 35px 30px 35px;
+    padding: 5px 35px 25px 35px;
     border-radius: 10px;
     transform: rotate(180deg);
   }
@@ -272,7 +275,7 @@
   .profile-plan__transport {
     margin: 0;
     order: -1;
-    width: 315px;
+    width: 310px;
   }
 
   .profile-plan__transport-wrap {
@@ -369,22 +372,19 @@
   .profile-plan__btn {
     margin: 0 95px 25px 0;
     margin-left: 1035px;
-    padding: 10px 0;
 
     width: 190px;
 
     order: 4;
-    border-radius: 0 0 10px 10px;
   }
 
   .profile-plan__btn-name {
-    &--mob {
-      display: none;
-    }
+    padding: 10px 0;
+    border-radius: 0 0 10px 10px;
+  }
 
-    &--desk {
-      display: block;
-    }
+  .profile-plan__btn-name-mob {
+    display: none;
   }
 
   .profile-plan__tags {
@@ -403,6 +403,7 @@
 
     &--tags {
       text-align: right;
+      padding-bottom: 15px;
     }
   }
 

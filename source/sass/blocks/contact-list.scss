@@ -16,6 +16,15 @@
   text-transform: uppercase;
 }
 
+.contact-list__link--top:hover .contact-list__link-text,
+.contact-list__link--top:focus .contact-list__link-text {
+  opacity: 0.6;
+}
+
+.contact-list__link--top:hover .contact-list__link-text:active {
+  opacity: 0.3;
+}
+
 .contact-list__link--yellow {
   color: $color-yellow;
 }
@@ -40,6 +49,7 @@
 
 @media (min-width: $tablet-width) {
   .contact-list {
+    margin: 0 auto;
     padding: 95px 60px;
 
     width: 568px;

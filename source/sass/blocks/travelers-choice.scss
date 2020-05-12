@@ -89,6 +89,16 @@
   fill: $color-blue;
 }
 
+.travelers-choice__input:hover ~ .travelers-choice__tick-field,
+.travelers-choice__input:focus ~ .travelers-choice__tick-field {
+  border: 1px solid #959bb2;
+}
+
+.travelers-choice__input:active ~ .travelers-choice__tick-field {
+  background-color: #e2e5f1;
+  border: none;
+}
+
 .travelers-choice__tick-field {
   margin-right: 10px;
   display: flex;
@@ -100,15 +110,6 @@
   background-color: $color-light;
   border-radius: 3px;
   box-sizing: border-box;
-
-  &:hover {
-    border: 1px solid #959bb2;
-  }
-
-  &:active {
-    background-color: #e2e5f1;
-    border: none;
-  }
 }
 
 .travelers-choice__input:not(:checked) + .travelers-choice__tick-field svg {
@@ -119,8 +120,9 @@
   display: block;
 }
 
-.travelers-choice__input:hover ~ .travelers-choice__transport-icon {
-  transform: scale(1.05);
+.travelers-choice__input:hover ~ .travelers-choice__transport-icon,
+.travelers-choice__input:focus ~ .travelers-choice__transport-icon {
+  transform: scale(1.2);
   transition-duration: 0.3s;
   fill: #b2b2b2;
   box-shadow: 6px 6px 21px 0 rgba(#000000, 0.08);

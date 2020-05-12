@@ -18,6 +18,11 @@
     align-items: center;
     order: -1;
     width: 333px;
+
+    &--inner-page {
+      padding: 42px 40px 42px 0;
+      background-color: $color-dark;
+    }
   }
 
   .user-list__item {
@@ -33,6 +38,7 @@
 
 @media (min-width: $desktop-width) {
   .user-list {
+    padding: 0;
     display: flex;
     width: 190px;
     order: 1;

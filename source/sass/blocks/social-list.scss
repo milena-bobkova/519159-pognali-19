@@ -19,22 +19,24 @@
 
   display: block;
   text-align: center;
-}
 
-.social-list__icon {
-  fill: $color-blue;
-
-  &:hover {
+  &:hover .social-list__icon,
+  &:focus .social-list__icon {
     opacity: 0.6;
   }
 
-  &:active {
+  &:active .social-list__icon {
     opacity: 0.3;
   }
 }
 
+.social-list__icon {
+  fill: $color-blue;
+}
+
 @media (min-width: $tablet-width) {
   .social-list {
+    margin: 0 auto;
     padding: 35px 75px 50px;
 
     width: 538px;

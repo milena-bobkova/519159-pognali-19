@@ -116,10 +116,9 @@
   &:hover,
   &:focus {
     .user-card__transport-icon {
-      transform: scale(1.05);
+      transform: scale(1.2);
       transition-duration: 0.3s;
       fill: #b2b2b2;
-      box-shadow: 6px 6px 21px 0 rgba(#000000, 0.08);
       cursor: pointer;
 
       &--on {
@@ -131,12 +130,32 @@
   &:active {
     .user-card__transport-icon {
       fill: #cbced8;
-      box-shadow: none;
 
       &--on {
         fill: #a3a9bd;
       }
     }
+  }
+}
+
+.user-card__transport-input:hover ~ .user-card__transport-icon,
+.user-card__transport-input:focus ~ .user-card__transport-icon {
+  transform: scale(1.2);
+  transition-duration: 0.3s;
+  fill: #b2b2b2;
+  cursor: pointer;
+
+  &--on {
+    fill: #57617c;
+  }
+}
+
+.user-card__transport-input:active ~ .user-card__transport-icon {
+  fill: #cbced8;
+  box-shadow: none;
+
+  &--on {
+    fill: #a3a9bd;
   }
 }
 

@@ -2,7 +2,8 @@ var businessLink = document.querySelector(".rates__button");
 var businessModal = document.querySelector(".rates-business");
 var businessClose = businessModal.querySelector(".rates-business__button");
 
-businessLink.addEventListener("click", function () {
+businessLink.addEventListener("click", function (evt) {
+  evt.preventDefault();
   if (businessModal.classList.contains("rates-business--closed")) {
     businessModal.classList.remove("rates-business--closed");
   } else {
@@ -10,7 +11,8 @@ businessLink.addEventListener("click", function () {
   }
 });
 
-businessClose.addEventListener("click", function () {
+businessClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
   if (!businessModal.classList.contains("rates-business--closed")) {
     businessModal.classList.add("rates-business--closed");
   }

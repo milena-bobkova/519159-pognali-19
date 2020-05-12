@@ -24,7 +24,7 @@
     <include src="build/img/sprite.svg"></include>
   </div>
 
-  <header class="page-header">
+  <header class="page-header page-header--nojs">
     <nav class="main-nav main-nav--closed main-nav--nojs container">
       <div class="main-nav__logo-wrap">
         <a class="main-nav__logo" aria-label="Логотип сервиса Погнали">
@@ -56,25 +56,27 @@
       </ul>
       <ul class="main-nav__list contact-list contact-list--header">
         <li class="contact-list__item">
-          <a class="main-nav__inner-link contact-list__link contact-list__link-phone" href="tel:+78005558628">
+          <a class="main-nav__inner-link contact-list__link contact-list__link--top contact-list__link-phone"
+            href="tel:+78005558628">
             <svg class="contact-list__icon contact-list__icon--phone" width="18" height="18">
               <use xlink:href="#contacts-phone"></use>
             </svg>
             <svg class="main-nav__inner-icon main-nav__inner-icon--phone" width="18" height="18">
               <use xlink:href="#topmenu-phone"></use>
             </svg>
-            <span>8 800 555-86-28</span>
+            <span class="contact-list__link-text">8 800 555-86-28</span>
           </a>
         </li>
         <li class="contact-list__item">
-          <a class="main-nav__inner-link contact-list__link contact-list__link-mail" href="mailto:mail@htmlacademy.ru">
+          <a class="main-nav__inner-link contact-list__link contact-list__link--top  contact-list__link-mail"
+            href="mailto:mail@htmlacademy.ru">
             <svg class="contact-list__icon contact-list__icon--mail" width="18" height="13">
               <use xlink:href="#contacts-mail"></use>
             </svg>
             <svg class="main-nav__inner-icon main-nav__inner-icon--mail" width="18" height="13">
               <use xlink:href="#topmenu-mail"></use>
             </svg>
-            <span>mail@htmlacademy.ru</span>
+            <span class="contact-list__link-text">mail@htmlacademy.ru</span>
           </a>
         </li>
       </ul>
@@ -106,7 +108,7 @@
 
   <main class="page-main">
     <h1 class="visually-hidden">"Погнали?" - сервис поиска попутчиков</h1>
-    <section class="intro page-section page-section--intro">
+    <section class="intro intro--nojs page-section page-section--intro">
       <h2 class="visually-hidden">Описание сервиса</h2>
       <div class="intro__wrap">
         <article class="intro-top">
@@ -136,7 +138,7 @@
         <article class="intro-comment">
           <h2 class="visually-hidden">Комментарий</h2>
           <blockquote class="intro-comment__review">
-            <p class="intro-comment__text">«Лучшее предложение, что я видел в жизни!»</p>
+            <p class="intro-comment__text">«Лучшее приложение, что я видел в жизни!»</p>
             <cite class="intro-comment__author">Мурат Эльтазин главный&nbsp;редактор газеты «гаджетлайф»</cite>
           </blockquote>
         </article>
@@ -263,7 +265,7 @@
         <div class="travelers__title-wrap">
           <h2 class="travelers__title page-section__title">Попутчики</h2>
           <p class="travelers__text page-section__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
-            Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+            Одному нужен пляж и коктейль, а&nbsp;другому маршрут для хайкинга.
           </p>
           <p class="travelers__text page-section__text page-section__text--bold">Теперь можно легко найти
             единомышленников!</p>
@@ -311,36 +313,40 @@
                   class="travelers__title-link travelers__title-link--off user-card__link" href="#">Таня Фирсова</a>
               </h3>
               <p class="travelers__habits user-card__habits">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-              <ul class=" travelers__transport-list user-card__transport-list">
-                <li class="travelers__transport-item user-card__transport-item tooltip">
+              <form class="travelers__transport-list user-card__transport-list">
+                <label class="travelers__transport-item user-card__transport-item tooltip">
+                  <input class="user-card__transport-input visually-hidden" type="button" value="Авиаперелет">
                   <svg class="travelers__transport-icon user-card__transport-icon user-card__transport-icon--on"
                     width="20" height="20" aria-label="Авиаперелет">
                     <use xlink:href="#plane"></use>
                   </svg>
                   <span>Авиаперелет</span>
-                </li>
-                <li class="travelers__transport-item user-card__transport-item tooltip">
+                </label>
+                <label class="travelers__transport-item user-card__transport-item tooltip">
+                  <input class="user-card__transport-input visually-hidden" type="button" value="Автотранспорт">
                   <svg class="travelers__transport-icon user-card__transport-icon" width="17" height="20"
                     aria-label="Автотранспорт">
                     <use xlink:href="#bus"></use>
                   </svg>
                   <span>Автотранспорт</span>
-                </li>
-                <li class="travelers__transport-item user-card__transport-item tooltip">
+                </label>
+                <label class="travelers__transport-item user-card__transport-item tooltip">
+                  <input class="user-card__transport-input visually-hidden" type="button" value="Велосипед">
                   <svg class="travelers__transport-icon user-card__transport-icon" width="24" height="20"
                     aria-label="Велосипед">
                     <use xlink:href="#bike"></use>
                   </svg>
                   <span>Велосипед</span>
-                </li>
-                <li class="travelers__transport-item user-card__transport-item tooltip">
+                </label>
+                <label class=" travelers__transport-item user-card__transport-item tooltip">
+                  <input class="user-card__transport-input visually-hidden" type="button" value="Пешком">
                   <svg class="travelers__transport-icon user-card__transport-icon" width="20" height="20"
                     aria-label="Пешком">
                     <use xlink:href="#run"></use>
                   </svg>
                   <span>Пешком</span>
-                </li>
-              </ul>
+                </label>
+              </form>
             </div>
           </article>
 
@@ -379,36 +385,40 @@
               <h3 class="travelers__card-title user-card__title"><a
                   class="travelers__title-link travelers__title-link--on user-card__link" href="#">Петя Демин</a></h3>
               <p class="travelers__habits user-card__habits">#бургер #бар #футбол #концерт #крафт</p>
-              <ul class=" travelers__transport-list user-card__transport-list">
-                <li class="travelers__transport-item user-card__transport-item tooltip">
+              <form class="travelers__transport-list user-card__transport-list">
+                <label class="travelers__transport-item user-card__transport-item tooltip">
+                  <input class="user-card__transport-input visually-hidden" type="button" value="Авиаперелет">
                   <svg class="travelers__transport-icon user-card__transport-icon user-card__transport-icon--on"
                     width="20" height="20" aria-label="Авиаперелет">
                     <use xlink:href="#plane"></use>
                   </svg>
                   <span>Авиаперелет</span>
-                </li>
-                <li class="travelers__transport-item user-card__transport-item tooltip">
-                  <svg class="travelers__transport-icon user-card__transport-icon" width="17" height="20"
-                    aria-label="Автотранспорт">
+                </label>
+                <label class="travelers__transport-item user-card__transport-item tooltip">
+                  <input class="user-card__transport-input visually-hidden" type="button" value="Автотранспорт">
+                  <svg class="travelers__transport-icon user-card__transport-icon user-card__transport-icon--on"
+                    width="17" height="20" aria-label="Автотранспорт">
                     <use xlink:href="#bus"></use>
                   </svg>
                   <span>Автотранспорт</span>
-                </li>
-                <li class="travelers__transport-item user-card__transport-item tooltip">
+                </label>
+                <label class="travelers__transport-item user-card__transport-item tooltip">
+                  <input class="user-card__transport-input visually-hidden" type="button" value="Велосипед">
                   <svg class="travelers__transport-icon user-card__transport-icon" width="24" height="20"
                     aria-label="Велосипед">
                     <use xlink:href="#bike"></use>
                   </svg>
                   <span>Велосипед</span>
-                </li>
-                <li class="travelers__transport-item user-card__transport-item tooltip">
-                  <svg class="travelers__transport-icon user-card__transport-icon" width="20" height="20"
-                    aria-label="Пешком">
+                </label>
+                <label class=" travelers__transport-item user-card__transport-item tooltip">
+                  <input class="user-card__transport-input visually-hidden" type="button" value="Пешком">
+                  <svg class="travelers__transport-icon user-card__transport-icon user-card__transport-icon--on"
+                    width="20" height="20" aria-label="Пешком">
                     <use xlink:href="#run"></use>
                   </svg>
                   <span>Пешком</span>
-                </li>
-              </ul>
+                </label>
+              </form>
             </div>
           </article>
         </div>
@@ -449,7 +459,7 @@
             <span class="rates__item-number rates__item-number--three">3</span>
           </li>
         </ol>
-        <a class="rates__button" href="#">
+        <a class="rates__button" href="rates/business.html">
           <svg class="rates__button-icon" width="17" height="20">
             <use xlink:href="#business"></use>
           </svg>
